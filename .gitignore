@@ -6,3 +6,6 @@ Bot/obj
 
 /.vs/Bot/v15
 /.vs
+*.sln
+*.csproj
+.gitignore

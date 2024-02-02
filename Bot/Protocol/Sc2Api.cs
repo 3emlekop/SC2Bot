@@ -9,19 +9,23 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace SC2APIProtocol {
+namespace SC2APIProtocol
+{
 
   /// <summary>Holder for reflection information generated from s2clientprotocol/sc2api.proto</summary>
-  public static partial class Sc2ApiReflection {
+  public static partial class Sc2ApiReflection
+  {
 
     #region Descriptor
     /// <summary>File descriptor for s2clientprotocol/sc2api.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
+    public static pbr::FileDescriptor Descriptor
+    {
       get { return descriptor; }
     }
     private static pbr::FileDescriptor descriptor;
 
-    static Sc2ApiReflection() {
+    static Sc2ApiReflection()
+    {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1zMmNsaWVudHByb3RvY29sL3NjMmFwaS5wcm90bxIOU0MyQVBJUHJvdG9j",
@@ -256,7 +260,7 @@ namespace SC2APIProtocol {
             "dBACEgcKA1RpZRADEg0KCVVuZGVjaWRlZBAEYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SC2APIProtocol.CommonReflection.Descriptor, global::SC2APIProtocol.DataReflection.Descriptor, global::SC2APIProtocol.DebugReflection.Descriptor, global::SC2APIProtocol.ErrorReflection.Descriptor, global::SC2APIProtocol.QueryReflection.Descriptor, global::SC2APIProtocol.RawReflection.Descriptor, global::SC2APIProtocol.ScoreReflection.Descriptor, global::SC2APIProtocol.SpatialReflection.Descriptor, global::SC2APIProtocol.UiReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SC2APIProtocol.Status), typeof(global::SC2APIProtocol.Difficulty), typeof(global::SC2APIProtocol.PlayerType), typeof(global::SC2APIProtocol.Alert), typeof(global::SC2APIProtocol.Result), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] { typeof(global::SC2APIProtocol.Status), typeof(global::SC2APIProtocol.Difficulty), typeof(global::SC2APIProtocol.PlayerType), typeof(global::SC2APIProtocol.Alert), typeof(global::SC2APIProtocol.Result), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SC2APIProtocol.Request), global::SC2APIProtocol.Request.Parser, new[]{ "CreateGame", "JoinGame", "RestartGame", "StartReplay", "LeaveGame", "QuickSave", "QuickLoad", "Quit", "GameInfo", "Observation", "Action", "ObsAction", "Step", "Data", "Query", "SaveReplay", "ReplayInfo", "AvailableMaps", "SaveMap", "Ping", "Debug" }, new[]{ "Request" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SC2APIProtocol.Response), global::SC2APIProtocol.Response.Parser, new[]{ "CreateGame", "JoinGame", "RestartGame", "StartReplay", "LeaveGame", "QuickSave", "QuickLoad", "Quit", "GameInfo", "Observation", "Action", "ObsAction", "Step", "Data", "Query", "SaveReplay", "ReplayInfo", "AvailableMaps", "SaveMap", "Ping", "Debug", "Error", "Status" }, new[]{ "Response" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SC2APIProtocol.RequestCreateGame), global::SC2APIProtocol.RequestCreateGame.Parser, new[]{ "LocalMap", "BattlenetMapName", "PlayerSetup", "DisableFog", "RandomSeed", "Realtime" }, new[]{ "Map" }, null, null),
@@ -324,7 +328,8 @@ namespace SC2APIProtocol {
 
   }
   #region Enums
-  public enum Status {
+  public enum Status
+  {
     [pbr::OriginalName("Status_UNSET")] Unset = 0,
     /// <summary>
     /// Game has been launch and is not yet doing anything.
@@ -356,7 +361,8 @@ namespace SC2APIProtocol {
     [pbr::OriginalName("unknown")] Unknown = 99,
   }
 
-  public enum Difficulty {
+  public enum Difficulty
+  {
     [pbr::OriginalName("Difficulty_UNSET")] Unset = 0,
     [pbr::OriginalName("VeryEasy")] VeryEasy = 1,
     [pbr::OriginalName("Easy")] Easy = 2,
@@ -370,20 +376,23 @@ namespace SC2APIProtocol {
     [pbr::OriginalName("CheatInsane")] CheatInsane = 10,
   }
 
-  public enum PlayerType {
+  public enum PlayerType
+  {
     [pbr::OriginalName("PlayerType_UNSET")] Unset = 0,
     [pbr::OriginalName("Participant")] Participant = 1,
     [pbr::OriginalName("Computer")] Computer = 2,
     [pbr::OriginalName("Observer")] Observer = 3,
   }
 
-  public enum Alert {
+  public enum Alert
+  {
     [pbr::OriginalName("Alert_UNSET")] Unset = 0,
     [pbr::OriginalName("NuclearLaunchDetected")] NuclearLaunchDetected = 1,
     [pbr::OriginalName("NydusWormDetected")] NydusWormDetected = 2,
   }
 
-  public enum Result {
+  public enum Result
+  {
     [pbr::OriginalName("Result_UNSET")] Unset = 0,
     [pbr::OriginalName("Victory")] Victory = 1,
     [pbr::OriginalName("Defeat")] Defeat = 2,
@@ -394,32 +403,38 @@ namespace SC2APIProtocol {
   #endregion
 
   #region Messages
-  public sealed partial class Request : pb::IMessage<Request> {
+  public sealed partial class Request : pb::IMessage<Request>
+  {
     private static readonly pb::MessageParser<Request> _parser = new pb::MessageParser<Request>(() => new Request());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Request> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Request() {
+    public Request()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Request(Request other) : this() {
-      switch (other.RequestCase) {
+    public Request(Request other) : this()
+    {
+      switch (other.RequestCase)
+      {
         case RequestOneofCase.CreateGame:
           CreateGame = other.CreateGame.Clone();
           break;
@@ -489,7 +504,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Request Clone() {
+    public Request Clone()
+    {
       return new Request(this);
     }
 
@@ -499,9 +515,11 @@ namespace SC2APIProtocol {
     /// Game Setup
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestCreateGame CreateGame {
-      get { return requestCase_ == RequestOneofCase.CreateGame ? (global::SC2APIProtocol.RequestCreateGame) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestCreateGame CreateGame
+    {
+      get { return requestCase_ == RequestOneofCase.CreateGame ? (global::SC2APIProtocol.RequestCreateGame)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.CreateGame;
       }
@@ -513,9 +531,11 @@ namespace SC2APIProtocol {
     /// Send to host and all clients for game to begin.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestJoinGame JoinGame {
-      get { return requestCase_ == RequestOneofCase.JoinGame ? (global::SC2APIProtocol.RequestJoinGame) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestJoinGame JoinGame
+    {
+      get { return requestCase_ == RequestOneofCase.JoinGame ? (global::SC2APIProtocol.RequestJoinGame)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.JoinGame;
       }
@@ -527,9 +547,11 @@ namespace SC2APIProtocol {
     /// Single player only. Reinitializes the game with the same player setup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestRestartGame RestartGame {
-      get { return requestCase_ == RequestOneofCase.RestartGame ? (global::SC2APIProtocol.RequestRestartGame) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestRestartGame RestartGame
+    {
+      get { return requestCase_ == RequestOneofCase.RestartGame ? (global::SC2APIProtocol.RequestRestartGame)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.RestartGame;
       }
@@ -541,9 +563,11 @@ namespace SC2APIProtocol {
     /// Start playing a replay.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestStartReplay StartReplay {
-      get { return requestCase_ == RequestOneofCase.StartReplay ? (global::SC2APIProtocol.RequestStartReplay) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestStartReplay StartReplay
+    {
+      get { return requestCase_ == RequestOneofCase.StartReplay ? (global::SC2APIProtocol.RequestStartReplay)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.StartReplay;
       }
@@ -555,9 +579,11 @@ namespace SC2APIProtocol {
     /// Multiplayer only. Disconnects from a multiplayer game, equivalent to surrender.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestLeaveGame LeaveGame {
-      get { return requestCase_ == RequestOneofCase.LeaveGame ? (global::SC2APIProtocol.RequestLeaveGame) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestLeaveGame LeaveGame
+    {
+      get { return requestCase_ == RequestOneofCase.LeaveGame ? (global::SC2APIProtocol.RequestLeaveGame)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.LeaveGame;
       }
@@ -569,9 +595,11 @@ namespace SC2APIProtocol {
     /// Saves game to an in-memory bookmark.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestQuickSave QuickSave {
-      get { return requestCase_ == RequestOneofCase.QuickSave ? (global::SC2APIProtocol.RequestQuickSave) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestQuickSave QuickSave
+    {
+      get { return requestCase_ == RequestOneofCase.QuickSave ? (global::SC2APIProtocol.RequestQuickSave)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.QuickSave;
       }
@@ -583,9 +611,11 @@ namespace SC2APIProtocol {
     /// Loads from an in-memory bookmark.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestQuickLoad QuickLoad {
-      get { return requestCase_ == RequestOneofCase.QuickLoad ? (global::SC2APIProtocol.RequestQuickLoad) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestQuickLoad QuickLoad
+    {
+      get { return requestCase_ == RequestOneofCase.QuickLoad ? (global::SC2APIProtocol.RequestQuickLoad)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.QuickLoad;
       }
@@ -597,9 +627,11 @@ namespace SC2APIProtocol {
     /// Terminates the application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestQuit Quit {
-      get { return requestCase_ == RequestOneofCase.Quit ? (global::SC2APIProtocol.RequestQuit) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestQuit Quit
+    {
+      get { return requestCase_ == RequestOneofCase.Quit ? (global::SC2APIProtocol.RequestQuit)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Quit;
       }
@@ -611,9 +643,11 @@ namespace SC2APIProtocol {
     /// During Game
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestGameInfo GameInfo {
-      get { return requestCase_ == RequestOneofCase.GameInfo ? (global::SC2APIProtocol.RequestGameInfo) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestGameInfo GameInfo
+    {
+      get { return requestCase_ == RequestOneofCase.GameInfo ? (global::SC2APIProtocol.RequestGameInfo)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.GameInfo;
       }
@@ -625,9 +659,11 @@ namespace SC2APIProtocol {
     /// Snapshot of the current game state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestObservation Observation {
-      get { return requestCase_ == RequestOneofCase.Observation ? (global::SC2APIProtocol.RequestObservation) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestObservation Observation
+    {
+      get { return requestCase_ == RequestOneofCase.Observation ? (global::SC2APIProtocol.RequestObservation)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Observation;
       }
@@ -639,9 +675,11 @@ namespace SC2APIProtocol {
     /// Executes an action for a participant.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestAction Action {
-      get { return requestCase_ == RequestOneofCase.Action ? (global::SC2APIProtocol.RequestAction) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestAction Action
+    {
+      get { return requestCase_ == RequestOneofCase.Action ? (global::SC2APIProtocol.RequestAction)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Action;
       }
@@ -653,9 +691,11 @@ namespace SC2APIProtocol {
     /// Executes an action for an observer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestObserverAction ObsAction {
-      get { return requestCase_ == RequestOneofCase.ObsAction ? (global::SC2APIProtocol.RequestObserverAction) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestObserverAction ObsAction
+    {
+      get { return requestCase_ == RequestOneofCase.ObsAction ? (global::SC2APIProtocol.RequestObserverAction)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.ObsAction;
       }
@@ -667,9 +707,11 @@ namespace SC2APIProtocol {
     /// Advances the game simulation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestStep Step {
-      get { return requestCase_ == RequestOneofCase.Step ? (global::SC2APIProtocol.RequestStep) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestStep Step
+    {
+      get { return requestCase_ == RequestOneofCase.Step ? (global::SC2APIProtocol.RequestStep)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Step;
       }
@@ -681,9 +723,11 @@ namespace SC2APIProtocol {
     /// Data about different gameplay elements. May be different for different games.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestData Data {
-      get { return requestCase_ == RequestOneofCase.Data ? (global::SC2APIProtocol.RequestData) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestData Data
+    {
+      get { return requestCase_ == RequestOneofCase.Data ? (global::SC2APIProtocol.RequestData)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Data;
       }
@@ -695,9 +739,11 @@ namespace SC2APIProtocol {
     /// Additional methods for inspecting game state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestQuery Query {
-      get { return requestCase_ == RequestOneofCase.Query ? (global::SC2APIProtocol.RequestQuery) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestQuery Query
+    {
+      get { return requestCase_ == RequestOneofCase.Query ? (global::SC2APIProtocol.RequestQuery)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Query;
       }
@@ -709,9 +755,11 @@ namespace SC2APIProtocol {
     /// Generates a replay.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestSaveReplay SaveReplay {
-      get { return requestCase_ == RequestOneofCase.SaveReplay ? (global::SC2APIProtocol.RequestSaveReplay) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestSaveReplay SaveReplay
+    {
+      get { return requestCase_ == RequestOneofCase.SaveReplay ? (global::SC2APIProtocol.RequestSaveReplay)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.SaveReplay;
       }
@@ -723,9 +771,11 @@ namespace SC2APIProtocol {
     /// Other.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestReplayInfo ReplayInfo {
-      get { return requestCase_ == RequestOneofCase.ReplayInfo ? (global::SC2APIProtocol.RequestReplayInfo) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestReplayInfo ReplayInfo
+    {
+      get { return requestCase_ == RequestOneofCase.ReplayInfo ? (global::SC2APIProtocol.RequestReplayInfo)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.ReplayInfo;
       }
@@ -737,9 +787,11 @@ namespace SC2APIProtocol {
     /// Returns directory of maps that can be played on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestAvailableMaps AvailableMaps {
-      get { return requestCase_ == RequestOneofCase.AvailableMaps ? (global::SC2APIProtocol.RequestAvailableMaps) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestAvailableMaps AvailableMaps
+    {
+      get { return requestCase_ == RequestOneofCase.AvailableMaps ? (global::SC2APIProtocol.RequestAvailableMaps)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.AvailableMaps;
       }
@@ -751,9 +803,11 @@ namespace SC2APIProtocol {
     /// Saves binary map data to the local temp directory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestSaveMap SaveMap {
-      get { return requestCase_ == RequestOneofCase.SaveMap ? (global::SC2APIProtocol.RequestSaveMap) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestSaveMap SaveMap
+    {
+      get { return requestCase_ == RequestOneofCase.SaveMap ? (global::SC2APIProtocol.RequestSaveMap)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.SaveMap;
       }
@@ -765,9 +819,11 @@ namespace SC2APIProtocol {
     /// Debugging
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestPing Ping {
-      get { return requestCase_ == RequestOneofCase.Ping ? (global::SC2APIProtocol.RequestPing) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestPing Ping
+    {
+      get { return requestCase_ == RequestOneofCase.Ping ? (global::SC2APIProtocol.RequestPing)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Ping;
       }
@@ -779,9 +835,11 @@ namespace SC2APIProtocol {
     /// Display debug information and execute debug actions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.RequestDebug Debug {
-      get { return requestCase_ == RequestOneofCase.Debug ? (global::SC2APIProtocol.RequestDebug) request_ : null; }
-      set {
+    public global::SC2APIProtocol.RequestDebug Debug
+    {
+      get { return requestCase_ == RequestOneofCase.Debug ? (global::SC2APIProtocol.RequestDebug)request_ : null; }
+      set
+      {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Debug;
       }
@@ -789,7 +847,8 @@ namespace SC2APIProtocol {
 
     private object request_;
     /// <summary>Enum of possible cases for the "request" oneof.</summary>
-    public enum RequestOneofCase {
+    public enum RequestOneofCase
+    {
       None = 0,
       CreateGame = 1,
       JoinGame = 2,
@@ -815,27 +874,33 @@ namespace SC2APIProtocol {
     }
     private RequestOneofCase requestCase_ = RequestOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestOneofCase RequestCase {
+    public RequestOneofCase RequestCase
+    {
       get { return requestCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearRequest() {
+    public void ClearRequest()
+    {
       requestCase_ = RequestOneofCase.None;
       request_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as Request);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Request other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(Request other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(CreateGame, other.CreateGame)) return false;
@@ -864,7 +929,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (requestCase_ == RequestOneofCase.CreateGame) hash ^= CreateGame.GetHashCode();
       if (requestCase_ == RequestOneofCase.JoinGame) hash ^= JoinGame.GetHashCode();
@@ -887,309 +953,381 @@ namespace SC2APIProtocol {
       if (requestCase_ == RequestOneofCase.SaveMap) hash ^= SaveMap.GetHashCode();
       if (requestCase_ == RequestOneofCase.Ping) hash ^= Ping.GetHashCode();
       if (requestCase_ == RequestOneofCase.Debug) hash ^= Debug.GetHashCode();
-      hash ^= (int) requestCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)requestCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (requestCase_ == RequestOneofCase.CreateGame) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (requestCase_ == RequestOneofCase.CreateGame)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(CreateGame);
       }
-      if (requestCase_ == RequestOneofCase.JoinGame) {
+      if (requestCase_ == RequestOneofCase.JoinGame)
+      {
         output.WriteRawTag(18);
         output.WriteMessage(JoinGame);
       }
-      if (requestCase_ == RequestOneofCase.RestartGame) {
+      if (requestCase_ == RequestOneofCase.RestartGame)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(RestartGame);
       }
-      if (requestCase_ == RequestOneofCase.StartReplay) {
+      if (requestCase_ == RequestOneofCase.StartReplay)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(StartReplay);
       }
-      if (requestCase_ == RequestOneofCase.LeaveGame) {
+      if (requestCase_ == RequestOneofCase.LeaveGame)
+      {
         output.WriteRawTag(42);
         output.WriteMessage(LeaveGame);
       }
-      if (requestCase_ == RequestOneofCase.QuickSave) {
+      if (requestCase_ == RequestOneofCase.QuickSave)
+      {
         output.WriteRawTag(50);
         output.WriteMessage(QuickSave);
       }
-      if (requestCase_ == RequestOneofCase.QuickLoad) {
+      if (requestCase_ == RequestOneofCase.QuickLoad)
+      {
         output.WriteRawTag(58);
         output.WriteMessage(QuickLoad);
       }
-      if (requestCase_ == RequestOneofCase.Quit) {
+      if (requestCase_ == RequestOneofCase.Quit)
+      {
         output.WriteRawTag(66);
         output.WriteMessage(Quit);
       }
-      if (requestCase_ == RequestOneofCase.GameInfo) {
+      if (requestCase_ == RequestOneofCase.GameInfo)
+      {
         output.WriteRawTag(74);
         output.WriteMessage(GameInfo);
       }
-      if (requestCase_ == RequestOneofCase.Observation) {
+      if (requestCase_ == RequestOneofCase.Observation)
+      {
         output.WriteRawTag(82);
         output.WriteMessage(Observation);
       }
-      if (requestCase_ == RequestOneofCase.Action) {
+      if (requestCase_ == RequestOneofCase.Action)
+      {
         output.WriteRawTag(90);
         output.WriteMessage(Action);
       }
-      if (requestCase_ == RequestOneofCase.Step) {
+      if (requestCase_ == RequestOneofCase.Step)
+      {
         output.WriteRawTag(98);
         output.WriteMessage(Step);
       }
-      if (requestCase_ == RequestOneofCase.Data) {
+      if (requestCase_ == RequestOneofCase.Data)
+      {
         output.WriteRawTag(106);
         output.WriteMessage(Data);
       }
-      if (requestCase_ == RequestOneofCase.Query) {
+      if (requestCase_ == RequestOneofCase.Query)
+      {
         output.WriteRawTag(114);
         output.WriteMessage(Query);
       }
-      if (requestCase_ == RequestOneofCase.SaveReplay) {
+      if (requestCase_ == RequestOneofCase.SaveReplay)
+      {
         output.WriteRawTag(122);
         output.WriteMessage(SaveReplay);
       }
-      if (requestCase_ == RequestOneofCase.ReplayInfo) {
+      if (requestCase_ == RequestOneofCase.ReplayInfo)
+      {
         output.WriteRawTag(130, 1);
         output.WriteMessage(ReplayInfo);
       }
-      if (requestCase_ == RequestOneofCase.AvailableMaps) {
+      if (requestCase_ == RequestOneofCase.AvailableMaps)
+      {
         output.WriteRawTag(138, 1);
         output.WriteMessage(AvailableMaps);
       }
-      if (requestCase_ == RequestOneofCase.SaveMap) {
+      if (requestCase_ == RequestOneofCase.SaveMap)
+      {
         output.WriteRawTag(146, 1);
         output.WriteMessage(SaveMap);
       }
-      if (requestCase_ == RequestOneofCase.Ping) {
+      if (requestCase_ == RequestOneofCase.Ping)
+      {
         output.WriteRawTag(154, 1);
         output.WriteMessage(Ping);
       }
-      if (requestCase_ == RequestOneofCase.Debug) {
+      if (requestCase_ == RequestOneofCase.Debug)
+      {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Debug);
       }
-      if (requestCase_ == RequestOneofCase.ObsAction) {
+      if (requestCase_ == RequestOneofCase.ObsAction)
+      {
         output.WriteRawTag(170, 1);
         output.WriteMessage(ObsAction);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (requestCase_ == RequestOneofCase.CreateGame) {
+      if (requestCase_ == RequestOneofCase.CreateGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateGame);
       }
-      if (requestCase_ == RequestOneofCase.JoinGame) {
+      if (requestCase_ == RequestOneofCase.JoinGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JoinGame);
       }
-      if (requestCase_ == RequestOneofCase.RestartGame) {
+      if (requestCase_ == RequestOneofCase.RestartGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RestartGame);
       }
-      if (requestCase_ == RequestOneofCase.StartReplay) {
+      if (requestCase_ == RequestOneofCase.StartReplay)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartReplay);
       }
-      if (requestCase_ == RequestOneofCase.LeaveGame) {
+      if (requestCase_ == RequestOneofCase.LeaveGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LeaveGame);
       }
-      if (requestCase_ == RequestOneofCase.QuickSave) {
+      if (requestCase_ == RequestOneofCase.QuickSave)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuickSave);
       }
-      if (requestCase_ == RequestOneofCase.QuickLoad) {
+      if (requestCase_ == RequestOneofCase.QuickLoad)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuickLoad);
       }
-      if (requestCase_ == RequestOneofCase.Quit) {
+      if (requestCase_ == RequestOneofCase.Quit)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Quit);
       }
-      if (requestCase_ == RequestOneofCase.GameInfo) {
+      if (requestCase_ == RequestOneofCase.GameInfo)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameInfo);
       }
-      if (requestCase_ == RequestOneofCase.Observation) {
+      if (requestCase_ == RequestOneofCase.Observation)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Observation);
       }
-      if (requestCase_ == RequestOneofCase.Action) {
+      if (requestCase_ == RequestOneofCase.Action)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Action);
       }
-      if (requestCase_ == RequestOneofCase.ObsAction) {
+      if (requestCase_ == RequestOneofCase.ObsAction)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ObsAction);
       }
-      if (requestCase_ == RequestOneofCase.Step) {
+      if (requestCase_ == RequestOneofCase.Step)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Step);
       }
-      if (requestCase_ == RequestOneofCase.Data) {
+      if (requestCase_ == RequestOneofCase.Data)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      if (requestCase_ == RequestOneofCase.Query) {
+      if (requestCase_ == RequestOneofCase.Query)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Query);
       }
-      if (requestCase_ == RequestOneofCase.SaveReplay) {
+      if (requestCase_ == RequestOneofCase.SaveReplay)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SaveReplay);
       }
-      if (requestCase_ == RequestOneofCase.ReplayInfo) {
+      if (requestCase_ == RequestOneofCase.ReplayInfo)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReplayInfo);
       }
-      if (requestCase_ == RequestOneofCase.AvailableMaps) {
+      if (requestCase_ == RequestOneofCase.AvailableMaps)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AvailableMaps);
       }
-      if (requestCase_ == RequestOneofCase.SaveMap) {
+      if (requestCase_ == RequestOneofCase.SaveMap)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SaveMap);
       }
-      if (requestCase_ == RequestOneofCase.Ping) {
+      if (requestCase_ == RequestOneofCase.Ping)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Ping);
       }
-      if (requestCase_ == RequestOneofCase.Debug) {
+      if (requestCase_ == RequestOneofCase.Debug)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Debug);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Request other) {
-      if (other == null) {
+    public void MergeFrom(Request other)
+    {
+      if (other == null)
+      {
         return;
       }
-      switch (other.RequestCase) {
+      switch (other.RequestCase)
+      {
         case RequestOneofCase.CreateGame:
-          if (CreateGame == null) {
+          if (CreateGame == null)
+          {
             CreateGame = new global::SC2APIProtocol.RequestCreateGame();
           }
           CreateGame.MergeFrom(other.CreateGame);
           break;
         case RequestOneofCase.JoinGame:
-          if (JoinGame == null) {
+          if (JoinGame == null)
+          {
             JoinGame = new global::SC2APIProtocol.RequestJoinGame();
           }
           JoinGame.MergeFrom(other.JoinGame);
           break;
         case RequestOneofCase.RestartGame:
-          if (RestartGame == null) {
+          if (RestartGame == null)
+          {
             RestartGame = new global::SC2APIProtocol.RequestRestartGame();
           }
           RestartGame.MergeFrom(other.RestartGame);
           break;
         case RequestOneofCase.StartReplay:
-          if (StartReplay == null) {
+          if (StartReplay == null)
+          {
             StartReplay = new global::SC2APIProtocol.RequestStartReplay();
           }
           StartReplay.MergeFrom(other.StartReplay);
           break;
         case RequestOneofCase.LeaveGame:
-          if (LeaveGame == null) {
+          if (LeaveGame == null)
+          {
             LeaveGame = new global::SC2APIProtocol.RequestLeaveGame();
           }
           LeaveGame.MergeFrom(other.LeaveGame);
           break;
         case RequestOneofCase.QuickSave:
-          if (QuickSave == null) {
+          if (QuickSave == null)
+          {
             QuickSave = new global::SC2APIProtocol.RequestQuickSave();
           }
           QuickSave.MergeFrom(other.QuickSave);
           break;
         case RequestOneofCase.QuickLoad:
-          if (QuickLoad == null) {
+          if (QuickLoad == null)
+          {
             QuickLoad = new global::SC2APIProtocol.RequestQuickLoad();
           }
           QuickLoad.MergeFrom(other.QuickLoad);
           break;
         case RequestOneofCase.Quit:
-          if (Quit == null) {
+          if (Quit == null)
+          {
             Quit = new global::SC2APIProtocol.RequestQuit();
           }
           Quit.MergeFrom(other.Quit);
           break;
         case RequestOneofCase.GameInfo:
-          if (GameInfo == null) {
+          if (GameInfo == null)
+          {
             GameInfo = new global::SC2APIProtocol.RequestGameInfo();
           }
           GameInfo.MergeFrom(other.GameInfo);
           break;
         case RequestOneofCase.Observation:
-          if (Observation == null) {
+          if (Observation == null)
+          {
             Observation = new global::SC2APIProtocol.RequestObservation();
           }
           Observation.MergeFrom(other.Observation);
           break;
         case RequestOneofCase.Action:
-          if (Action == null) {
+          if (Action == null)
+          {
             Action = new global::SC2APIProtocol.RequestAction();
           }
           Action.MergeFrom(other.Action);
           break;
         case RequestOneofCase.ObsAction:
-          if (ObsAction == null) {
+          if (ObsAction == null)
+          {
             ObsAction = new global::SC2APIProtocol.RequestObserverAction();
           }
           ObsAction.MergeFrom(other.ObsAction);
           break;
         case RequestOneofCase.Step:
-          if (Step == null) {
+          if (Step == null)
+          {
             Step = new global::SC2APIProtocol.RequestStep();
           }
           Step.MergeFrom(other.Step);
           break;
         case RequestOneofCase.Data:
-          if (Data == null) {
+          if (Data == null)
+          {
             Data = new global::SC2APIProtocol.RequestData();
           }
           Data.MergeFrom(other.Data);
           break;
         case RequestOneofCase.Query:
-          if (Query == null) {
+          if (Query == null)
+          {
             Query = new global::SC2APIProtocol.RequestQuery();
           }
           Query.MergeFrom(other.Query);
           break;
         case RequestOneofCase.SaveReplay:
-          if (SaveReplay == null) {
+          if (SaveReplay == null)
+          {
             SaveReplay = new global::SC2APIProtocol.RequestSaveReplay();
           }
           SaveReplay.MergeFrom(other.SaveReplay);
           break;
         case RequestOneofCase.ReplayInfo:
-          if (ReplayInfo == null) {
+          if (ReplayInfo == null)
+          {
             ReplayInfo = new global::SC2APIProtocol.RequestReplayInfo();
           }
           ReplayInfo.MergeFrom(other.ReplayInfo);
           break;
         case RequestOneofCase.AvailableMaps:
-          if (AvailableMaps == null) {
+          if (AvailableMaps == null)
+          {
             AvailableMaps = new global::SC2APIProtocol.RequestAvailableMaps();
           }
           AvailableMaps.MergeFrom(other.AvailableMaps);
           break;
         case RequestOneofCase.SaveMap:
-          if (SaveMap == null) {
+          if (SaveMap == null)
+          {
             SaveMap = new global::SC2APIProtocol.RequestSaveMap();
           }
           SaveMap.MergeFrom(other.SaveMap);
           break;
         case RequestOneofCase.Ping:
-          if (Ping == null) {
+          if (Ping == null)
+          {
             Ping = new global::SC2APIProtocol.RequestPing();
           }
           Ping.MergeFrom(other.Ping);
           break;
         case RequestOneofCase.Debug:
-          if (Debug == null) {
+          if (Debug == null)
+          {
             Debug = new global::SC2APIProtocol.RequestDebug();
           }
           Debug.MergeFrom(other.Debug);
@@ -1200,236 +1338,287 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            global::SC2APIProtocol.RequestCreateGame subBuilder = new global::SC2APIProtocol.RequestCreateGame();
-            if (requestCase_ == RequestOneofCase.CreateGame) {
-              subBuilder.MergeFrom(CreateGame);
+          case 10:
+            {
+              global::SC2APIProtocol.RequestCreateGame subBuilder = new global::SC2APIProtocol.RequestCreateGame();
+              if (requestCase_ == RequestOneofCase.CreateGame)
+              {
+                subBuilder.MergeFrom(CreateGame);
+              }
+              input.ReadMessage(subBuilder);
+              CreateGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            CreateGame = subBuilder;
-            break;
-          }
-          case 18: {
-            global::SC2APIProtocol.RequestJoinGame subBuilder = new global::SC2APIProtocol.RequestJoinGame();
-            if (requestCase_ == RequestOneofCase.JoinGame) {
-              subBuilder.MergeFrom(JoinGame);
+          case 18:
+            {
+              global::SC2APIProtocol.RequestJoinGame subBuilder = new global::SC2APIProtocol.RequestJoinGame();
+              if (requestCase_ == RequestOneofCase.JoinGame)
+              {
+                subBuilder.MergeFrom(JoinGame);
+              }
+              input.ReadMessage(subBuilder);
+              JoinGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            JoinGame = subBuilder;
-            break;
-          }
-          case 26: {
-            global::SC2APIProtocol.RequestRestartGame subBuilder = new global::SC2APIProtocol.RequestRestartGame();
-            if (requestCase_ == RequestOneofCase.RestartGame) {
-              subBuilder.MergeFrom(RestartGame);
+          case 26:
+            {
+              global::SC2APIProtocol.RequestRestartGame subBuilder = new global::SC2APIProtocol.RequestRestartGame();
+              if (requestCase_ == RequestOneofCase.RestartGame)
+              {
+                subBuilder.MergeFrom(RestartGame);
+              }
+              input.ReadMessage(subBuilder);
+              RestartGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            RestartGame = subBuilder;
-            break;
-          }
-          case 34: {
-            global::SC2APIProtocol.RequestStartReplay subBuilder = new global::SC2APIProtocol.RequestStartReplay();
-            if (requestCase_ == RequestOneofCase.StartReplay) {
-              subBuilder.MergeFrom(StartReplay);
+          case 34:
+            {
+              global::SC2APIProtocol.RequestStartReplay subBuilder = new global::SC2APIProtocol.RequestStartReplay();
+              if (requestCase_ == RequestOneofCase.StartReplay)
+              {
+                subBuilder.MergeFrom(StartReplay);
+              }
+              input.ReadMessage(subBuilder);
+              StartReplay = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            StartReplay = subBuilder;
-            break;
-          }
-          case 42: {
-            global::SC2APIProtocol.RequestLeaveGame subBuilder = new global::SC2APIProtocol.RequestLeaveGame();
-            if (requestCase_ == RequestOneofCase.LeaveGame) {
-              subBuilder.MergeFrom(LeaveGame);
+          case 42:
+            {
+              global::SC2APIProtocol.RequestLeaveGame subBuilder = new global::SC2APIProtocol.RequestLeaveGame();
+              if (requestCase_ == RequestOneofCase.LeaveGame)
+              {
+                subBuilder.MergeFrom(LeaveGame);
+              }
+              input.ReadMessage(subBuilder);
+              LeaveGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            LeaveGame = subBuilder;
-            break;
-          }
-          case 50: {
-            global::SC2APIProtocol.RequestQuickSave subBuilder = new global::SC2APIProtocol.RequestQuickSave();
-            if (requestCase_ == RequestOneofCase.QuickSave) {
-              subBuilder.MergeFrom(QuickSave);
+          case 50:
+            {
+              global::SC2APIProtocol.RequestQuickSave subBuilder = new global::SC2APIProtocol.RequestQuickSave();
+              if (requestCase_ == RequestOneofCase.QuickSave)
+              {
+                subBuilder.MergeFrom(QuickSave);
+              }
+              input.ReadMessage(subBuilder);
+              QuickSave = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            QuickSave = subBuilder;
-            break;
-          }
-          case 58: {
-            global::SC2APIProtocol.RequestQuickLoad subBuilder = new global::SC2APIProtocol.RequestQuickLoad();
-            if (requestCase_ == RequestOneofCase.QuickLoad) {
-              subBuilder.MergeFrom(QuickLoad);
+          case 58:
+            {
+              global::SC2APIProtocol.RequestQuickLoad subBuilder = new global::SC2APIProtocol.RequestQuickLoad();
+              if (requestCase_ == RequestOneofCase.QuickLoad)
+              {
+                subBuilder.MergeFrom(QuickLoad);
+              }
+              input.ReadMessage(subBuilder);
+              QuickLoad = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            QuickLoad = subBuilder;
-            break;
-          }
-          case 66: {
-            global::SC2APIProtocol.RequestQuit subBuilder = new global::SC2APIProtocol.RequestQuit();
-            if (requestCase_ == RequestOneofCase.Quit) {
-              subBuilder.MergeFrom(Quit);
+          case 66:
+            {
+              global::SC2APIProtocol.RequestQuit subBuilder = new global::SC2APIProtocol.RequestQuit();
+              if (requestCase_ == RequestOneofCase.Quit)
+              {
+                subBuilder.MergeFrom(Quit);
+              }
+              input.ReadMessage(subBuilder);
+              Quit = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Quit = subBuilder;
-            break;
-          }
-          case 74: {
-            global::SC2APIProtocol.RequestGameInfo subBuilder = new global::SC2APIProtocol.RequestGameInfo();
-            if (requestCase_ == RequestOneofCase.GameInfo) {
-              subBuilder.MergeFrom(GameInfo);
+          case 74:
+            {
+              global::SC2APIProtocol.RequestGameInfo subBuilder = new global::SC2APIProtocol.RequestGameInfo();
+              if (requestCase_ == RequestOneofCase.GameInfo)
+              {
+                subBuilder.MergeFrom(GameInfo);
+              }
+              input.ReadMessage(subBuilder);
+              GameInfo = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            GameInfo = subBuilder;
-            break;
-          }
-          case 82: {
-            global::SC2APIProtocol.RequestObservation subBuilder = new global::SC2APIProtocol.RequestObservation();
-            if (requestCase_ == RequestOneofCase.Observation) {
-              subBuilder.MergeFrom(Observation);
+          case 82:
+            {
+              global::SC2APIProtocol.RequestObservation subBuilder = new global::SC2APIProtocol.RequestObservation();
+              if (requestCase_ == RequestOneofCase.Observation)
+              {
+                subBuilder.MergeFrom(Observation);
+              }
+              input.ReadMessage(subBuilder);
+              Observation = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Observation = subBuilder;
-            break;
-          }
-          case 90: {
-            global::SC2APIProtocol.RequestAction subBuilder = new global::SC2APIProtocol.RequestAction();
-            if (requestCase_ == RequestOneofCase.Action) {
-              subBuilder.MergeFrom(Action);
+          case 90:
+            {
+              global::SC2APIProtocol.RequestAction subBuilder = new global::SC2APIProtocol.RequestAction();
+              if (requestCase_ == RequestOneofCase.Action)
+              {
+                subBuilder.MergeFrom(Action);
+              }
+              input.ReadMessage(subBuilder);
+              Action = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Action = subBuilder;
-            break;
-          }
-          case 98: {
-            global::SC2APIProtocol.RequestStep subBuilder = new global::SC2APIProtocol.RequestStep();
-            if (requestCase_ == RequestOneofCase.Step) {
-              subBuilder.MergeFrom(Step);
+          case 98:
+            {
+              global::SC2APIProtocol.RequestStep subBuilder = new global::SC2APIProtocol.RequestStep();
+              if (requestCase_ == RequestOneofCase.Step)
+              {
+                subBuilder.MergeFrom(Step);
+              }
+              input.ReadMessage(subBuilder);
+              Step = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Step = subBuilder;
-            break;
-          }
-          case 106: {
-            global::SC2APIProtocol.RequestData subBuilder = new global::SC2APIProtocol.RequestData();
-            if (requestCase_ == RequestOneofCase.Data) {
-              subBuilder.MergeFrom(Data);
+          case 106:
+            {
+              global::SC2APIProtocol.RequestData subBuilder = new global::SC2APIProtocol.RequestData();
+              if (requestCase_ == RequestOneofCase.Data)
+              {
+                subBuilder.MergeFrom(Data);
+              }
+              input.ReadMessage(subBuilder);
+              Data = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Data = subBuilder;
-            break;
-          }
-          case 114: {
-            global::SC2APIProtocol.RequestQuery subBuilder = new global::SC2APIProtocol.RequestQuery();
-            if (requestCase_ == RequestOneofCase.Query) {
-              subBuilder.MergeFrom(Query);
+          case 114:
+            {
+              global::SC2APIProtocol.RequestQuery subBuilder = new global::SC2APIProtocol.RequestQuery();
+              if (requestCase_ == RequestOneofCase.Query)
+              {
+                subBuilder.MergeFrom(Query);
+              }
+              input.ReadMessage(subBuilder);
+              Query = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Query = subBuilder;
-            break;
-          }
-          case 122: {
-            global::SC2APIProtocol.RequestSaveReplay subBuilder = new global::SC2APIProtocol.RequestSaveReplay();
-            if (requestCase_ == RequestOneofCase.SaveReplay) {
-              subBuilder.MergeFrom(SaveReplay);
+          case 122:
+            {
+              global::SC2APIProtocol.RequestSaveReplay subBuilder = new global::SC2APIProtocol.RequestSaveReplay();
+              if (requestCase_ == RequestOneofCase.SaveReplay)
+              {
+                subBuilder.MergeFrom(SaveReplay);
+              }
+              input.ReadMessage(subBuilder);
+              SaveReplay = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            SaveReplay = subBuilder;
-            break;
-          }
-          case 130: {
-            global::SC2APIProtocol.RequestReplayInfo subBuilder = new global::SC2APIProtocol.RequestReplayInfo();
-            if (requestCase_ == RequestOneofCase.ReplayInfo) {
-              subBuilder.MergeFrom(ReplayInfo);
+          case 130:
+            {
+              global::SC2APIProtocol.RequestReplayInfo subBuilder = new global::SC2APIProtocol.RequestReplayInfo();
+              if (requestCase_ == RequestOneofCase.ReplayInfo)
+              {
+                subBuilder.MergeFrom(ReplayInfo);
+              }
+              input.ReadMessage(subBuilder);
+              ReplayInfo = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            ReplayInfo = subBuilder;
-            break;
-          }
-          case 138: {
-            global::SC2APIProtocol.RequestAvailableMaps subBuilder = new global::SC2APIProtocol.RequestAvailableMaps();
-            if (requestCase_ == RequestOneofCase.AvailableMaps) {
-              subBuilder.MergeFrom(AvailableMaps);
+          case 138:
+            {
+              global::SC2APIProtocol.RequestAvailableMaps subBuilder = new global::SC2APIProtocol.RequestAvailableMaps();
+              if (requestCase_ == RequestOneofCase.AvailableMaps)
+              {
+                subBuilder.MergeFrom(AvailableMaps);
+              }
+              input.ReadMessage(subBuilder);
+              AvailableMaps = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            AvailableMaps = subBuilder;
-            break;
-          }
-          case 146: {
-            global::SC2APIProtocol.RequestSaveMap subBuilder = new global::SC2APIProtocol.RequestSaveMap();
-            if (requestCase_ == RequestOneofCase.SaveMap) {
-              subBuilder.MergeFrom(SaveMap);
+          case 146:
+            {
+              global::SC2APIProtocol.RequestSaveMap subBuilder = new global::SC2APIProtocol.RequestSaveMap();
+              if (requestCase_ == RequestOneofCase.SaveMap)
+              {
+                subBuilder.MergeFrom(SaveMap);
+              }
+              input.ReadMessage(subBuilder);
+              SaveMap = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            SaveMap = subBuilder;
-            break;
-          }
-          case 154: {
-            global::SC2APIProtocol.RequestPing subBuilder = new global::SC2APIProtocol.RequestPing();
-            if (requestCase_ == RequestOneofCase.Ping) {
-              subBuilder.MergeFrom(Ping);
+          case 154:
+            {
+              global::SC2APIProtocol.RequestPing subBuilder = new global::SC2APIProtocol.RequestPing();
+              if (requestCase_ == RequestOneofCase.Ping)
+              {
+                subBuilder.MergeFrom(Ping);
+              }
+              input.ReadMessage(subBuilder);
+              Ping = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Ping = subBuilder;
-            break;
-          }
-          case 162: {
-            global::SC2APIProtocol.RequestDebug subBuilder = new global::SC2APIProtocol.RequestDebug();
-            if (requestCase_ == RequestOneofCase.Debug) {
-              subBuilder.MergeFrom(Debug);
+          case 162:
+            {
+              global::SC2APIProtocol.RequestDebug subBuilder = new global::SC2APIProtocol.RequestDebug();
+              if (requestCase_ == RequestOneofCase.Debug)
+              {
+                subBuilder.MergeFrom(Debug);
+              }
+              input.ReadMessage(subBuilder);
+              Debug = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Debug = subBuilder;
-            break;
-          }
-          case 170: {
-            global::SC2APIProtocol.RequestObserverAction subBuilder = new global::SC2APIProtocol.RequestObserverAction();
-            if (requestCase_ == RequestOneofCase.ObsAction) {
-              subBuilder.MergeFrom(ObsAction);
+          case 170:
+            {
+              global::SC2APIProtocol.RequestObserverAction subBuilder = new global::SC2APIProtocol.RequestObserverAction();
+              if (requestCase_ == RequestOneofCase.ObsAction)
+              {
+                subBuilder.MergeFrom(ObsAction);
+              }
+              input.ReadMessage(subBuilder);
+              ObsAction = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            ObsAction = subBuilder;
-            break;
-          }
         }
       }
     }
 
   }
 
-  public sealed partial class Response : pb::IMessage<Response> {
+  public sealed partial class Response : pb::IMessage<Response>
+  {
     private static readonly pb::MessageParser<Response> _parser = new pb::MessageParser<Response>(() => new Response());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Response> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Response() {
+    public Response()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Response(Response other) : this() {
+    public Response(Response other) : this()
+    {
       error_ = other.error_.Clone();
       status_ = other.status_;
-      switch (other.ResponseCase) {
+      switch (other.ResponseCase)
+      {
         case ResponseOneofCase.CreateGame:
           CreateGame = other.CreateGame.Clone();
           break;
@@ -1499,16 +1688,19 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Response Clone() {
+    public Response Clone()
+    {
       return new Response(this);
     }
 
     /// <summary>Field number for the "create_game" field.</summary>
     public const int CreateGameFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseCreateGame CreateGame {
-      get { return responseCase_ == ResponseOneofCase.CreateGame ? (global::SC2APIProtocol.ResponseCreateGame) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseCreateGame CreateGame
+    {
+      get { return responseCase_ == ResponseOneofCase.CreateGame ? (global::SC2APIProtocol.ResponseCreateGame)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.CreateGame;
       }
@@ -1517,9 +1709,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "join_game" field.</summary>
     public const int JoinGameFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseJoinGame JoinGame {
-      get { return responseCase_ == ResponseOneofCase.JoinGame ? (global::SC2APIProtocol.ResponseJoinGame) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseJoinGame JoinGame
+    {
+      get { return responseCase_ == ResponseOneofCase.JoinGame ? (global::SC2APIProtocol.ResponseJoinGame)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.JoinGame;
       }
@@ -1528,9 +1722,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "restart_game" field.</summary>
     public const int RestartGameFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseRestartGame RestartGame {
-      get { return responseCase_ == ResponseOneofCase.RestartGame ? (global::SC2APIProtocol.ResponseRestartGame) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseRestartGame RestartGame
+    {
+      get { return responseCase_ == ResponseOneofCase.RestartGame ? (global::SC2APIProtocol.ResponseRestartGame)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.RestartGame;
       }
@@ -1539,9 +1735,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "start_replay" field.</summary>
     public const int StartReplayFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseStartReplay StartReplay {
-      get { return responseCase_ == ResponseOneofCase.StartReplay ? (global::SC2APIProtocol.ResponseStartReplay) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseStartReplay StartReplay
+    {
+      get { return responseCase_ == ResponseOneofCase.StartReplay ? (global::SC2APIProtocol.ResponseStartReplay)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.StartReplay;
       }
@@ -1550,9 +1748,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "leave_game" field.</summary>
     public const int LeaveGameFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseLeaveGame LeaveGame {
-      get { return responseCase_ == ResponseOneofCase.LeaveGame ? (global::SC2APIProtocol.ResponseLeaveGame) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseLeaveGame LeaveGame
+    {
+      get { return responseCase_ == ResponseOneofCase.LeaveGame ? (global::SC2APIProtocol.ResponseLeaveGame)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.LeaveGame;
       }
@@ -1561,9 +1761,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "quick_save" field.</summary>
     public const int QuickSaveFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseQuickSave QuickSave {
-      get { return responseCase_ == ResponseOneofCase.QuickSave ? (global::SC2APIProtocol.ResponseQuickSave) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseQuickSave QuickSave
+    {
+      get { return responseCase_ == ResponseOneofCase.QuickSave ? (global::SC2APIProtocol.ResponseQuickSave)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.QuickSave;
       }
@@ -1572,9 +1774,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "quick_load" field.</summary>
     public const int QuickLoadFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseQuickLoad QuickLoad {
-      get { return responseCase_ == ResponseOneofCase.QuickLoad ? (global::SC2APIProtocol.ResponseQuickLoad) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseQuickLoad QuickLoad
+    {
+      get { return responseCase_ == ResponseOneofCase.QuickLoad ? (global::SC2APIProtocol.ResponseQuickLoad)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.QuickLoad;
       }
@@ -1583,9 +1787,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "quit" field.</summary>
     public const int QuitFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseQuit Quit {
-      get { return responseCase_ == ResponseOneofCase.Quit ? (global::SC2APIProtocol.ResponseQuit) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseQuit Quit
+    {
+      get { return responseCase_ == ResponseOneofCase.Quit ? (global::SC2APIProtocol.ResponseQuit)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Quit;
       }
@@ -1594,9 +1800,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "game_info" field.</summary>
     public const int GameInfoFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseGameInfo GameInfo {
-      get { return responseCase_ == ResponseOneofCase.GameInfo ? (global::SC2APIProtocol.ResponseGameInfo) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseGameInfo GameInfo
+    {
+      get { return responseCase_ == ResponseOneofCase.GameInfo ? (global::SC2APIProtocol.ResponseGameInfo)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.GameInfo;
       }
@@ -1605,9 +1813,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "observation" field.</summary>
     public const int ObservationFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseObservation Observation {
-      get { return responseCase_ == ResponseOneofCase.Observation ? (global::SC2APIProtocol.ResponseObservation) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseObservation Observation
+    {
+      get { return responseCase_ == ResponseOneofCase.Observation ? (global::SC2APIProtocol.ResponseObservation)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Observation;
       }
@@ -1616,9 +1826,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "action" field.</summary>
     public const int ActionFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseAction Action {
-      get { return responseCase_ == ResponseOneofCase.Action ? (global::SC2APIProtocol.ResponseAction) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseAction Action
+    {
+      get { return responseCase_ == ResponseOneofCase.Action ? (global::SC2APIProtocol.ResponseAction)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Action;
       }
@@ -1627,9 +1839,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "obs_action" field.</summary>
     public const int ObsActionFieldNumber = 21;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseObserverAction ObsAction {
-      get { return responseCase_ == ResponseOneofCase.ObsAction ? (global::SC2APIProtocol.ResponseObserverAction) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseObserverAction ObsAction
+    {
+      get { return responseCase_ == ResponseOneofCase.ObsAction ? (global::SC2APIProtocol.ResponseObserverAction)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.ObsAction;
       }
@@ -1638,9 +1852,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "step" field.</summary>
     public const int StepFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseStep Step {
-      get { return responseCase_ == ResponseOneofCase.Step ? (global::SC2APIProtocol.ResponseStep) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseStep Step
+    {
+      get { return responseCase_ == ResponseOneofCase.Step ? (global::SC2APIProtocol.ResponseStep)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Step;
       }
@@ -1649,9 +1865,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseData Data {
-      get { return responseCase_ == ResponseOneofCase.Data ? (global::SC2APIProtocol.ResponseData) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseData Data
+    {
+      get { return responseCase_ == ResponseOneofCase.Data ? (global::SC2APIProtocol.ResponseData)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Data;
       }
@@ -1660,9 +1878,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "query" field.</summary>
     public const int QueryFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseQuery Query {
-      get { return responseCase_ == ResponseOneofCase.Query ? (global::SC2APIProtocol.ResponseQuery) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseQuery Query
+    {
+      get { return responseCase_ == ResponseOneofCase.Query ? (global::SC2APIProtocol.ResponseQuery)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Query;
       }
@@ -1671,9 +1891,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "save_replay" field.</summary>
     public const int SaveReplayFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseSaveReplay SaveReplay {
-      get { return responseCase_ == ResponseOneofCase.SaveReplay ? (global::SC2APIProtocol.ResponseSaveReplay) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseSaveReplay SaveReplay
+    {
+      get { return responseCase_ == ResponseOneofCase.SaveReplay ? (global::SC2APIProtocol.ResponseSaveReplay)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.SaveReplay;
       }
@@ -1682,9 +1904,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "replay_info" field.</summary>
     public const int ReplayInfoFieldNumber = 16;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseReplayInfo ReplayInfo {
-      get { return responseCase_ == ResponseOneofCase.ReplayInfo ? (global::SC2APIProtocol.ResponseReplayInfo) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseReplayInfo ReplayInfo
+    {
+      get { return responseCase_ == ResponseOneofCase.ReplayInfo ? (global::SC2APIProtocol.ResponseReplayInfo)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.ReplayInfo;
       }
@@ -1693,9 +1917,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "available_maps" field.</summary>
     public const int AvailableMapsFieldNumber = 17;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseAvailableMaps AvailableMaps {
-      get { return responseCase_ == ResponseOneofCase.AvailableMaps ? (global::SC2APIProtocol.ResponseAvailableMaps) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseAvailableMaps AvailableMaps
+    {
+      get { return responseCase_ == ResponseOneofCase.AvailableMaps ? (global::SC2APIProtocol.ResponseAvailableMaps)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.AvailableMaps;
       }
@@ -1704,9 +1930,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "save_map" field.</summary>
     public const int SaveMapFieldNumber = 18;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseSaveMap SaveMap {
-      get { return responseCase_ == ResponseOneofCase.SaveMap ? (global::SC2APIProtocol.ResponseSaveMap) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseSaveMap SaveMap
+    {
+      get { return responseCase_ == ResponseOneofCase.SaveMap ? (global::SC2APIProtocol.ResponseSaveMap)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.SaveMap;
       }
@@ -1718,9 +1946,11 @@ namespace SC2APIProtocol {
     /// Debugging
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponsePing Ping {
-      get { return responseCase_ == ResponseOneofCase.Ping ? (global::SC2APIProtocol.ResponsePing) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponsePing Ping
+    {
+      get { return responseCase_ == ResponseOneofCase.Ping ? (global::SC2APIProtocol.ResponsePing)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Ping;
       }
@@ -1729,9 +1959,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "debug" field.</summary>
     public const int DebugFieldNumber = 20;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseDebug Debug {
-      get { return responseCase_ == ResponseOneofCase.Debug ? (global::SC2APIProtocol.ResponseDebug) response_ : null; }
-      set {
+    public global::SC2APIProtocol.ResponseDebug Debug
+    {
+      get { return responseCase_ == ResponseOneofCase.Debug ? (global::SC2APIProtocol.ResponseDebug)response_ : null; }
+      set
+      {
         response_ = value;
         responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Debug;
       }
@@ -1746,7 +1978,8 @@ namespace SC2APIProtocol {
     /// If command is missing, this will contain the error. Otherwise this will contain any warnings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Error {
+    public pbc::RepeatedField<string> Error
+    {
       get { return error_; }
     }
 
@@ -1757,16 +1990,19 @@ namespace SC2APIProtocol {
     /// Should be sent back with all responses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Status Status {
+    public global::SC2APIProtocol.Status Status
+    {
       get { return status_; }
-      set {
+      set
+      {
         status_ = value;
       }
     }
 
     private object response_;
     /// <summary>Enum of possible cases for the "response" oneof.</summary>
-    public enum ResponseOneofCase {
+    public enum ResponseOneofCase
+    {
       None = 0,
       CreateGame = 1,
       JoinGame = 2,
@@ -1792,27 +2028,33 @@ namespace SC2APIProtocol {
     }
     private ResponseOneofCase responseCase_ = ResponseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseOneofCase ResponseCase {
+    public ResponseOneofCase ResponseCase
+    {
       get { return responseCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearResponse() {
+    public void ClearResponse()
+    {
       responseCase_ = ResponseOneofCase.None;
       response_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as Response);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Response other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(Response other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(CreateGame, other.CreateGame)) return false;
@@ -1836,14 +2078,15 @@ namespace SC2APIProtocol {
       if (!object.Equals(SaveMap, other.SaveMap)) return false;
       if (!object.Equals(Ping, other.Ping)) return false;
       if (!object.Equals(Debug, other.Debug)) return false;
-      if(!error_.Equals(other.error_)) return false;
+      if (!error_.Equals(other.error_)) return false;
       if (Status != other.Status) return false;
       if (ResponseCase != other.ResponseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (responseCase_ == ResponseOneofCase.CreateGame) hash ^= CreateGame.GetHashCode();
       if (responseCase_ == ResponseOneofCase.JoinGame) hash ^= JoinGame.GetHashCode();
@@ -1868,322 +2111,397 @@ namespace SC2APIProtocol {
       if (responseCase_ == ResponseOneofCase.Debug) hash ^= Debug.GetHashCode();
       hash ^= error_.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
-      hash ^= (int) responseCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)responseCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (responseCase_ == ResponseOneofCase.CreateGame) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (responseCase_ == ResponseOneofCase.CreateGame)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(CreateGame);
       }
-      if (responseCase_ == ResponseOneofCase.JoinGame) {
+      if (responseCase_ == ResponseOneofCase.JoinGame)
+      {
         output.WriteRawTag(18);
         output.WriteMessage(JoinGame);
       }
-      if (responseCase_ == ResponseOneofCase.RestartGame) {
+      if (responseCase_ == ResponseOneofCase.RestartGame)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(RestartGame);
       }
-      if (responseCase_ == ResponseOneofCase.StartReplay) {
+      if (responseCase_ == ResponseOneofCase.StartReplay)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(StartReplay);
       }
-      if (responseCase_ == ResponseOneofCase.LeaveGame) {
+      if (responseCase_ == ResponseOneofCase.LeaveGame)
+      {
         output.WriteRawTag(42);
         output.WriteMessage(LeaveGame);
       }
-      if (responseCase_ == ResponseOneofCase.QuickSave) {
+      if (responseCase_ == ResponseOneofCase.QuickSave)
+      {
         output.WriteRawTag(50);
         output.WriteMessage(QuickSave);
       }
-      if (responseCase_ == ResponseOneofCase.QuickLoad) {
+      if (responseCase_ == ResponseOneofCase.QuickLoad)
+      {
         output.WriteRawTag(58);
         output.WriteMessage(QuickLoad);
       }
-      if (responseCase_ == ResponseOneofCase.Quit) {
+      if (responseCase_ == ResponseOneofCase.Quit)
+      {
         output.WriteRawTag(66);
         output.WriteMessage(Quit);
       }
-      if (responseCase_ == ResponseOneofCase.GameInfo) {
+      if (responseCase_ == ResponseOneofCase.GameInfo)
+      {
         output.WriteRawTag(74);
         output.WriteMessage(GameInfo);
       }
-      if (responseCase_ == ResponseOneofCase.Observation) {
+      if (responseCase_ == ResponseOneofCase.Observation)
+      {
         output.WriteRawTag(82);
         output.WriteMessage(Observation);
       }
-      if (responseCase_ == ResponseOneofCase.Action) {
+      if (responseCase_ == ResponseOneofCase.Action)
+      {
         output.WriteRawTag(90);
         output.WriteMessage(Action);
       }
-      if (responseCase_ == ResponseOneofCase.Step) {
+      if (responseCase_ == ResponseOneofCase.Step)
+      {
         output.WriteRawTag(98);
         output.WriteMessage(Step);
       }
-      if (responseCase_ == ResponseOneofCase.Data) {
+      if (responseCase_ == ResponseOneofCase.Data)
+      {
         output.WriteRawTag(106);
         output.WriteMessage(Data);
       }
-      if (responseCase_ == ResponseOneofCase.Query) {
+      if (responseCase_ == ResponseOneofCase.Query)
+      {
         output.WriteRawTag(114);
         output.WriteMessage(Query);
       }
-      if (responseCase_ == ResponseOneofCase.SaveReplay) {
+      if (responseCase_ == ResponseOneofCase.SaveReplay)
+      {
         output.WriteRawTag(122);
         output.WriteMessage(SaveReplay);
       }
-      if (responseCase_ == ResponseOneofCase.ReplayInfo) {
+      if (responseCase_ == ResponseOneofCase.ReplayInfo)
+      {
         output.WriteRawTag(130, 1);
         output.WriteMessage(ReplayInfo);
       }
-      if (responseCase_ == ResponseOneofCase.AvailableMaps) {
+      if (responseCase_ == ResponseOneofCase.AvailableMaps)
+      {
         output.WriteRawTag(138, 1);
         output.WriteMessage(AvailableMaps);
       }
-      if (responseCase_ == ResponseOneofCase.SaveMap) {
+      if (responseCase_ == ResponseOneofCase.SaveMap)
+      {
         output.WriteRawTag(146, 1);
         output.WriteMessage(SaveMap);
       }
-      if (responseCase_ == ResponseOneofCase.Ping) {
+      if (responseCase_ == ResponseOneofCase.Ping)
+      {
         output.WriteRawTag(154, 1);
         output.WriteMessage(Ping);
       }
-      if (responseCase_ == ResponseOneofCase.Debug) {
+      if (responseCase_ == ResponseOneofCase.Debug)
+      {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Debug);
       }
-      if (responseCase_ == ResponseOneofCase.ObsAction) {
+      if (responseCase_ == ResponseOneofCase.ObsAction)
+      {
         output.WriteRawTag(170, 1);
         output.WriteMessage(ObsAction);
       }
       error_.WriteTo(output, _repeated_error_codec);
-      if (Status != 0) {
+      if (Status != 0)
+      {
         output.WriteRawTag(152, 6);
-        output.WriteEnum((int) Status);
+        output.WriteEnum((int)Status);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (responseCase_ == ResponseOneofCase.CreateGame) {
+      if (responseCase_ == ResponseOneofCase.CreateGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateGame);
       }
-      if (responseCase_ == ResponseOneofCase.JoinGame) {
+      if (responseCase_ == ResponseOneofCase.JoinGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JoinGame);
       }
-      if (responseCase_ == ResponseOneofCase.RestartGame) {
+      if (responseCase_ == ResponseOneofCase.RestartGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RestartGame);
       }
-      if (responseCase_ == ResponseOneofCase.StartReplay) {
+      if (responseCase_ == ResponseOneofCase.StartReplay)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartReplay);
       }
-      if (responseCase_ == ResponseOneofCase.LeaveGame) {
+      if (responseCase_ == ResponseOneofCase.LeaveGame)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LeaveGame);
       }
-      if (responseCase_ == ResponseOneofCase.QuickSave) {
+      if (responseCase_ == ResponseOneofCase.QuickSave)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuickSave);
       }
-      if (responseCase_ == ResponseOneofCase.QuickLoad) {
+      if (responseCase_ == ResponseOneofCase.QuickLoad)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuickLoad);
       }
-      if (responseCase_ == ResponseOneofCase.Quit) {
+      if (responseCase_ == ResponseOneofCase.Quit)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Quit);
       }
-      if (responseCase_ == ResponseOneofCase.GameInfo) {
+      if (responseCase_ == ResponseOneofCase.GameInfo)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameInfo);
       }
-      if (responseCase_ == ResponseOneofCase.Observation) {
+      if (responseCase_ == ResponseOneofCase.Observation)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Observation);
       }
-      if (responseCase_ == ResponseOneofCase.Action) {
+      if (responseCase_ == ResponseOneofCase.Action)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Action);
       }
-      if (responseCase_ == ResponseOneofCase.ObsAction) {
+      if (responseCase_ == ResponseOneofCase.ObsAction)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ObsAction);
       }
-      if (responseCase_ == ResponseOneofCase.Step) {
+      if (responseCase_ == ResponseOneofCase.Step)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Step);
       }
-      if (responseCase_ == ResponseOneofCase.Data) {
+      if (responseCase_ == ResponseOneofCase.Data)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      if (responseCase_ == ResponseOneofCase.Query) {
+      if (responseCase_ == ResponseOneofCase.Query)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Query);
       }
-      if (responseCase_ == ResponseOneofCase.SaveReplay) {
+      if (responseCase_ == ResponseOneofCase.SaveReplay)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SaveReplay);
       }
-      if (responseCase_ == ResponseOneofCase.ReplayInfo) {
+      if (responseCase_ == ResponseOneofCase.ReplayInfo)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReplayInfo);
       }
-      if (responseCase_ == ResponseOneofCase.AvailableMaps) {
+      if (responseCase_ == ResponseOneofCase.AvailableMaps)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AvailableMaps);
       }
-      if (responseCase_ == ResponseOneofCase.SaveMap) {
+      if (responseCase_ == ResponseOneofCase.SaveMap)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SaveMap);
       }
-      if (responseCase_ == ResponseOneofCase.Ping) {
+      if (responseCase_ == ResponseOneofCase.Ping)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Ping);
       }
-      if (responseCase_ == ResponseOneofCase.Debug) {
+      if (responseCase_ == ResponseOneofCase.Debug)
+      {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Debug);
       }
       size += error_.CalculateSize(_repeated_error_codec);
-      if (Status != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      if (Status != 0)
+      {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int)Status);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Response other) {
-      if (other == null) {
+    public void MergeFrom(Response other)
+    {
+      if (other == null)
+      {
         return;
       }
       error_.Add(other.error_);
-      if (other.Status != 0) {
+      if (other.Status != 0)
+      {
         Status = other.Status;
       }
-      switch (other.ResponseCase) {
+      switch (other.ResponseCase)
+      {
         case ResponseOneofCase.CreateGame:
-          if (CreateGame == null) {
+          if (CreateGame == null)
+          {
             CreateGame = new global::SC2APIProtocol.ResponseCreateGame();
           }
           CreateGame.MergeFrom(other.CreateGame);
           break;
         case ResponseOneofCase.JoinGame:
-          if (JoinGame == null) {
+          if (JoinGame == null)
+          {
             JoinGame = new global::SC2APIProtocol.ResponseJoinGame();
           }
           JoinGame.MergeFrom(other.JoinGame);
           break;
         case ResponseOneofCase.RestartGame:
-          if (RestartGame == null) {
+          if (RestartGame == null)
+          {
             RestartGame = new global::SC2APIProtocol.ResponseRestartGame();
           }
           RestartGame.MergeFrom(other.RestartGame);
           break;
         case ResponseOneofCase.StartReplay:
-          if (StartReplay == null) {
+          if (StartReplay == null)
+          {
             StartReplay = new global::SC2APIProtocol.ResponseStartReplay();
           }
           StartReplay.MergeFrom(other.StartReplay);
           break;
         case ResponseOneofCase.LeaveGame:
-          if (LeaveGame == null) {
+          if (LeaveGame == null)
+          {
             LeaveGame = new global::SC2APIProtocol.ResponseLeaveGame();
           }
           LeaveGame.MergeFrom(other.LeaveGame);
           break;
         case ResponseOneofCase.QuickSave:
-          if (QuickSave == null) {
+          if (QuickSave == null)
+          {
             QuickSave = new global::SC2APIProtocol.ResponseQuickSave();
           }
           QuickSave.MergeFrom(other.QuickSave);
           break;
         case ResponseOneofCase.QuickLoad:
-          if (QuickLoad == null) {
+          if (QuickLoad == null)
+          {
             QuickLoad = new global::SC2APIProtocol.ResponseQuickLoad();
           }
           QuickLoad.MergeFrom(other.QuickLoad);
           break;
         case ResponseOneofCase.Quit:
-          if (Quit == null) {
+          if (Quit == null)
+          {
             Quit = new global::SC2APIProtocol.ResponseQuit();
           }
           Quit.MergeFrom(other.Quit);
           break;
         case ResponseOneofCase.GameInfo:
-          if (GameInfo == null) {
+          if (GameInfo == null)
+          {
             GameInfo = new global::SC2APIProtocol.ResponseGameInfo();
           }
           GameInfo.MergeFrom(other.GameInfo);
           break;
         case ResponseOneofCase.Observation:
-          if (Observation == null) {
+          if (Observation == null)
+          {
             Observation = new global::SC2APIProtocol.ResponseObservation();
           }
           Observation.MergeFrom(other.Observation);
           break;
         case ResponseOneofCase.Action:
-          if (Action == null) {
+          if (Action == null)
+          {
             Action = new global::SC2APIProtocol.ResponseAction();
           }
           Action.MergeFrom(other.Action);
           break;
         case ResponseOneofCase.ObsAction:
-          if (ObsAction == null) {
+          if (ObsAction == null)
+          {
             ObsAction = new global::SC2APIProtocol.ResponseObserverAction();
           }
           ObsAction.MergeFrom(other.ObsAction);
           break;
         case ResponseOneofCase.Step:
-          if (Step == null) {
+          if (Step == null)
+          {
             Step = new global::SC2APIProtocol.ResponseStep();
           }
           Step.MergeFrom(other.Step);
           break;
         case ResponseOneofCase.Data:
-          if (Data == null) {
+          if (Data == null)
+          {
             Data = new global::SC2APIProtocol.ResponseData();
           }
           Data.MergeFrom(other.Data);
           break;
         case ResponseOneofCase.Query:
-          if (Query == null) {
+          if (Query == null)
+          {
             Query = new global::SC2APIProtocol.ResponseQuery();
           }
           Query.MergeFrom(other.Query);
           break;
         case ResponseOneofCase.SaveReplay:
-          if (SaveReplay == null) {
+          if (SaveReplay == null)
+          {
             SaveReplay = new global::SC2APIProtocol.ResponseSaveReplay();
           }
           SaveReplay.MergeFrom(other.SaveReplay);
           break;
         case ResponseOneofCase.ReplayInfo:
-          if (ReplayInfo == null) {
+          if (ReplayInfo == null)
+          {
             ReplayInfo = new global::SC2APIProtocol.ResponseReplayInfo();
           }
           ReplayInfo.MergeFrom(other.ReplayInfo);
           break;
         case ResponseOneofCase.AvailableMaps:
-          if (AvailableMaps == null) {
+          if (AvailableMaps == null)
+          {
             AvailableMaps = new global::SC2APIProtocol.ResponseAvailableMaps();
           }
           AvailableMaps.MergeFrom(other.AvailableMaps);
           break;
         case ResponseOneofCase.SaveMap:
-          if (SaveMap == null) {
+          if (SaveMap == null)
+          {
             SaveMap = new global::SC2APIProtocol.ResponseSaveMap();
           }
           SaveMap.MergeFrom(other.SaveMap);
           break;
         case ResponseOneofCase.Ping:
-          if (Ping == null) {
+          if (Ping == null)
+          {
             Ping = new global::SC2APIProtocol.ResponsePing();
           }
           Ping.MergeFrom(other.Ping);
           break;
         case ResponseOneofCase.Debug:
-          if (Debug == null) {
+          if (Debug == null)
+          {
             Debug = new global::SC2APIProtocol.ResponseDebug();
           }
           Debug.MergeFrom(other.Debug);
@@ -2194,210 +2512,257 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            global::SC2APIProtocol.ResponseCreateGame subBuilder = new global::SC2APIProtocol.ResponseCreateGame();
-            if (responseCase_ == ResponseOneofCase.CreateGame) {
-              subBuilder.MergeFrom(CreateGame);
+          case 10:
+            {
+              global::SC2APIProtocol.ResponseCreateGame subBuilder = new global::SC2APIProtocol.ResponseCreateGame();
+              if (responseCase_ == ResponseOneofCase.CreateGame)
+              {
+                subBuilder.MergeFrom(CreateGame);
+              }
+              input.ReadMessage(subBuilder);
+              CreateGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            CreateGame = subBuilder;
-            break;
-          }
-          case 18: {
-            global::SC2APIProtocol.ResponseJoinGame subBuilder = new global::SC2APIProtocol.ResponseJoinGame();
-            if (responseCase_ == ResponseOneofCase.JoinGame) {
-              subBuilder.MergeFrom(JoinGame);
+          case 18:
+            {
+              global::SC2APIProtocol.ResponseJoinGame subBuilder = new global::SC2APIProtocol.ResponseJoinGame();
+              if (responseCase_ == ResponseOneofCase.JoinGame)
+              {
+                subBuilder.MergeFrom(JoinGame);
+              }
+              input.ReadMessage(subBuilder);
+              JoinGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            JoinGame = subBuilder;
-            break;
-          }
-          case 26: {
-            global::SC2APIProtocol.ResponseRestartGame subBuilder = new global::SC2APIProtocol.ResponseRestartGame();
-            if (responseCase_ == ResponseOneofCase.RestartGame) {
-              subBuilder.MergeFrom(RestartGame);
+          case 26:
+            {
+              global::SC2APIProtocol.ResponseRestartGame subBuilder = new global::SC2APIProtocol.ResponseRestartGame();
+              if (responseCase_ == ResponseOneofCase.RestartGame)
+              {
+                subBuilder.MergeFrom(RestartGame);
+              }
+              input.ReadMessage(subBuilder);
+              RestartGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            RestartGame = subBuilder;
-            break;
-          }
-          case 34: {
-            global::SC2APIProtocol.ResponseStartReplay subBuilder = new global::SC2APIProtocol.ResponseStartReplay();
-            if (responseCase_ == ResponseOneofCase.StartReplay) {
-              subBuilder.MergeFrom(StartReplay);
+          case 34:
+            {
+              global::SC2APIProtocol.ResponseStartReplay subBuilder = new global::SC2APIProtocol.ResponseStartReplay();
+              if (responseCase_ == ResponseOneofCase.StartReplay)
+              {
+                subBuilder.MergeFrom(StartReplay);
+              }
+              input.ReadMessage(subBuilder);
+              StartReplay = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            StartReplay = subBuilder;
-            break;
-          }
-          case 42: {
-            global::SC2APIProtocol.ResponseLeaveGame subBuilder = new global::SC2APIProtocol.ResponseLeaveGame();
-            if (responseCase_ == ResponseOneofCase.LeaveGame) {
-              subBuilder.MergeFrom(LeaveGame);
+          case 42:
+            {
+              global::SC2APIProtocol.ResponseLeaveGame subBuilder = new global::SC2APIProtocol.ResponseLeaveGame();
+              if (responseCase_ == ResponseOneofCase.LeaveGame)
+              {
+                subBuilder.MergeFrom(LeaveGame);
+              }
+              input.ReadMessage(subBuilder);
+              LeaveGame = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            LeaveGame = subBuilder;
-            break;
-          }
-          case 50: {
-            global::SC2APIProtocol.ResponseQuickSave subBuilder = new global::SC2APIProtocol.ResponseQuickSave();
-            if (responseCase_ == ResponseOneofCase.QuickSave) {
-              subBuilder.MergeFrom(QuickSave);
+          case 50:
+            {
+              global::SC2APIProtocol.ResponseQuickSave subBuilder = new global::SC2APIProtocol.ResponseQuickSave();
+              if (responseCase_ == ResponseOneofCase.QuickSave)
+              {
+                subBuilder.MergeFrom(QuickSave);
+              }
+              input.ReadMessage(subBuilder);
+              QuickSave = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            QuickSave = subBuilder;
-            break;
-          }
-          case 58: {
-            global::SC2APIProtocol.ResponseQuickLoad subBuilder = new global::SC2APIProtocol.ResponseQuickLoad();
-            if (responseCase_ == ResponseOneofCase.QuickLoad) {
-              subBuilder.MergeFrom(QuickLoad);
+          case 58:
+            {
+              global::SC2APIProtocol.ResponseQuickLoad subBuilder = new global::SC2APIProtocol.ResponseQuickLoad();
+              if (responseCase_ == ResponseOneofCase.QuickLoad)
+              {
+                subBuilder.MergeFrom(QuickLoad);
+              }
+              input.ReadMessage(subBuilder);
+              QuickLoad = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            QuickLoad = subBuilder;
-            break;
-          }
-          case 66: {
-            global::SC2APIProtocol.ResponseQuit subBuilder = new global::SC2APIProtocol.ResponseQuit();
-            if (responseCase_ == ResponseOneofCase.Quit) {
-              subBuilder.MergeFrom(Quit);
+          case 66:
+            {
+              global::SC2APIProtocol.ResponseQuit subBuilder = new global::SC2APIProtocol.ResponseQuit();
+              if (responseCase_ == ResponseOneofCase.Quit)
+              {
+                subBuilder.MergeFrom(Quit);
+              }
+              input.ReadMessage(subBuilder);
+              Quit = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Quit = subBuilder;
-            break;
-          }
-          case 74: {
-            global::SC2APIProtocol.ResponseGameInfo subBuilder = new global::SC2APIProtocol.ResponseGameInfo();
-            if (responseCase_ == ResponseOneofCase.GameInfo) {
-              subBuilder.MergeFrom(GameInfo);
+          case 74:
+            {
+              global::SC2APIProtocol.ResponseGameInfo subBuilder = new global::SC2APIProtocol.ResponseGameInfo();
+              if (responseCase_ == ResponseOneofCase.GameInfo)
+              {
+                subBuilder.MergeFrom(GameInfo);
+              }
+              input.ReadMessage(subBuilder);
+              GameInfo = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            GameInfo = subBuilder;
-            break;
-          }
-          case 82: {
-            global::SC2APIProtocol.ResponseObservation subBuilder = new global::SC2APIProtocol.ResponseObservation();
-            if (responseCase_ == ResponseOneofCase.Observation) {
-              subBuilder.MergeFrom(Observation);
+          case 82:
+            {
+              global::SC2APIProtocol.ResponseObservation subBuilder = new global::SC2APIProtocol.ResponseObservation();
+              if (responseCase_ == ResponseOneofCase.Observation)
+              {
+                subBuilder.MergeFrom(Observation);
+              }
+              input.ReadMessage(subBuilder);
+              Observation = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Observation = subBuilder;
-            break;
-          }
-          case 90: {
-            global::SC2APIProtocol.ResponseAction subBuilder = new global::SC2APIProtocol.ResponseAction();
-            if (responseCase_ == ResponseOneofCase.Action) {
-              subBuilder.MergeFrom(Action);
+          case 90:
+            {
+              global::SC2APIProtocol.ResponseAction subBuilder = new global::SC2APIProtocol.ResponseAction();
+              if (responseCase_ == ResponseOneofCase.Action)
+              {
+                subBuilder.MergeFrom(Action);
+              }
+              input.ReadMessage(subBuilder);
+              Action = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Action = subBuilder;
-            break;
-          }
-          case 98: {
-            global::SC2APIProtocol.ResponseStep subBuilder = new global::SC2APIProtocol.ResponseStep();
-            if (responseCase_ == ResponseOneofCase.Step) {
-              subBuilder.MergeFrom(Step);
+          case 98:
+            {
+              global::SC2APIProtocol.ResponseStep subBuilder = new global::SC2APIProtocol.ResponseStep();
+              if (responseCase_ == ResponseOneofCase.Step)
+              {
+                subBuilder.MergeFrom(Step);
+              }
+              input.ReadMessage(subBuilder);
+              Step = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Step = subBuilder;
-            break;
-          }
-          case 106: {
-            global::SC2APIProtocol.ResponseData subBuilder = new global::SC2APIProtocol.ResponseData();
-            if (responseCase_ == ResponseOneofCase.Data) {
-              subBuilder.MergeFrom(Data);
+          case 106:
+            {
+              global::SC2APIProtocol.ResponseData subBuilder = new global::SC2APIProtocol.ResponseData();
+              if (responseCase_ == ResponseOneofCase.Data)
+              {
+                subBuilder.MergeFrom(Data);
+              }
+              input.ReadMessage(subBuilder);
+              Data = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Data = subBuilder;
-            break;
-          }
-          case 114: {
-            global::SC2APIProtocol.ResponseQuery subBuilder = new global::SC2APIProtocol.ResponseQuery();
-            if (responseCase_ == ResponseOneofCase.Query) {
-              subBuilder.MergeFrom(Query);
+          case 114:
+            {
+              global::SC2APIProtocol.ResponseQuery subBuilder = new global::SC2APIProtocol.ResponseQuery();
+              if (responseCase_ == ResponseOneofCase.Query)
+              {
+                subBuilder.MergeFrom(Query);
+              }
+              input.ReadMessage(subBuilder);
+              Query = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Query = subBuilder;
-            break;
-          }
-          case 122: {
-            global::SC2APIProtocol.ResponseSaveReplay subBuilder = new global::SC2APIProtocol.ResponseSaveReplay();
-            if (responseCase_ == ResponseOneofCase.SaveReplay) {
-              subBuilder.MergeFrom(SaveReplay);
+          case 122:
+            {
+              global::SC2APIProtocol.ResponseSaveReplay subBuilder = new global::SC2APIProtocol.ResponseSaveReplay();
+              if (responseCase_ == ResponseOneofCase.SaveReplay)
+              {
+                subBuilder.MergeFrom(SaveReplay);
+              }
+              input.ReadMessage(subBuilder);
+              SaveReplay = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            SaveReplay = subBuilder;
-            break;
-          }
-          case 130: {
-            global::SC2APIProtocol.ResponseReplayInfo subBuilder = new global::SC2APIProtocol.ResponseReplayInfo();
-            if (responseCase_ == ResponseOneofCase.ReplayInfo) {
-              subBuilder.MergeFrom(ReplayInfo);
+          case 130:
+            {
+              global::SC2APIProtocol.ResponseReplayInfo subBuilder = new global::SC2APIProtocol.ResponseReplayInfo();
+              if (responseCase_ == ResponseOneofCase.ReplayInfo)
+              {
+                subBuilder.MergeFrom(ReplayInfo);
+              }
+              input.ReadMessage(subBuilder);
+              ReplayInfo = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            ReplayInfo = subBuilder;
-            break;
-          }
-          case 138: {
-            global::SC2APIProtocol.ResponseAvailableMaps subBuilder = new global::SC2APIProtocol.ResponseAvailableMaps();
-            if (responseCase_ == ResponseOneofCase.AvailableMaps) {
-              subBuilder.MergeFrom(AvailableMaps);
+          case 138:
+            {
+              global::SC2APIProtocol.ResponseAvailableMaps subBuilder = new global::SC2APIProtocol.ResponseAvailableMaps();
+              if (responseCase_ == ResponseOneofCase.AvailableMaps)
+              {
+                subBuilder.MergeFrom(AvailableMaps);
+              }
+              input.ReadMessage(subBuilder);
+              AvailableMaps = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            AvailableMaps = subBuilder;
-            break;
-          }
-          case 146: {
-            global::SC2APIProtocol.ResponseSaveMap subBuilder = new global::SC2APIProtocol.ResponseSaveMap();
-            if (responseCase_ == ResponseOneofCase.SaveMap) {
-              subBuilder.MergeFrom(SaveMap);
+          case 146:
+            {
+              global::SC2APIProtocol.ResponseSaveMap subBuilder = new global::SC2APIProtocol.ResponseSaveMap();
+              if (responseCase_ == ResponseOneofCase.SaveMap)
+              {
+                subBuilder.MergeFrom(SaveMap);
+              }
+              input.ReadMessage(subBuilder);
+              SaveMap = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            SaveMap = subBuilder;
-            break;
-          }
-          case 154: {
-            global::SC2APIProtocol.ResponsePing subBuilder = new global::SC2APIProtocol.ResponsePing();
-            if (responseCase_ == ResponseOneofCase.Ping) {
-              subBuilder.MergeFrom(Ping);
+          case 154:
+            {
+              global::SC2APIProtocol.ResponsePing subBuilder = new global::SC2APIProtocol.ResponsePing();
+              if (responseCase_ == ResponseOneofCase.Ping)
+              {
+                subBuilder.MergeFrom(Ping);
+              }
+              input.ReadMessage(subBuilder);
+              Ping = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Ping = subBuilder;
-            break;
-          }
-          case 162: {
-            global::SC2APIProtocol.ResponseDebug subBuilder = new global::SC2APIProtocol.ResponseDebug();
-            if (responseCase_ == ResponseOneofCase.Debug) {
-              subBuilder.MergeFrom(Debug);
+          case 162:
+            {
+              global::SC2APIProtocol.ResponseDebug subBuilder = new global::SC2APIProtocol.ResponseDebug();
+              if (responseCase_ == ResponseOneofCase.Debug)
+              {
+                subBuilder.MergeFrom(Debug);
+              }
+              input.ReadMessage(subBuilder);
+              Debug = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            Debug = subBuilder;
-            break;
-          }
-          case 170: {
-            global::SC2APIProtocol.ResponseObserverAction subBuilder = new global::SC2APIProtocol.ResponseObserverAction();
-            if (responseCase_ == ResponseOneofCase.ObsAction) {
-              subBuilder.MergeFrom(ObsAction);
+          case 170:
+            {
+              global::SC2APIProtocol.ResponseObserverAction subBuilder = new global::SC2APIProtocol.ResponseObserverAction();
+              if (responseCase_ == ResponseOneofCase.ObsAction)
+              {
+                subBuilder.MergeFrom(ObsAction);
+              }
+              input.ReadMessage(subBuilder);
+              ObsAction = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            ObsAction = subBuilder;
-            break;
-          }
-          case 786: {
-            error_.AddEntriesFrom(input, _repeated_error_codec);
-            break;
-          }
-          case 792: {
-            status_ = (global::SC2APIProtocol.Status) input.ReadEnum();
-            break;
-          }
+          case 786:
+            {
+              error_.AddEntriesFrom(input, _repeated_error_codec);
+              break;
+            }
+          case 792:
+            {
+              status_ = (global::SC2APIProtocol.Status)input.ReadEnum();
+              break;
+            }
         }
       }
     }
@@ -2409,36 +2774,42 @@ namespace SC2APIProtocol {
   /// If successful, puts the game into the status: init_game.
   /// The next expected request should be RequestJoinGame. Can also quit (exit).
   /// </summary>
-  public sealed partial class RequestCreateGame : pb::IMessage<RequestCreateGame> {
+  public sealed partial class RequestCreateGame : pb::IMessage<RequestCreateGame>
+  {
     private static readonly pb::MessageParser<RequestCreateGame> _parser = new pb::MessageParser<RequestCreateGame>(() => new RequestCreateGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestCreateGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestCreateGame() {
+    public RequestCreateGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestCreateGame(RequestCreateGame other) : this() {
+    public RequestCreateGame(RequestCreateGame other) : this()
+    {
       playerSetup_ = other.playerSetup_.Clone();
       disableFog_ = other.disableFog_;
       randomSeed_ = other.randomSeed_;
       realtime_ = other.realtime_;
-      switch (other.MapCase) {
+      switch (other.MapCase)
+      {
         case MapOneofCase.LocalMap:
           LocalMap = other.LocalMap.Clone();
           break;
@@ -2451,7 +2822,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestCreateGame Clone() {
+    public RequestCreateGame Clone()
+    {
       return new RequestCreateGame(this);
     }
 
@@ -2461,9 +2833,11 @@ namespace SC2APIProtocol {
     /// Local .SC2Map file
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.LocalMap LocalMap {
-      get { return mapCase_ == MapOneofCase.LocalMap ? (global::SC2APIProtocol.LocalMap) map_ : null; }
-      set {
+    public global::SC2APIProtocol.LocalMap LocalMap
+    {
+      get { return mapCase_ == MapOneofCase.LocalMap ? (global::SC2APIProtocol.LocalMap)map_ : null; }
+      set
+      {
         map_ = value;
         mapCase_ = value == null ? MapOneofCase.None : MapOneofCase.LocalMap;
       }
@@ -2475,9 +2849,11 @@ namespace SC2APIProtocol {
     /// Map published to BattleNet
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BattlenetMapName {
-      get { return mapCase_ == MapOneofCase.BattlenetMapName ? (string) map_ : ""; }
-      set {
+    public string BattlenetMapName
+    {
+      get { return mapCase_ == MapOneofCase.BattlenetMapName ? (string)map_ : ""; }
+      set
+      {
         map_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         mapCase_ = MapOneofCase.BattlenetMapName;
       }
@@ -2489,7 +2865,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(26, global::SC2APIProtocol.PlayerSetup.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.PlayerSetup> playerSetup_ = new pbc::RepeatedField<global::SC2APIProtocol.PlayerSetup>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.PlayerSetup> PlayerSetup {
+    public pbc::RepeatedField<global::SC2APIProtocol.PlayerSetup> PlayerSetup
+    {
       get { return playerSetup_; }
     }
 
@@ -2497,9 +2874,11 @@ namespace SC2APIProtocol {
     public const int DisableFogFieldNumber = 4;
     private bool disableFog_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool DisableFog {
+    public bool DisableFog
+    {
       get { return disableFog_; }
-      set {
+      set
+      {
         disableFog_ = value;
       }
     }
@@ -2511,9 +2890,11 @@ namespace SC2APIProtocol {
     /// Sets the pseudo-random seed for the game.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint RandomSeed {
+    public uint RandomSeed
+    {
       get { return randomSeed_; }
-      set {
+      set
+      {
         randomSeed_ = value;
       }
     }
@@ -2525,48 +2906,57 @@ namespace SC2APIProtocol {
     /// If set, the game plays in real time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Realtime {
+    public bool Realtime
+    {
       get { return realtime_; }
-      set {
+      set
+      {
         realtime_ = value;
       }
     }
 
     private object map_;
     /// <summary>Enum of possible cases for the "Map" oneof.</summary>
-    public enum MapOneofCase {
+    public enum MapOneofCase
+    {
       None = 0,
       LocalMap = 1,
       BattlenetMapName = 2,
     }
     private MapOneofCase mapCase_ = MapOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MapOneofCase MapCase {
+    public MapOneofCase MapCase
+    {
       get { return mapCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearMap() {
+    public void ClearMap()
+    {
       mapCase_ = MapOneofCase.None;
       map_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestCreateGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestCreateGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestCreateGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(LocalMap, other.LocalMap)) return false;
       if (BattlenetMapName != other.BattlenetMapName) return false;
-      if(!playerSetup_.Equals(other.playerSetup_)) return false;
+      if (!playerSetup_.Equals(other.playerSetup_)) return false;
       if (DisableFog != other.DisableFog) return false;
       if (RandomSeed != other.RandomSeed) return false;
       if (Realtime != other.Realtime) return false;
@@ -2575,7 +2965,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (mapCase_ == MapOneofCase.LocalMap) hash ^= LocalMap.GetHashCode();
       if (mapCase_ == MapOneofCase.BattlenetMapName) hash ^= BattlenetMapName.GetHashCode();
@@ -2583,89 +2974,112 @@ namespace SC2APIProtocol {
       if (DisableFog != false) hash ^= DisableFog.GetHashCode();
       if (RandomSeed != 0) hash ^= RandomSeed.GetHashCode();
       if (Realtime != false) hash ^= Realtime.GetHashCode();
-      hash ^= (int) mapCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)mapCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (mapCase_ == MapOneofCase.LocalMap) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (mapCase_ == MapOneofCase.LocalMap)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(LocalMap);
       }
-      if (mapCase_ == MapOneofCase.BattlenetMapName) {
+      if (mapCase_ == MapOneofCase.BattlenetMapName)
+      {
         output.WriteRawTag(18);
         output.WriteString(BattlenetMapName);
       }
       playerSetup_.WriteTo(output, _repeated_playerSetup_codec);
-      if (DisableFog != false) {
+      if (DisableFog != false)
+      {
         output.WriteRawTag(32);
         output.WriteBool(DisableFog);
       }
-      if (RandomSeed != 0) {
+      if (RandomSeed != 0)
+      {
         output.WriteRawTag(40);
         output.WriteUInt32(RandomSeed);
       }
-      if (Realtime != false) {
+      if (Realtime != false)
+      {
         output.WriteRawTag(48);
         output.WriteBool(Realtime);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (mapCase_ == MapOneofCase.LocalMap) {
+      if (mapCase_ == MapOneofCase.LocalMap)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocalMap);
       }
-      if (mapCase_ == MapOneofCase.BattlenetMapName) {
+      if (mapCase_ == MapOneofCase.BattlenetMapName)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BattlenetMapName);
       }
       size += playerSetup_.CalculateSize(_repeated_playerSetup_codec);
-      if (DisableFog != false) {
+      if (DisableFog != false)
+      {
         size += 1 + 1;
       }
-      if (RandomSeed != 0) {
+      if (RandomSeed != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RandomSeed);
       }
-      if (Realtime != false) {
+      if (Realtime != false)
+      {
         size += 1 + 1;
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestCreateGame other) {
-      if (other == null) {
+    public void MergeFrom(RequestCreateGame other)
+    {
+      if (other == null)
+      {
         return;
       }
       playerSetup_.Add(other.playerSetup_);
-      if (other.DisableFog != false) {
+      if (other.DisableFog != false)
+      {
         DisableFog = other.DisableFog;
       }
-      if (other.RandomSeed != 0) {
+      if (other.RandomSeed != 0)
+      {
         RandomSeed = other.RandomSeed;
       }
-      if (other.Realtime != false) {
+      if (other.Realtime != false)
+      {
         Realtime = other.Realtime;
       }
-      switch (other.MapCase) {
+      switch (other.MapCase)
+      {
         case MapOneofCase.LocalMap:
-          if (LocalMap == null) {
+          if (LocalMap == null)
+          {
             LocalMap = new global::SC2APIProtocol.LocalMap();
           }
           LocalMap.MergeFrom(other.LocalMap);
@@ -2679,80 +3093,96 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            global::SC2APIProtocol.LocalMap subBuilder = new global::SC2APIProtocol.LocalMap();
-            if (mapCase_ == MapOneofCase.LocalMap) {
-              subBuilder.MergeFrom(LocalMap);
+          case 10:
+            {
+              global::SC2APIProtocol.LocalMap subBuilder = new global::SC2APIProtocol.LocalMap();
+              if (mapCase_ == MapOneofCase.LocalMap)
+              {
+                subBuilder.MergeFrom(LocalMap);
+              }
+              input.ReadMessage(subBuilder);
+              LocalMap = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            LocalMap = subBuilder;
-            break;
-          }
-          case 18: {
-            BattlenetMapName = input.ReadString();
-            break;
-          }
-          case 26: {
-            playerSetup_.AddEntriesFrom(input, _repeated_playerSetup_codec);
-            break;
-          }
-          case 32: {
-            DisableFog = input.ReadBool();
-            break;
-          }
-          case 40: {
-            RandomSeed = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            Realtime = input.ReadBool();
-            break;
-          }
+          case 18:
+            {
+              BattlenetMapName = input.ReadString();
+              break;
+            }
+          case 26:
+            {
+              playerSetup_.AddEntriesFrom(input, _repeated_playerSetup_codec);
+              break;
+            }
+          case 32:
+            {
+              DisableFog = input.ReadBool();
+              break;
+            }
+          case 40:
+            {
+              RandomSeed = input.ReadUInt32();
+              break;
+            }
+          case 48:
+            {
+              Realtime = input.ReadBool();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class LocalMap : pb::IMessage<LocalMap> {
+  public sealed partial class LocalMap : pb::IMessage<LocalMap>
+  {
     private static readonly pb::MessageParser<LocalMap> _parser = new pb::MessageParser<LocalMap>(() => new LocalMap());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LocalMap> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public LocalMap() {
+    public LocalMap()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public LocalMap(LocalMap other) : this() {
+    public LocalMap(LocalMap other) : this()
+    {
       mapPath_ = other.mapPath_;
       mapData_ = other.mapData_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public LocalMap Clone() {
+    public LocalMap Clone()
+    {
       return new LocalMap(this);
     }
 
@@ -2765,9 +3195,11 @@ namespace SC2APIProtocol {
     /// into the replay. (260 character max)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MapPath {
+    public string MapPath
+    {
       get { return mapPath_; }
-      set {
+      set
+      {
         mapPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -2776,24 +3208,30 @@ namespace SC2APIProtocol {
     public const int MapDataFieldNumber = 7;
     private pb::ByteString mapData_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString MapData {
+    public pb::ByteString MapData
+    {
       get { return mapData_; }
-      set {
+      set
+      {
         mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as LocalMap);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(LocalMap other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(LocalMap other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (MapPath != other.MapPath) return false;
@@ -2802,119 +3240,145 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (MapPath.Length != 0) hash ^= MapPath.GetHashCode();
       if (MapData.Length != 0) hash ^= MapData.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (MapPath.Length != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (MapPath.Length != 0)
+      {
         output.WriteRawTag(10);
         output.WriteString(MapPath);
       }
-      if (MapData.Length != 0) {
+      if (MapData.Length != 0)
+      {
         output.WriteRawTag(58);
         output.WriteBytes(MapData);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (MapPath.Length != 0) {
+      if (MapPath.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MapPath);
       }
-      if (MapData.Length != 0) {
+      if (MapData.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(LocalMap other) {
-      if (other == null) {
+    public void MergeFrom(LocalMap other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.MapPath.Length != 0) {
+      if (other.MapPath.Length != 0)
+      {
         MapPath = other.MapPath;
       }
-      if (other.MapData.Length != 0) {
+      if (other.MapData.Length != 0)
+      {
         MapData = other.MapData;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            MapPath = input.ReadString();
-            break;
-          }
-          case 58: {
-            MapData = input.ReadBytes();
-            break;
-          }
+          case 10:
+            {
+              MapPath = input.ReadString();
+              break;
+            }
+          case 58:
+            {
+              MapData = input.ReadBytes();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseCreateGame : pb::IMessage<ResponseCreateGame> {
+  public sealed partial class ResponseCreateGame : pb::IMessage<ResponseCreateGame>
+  {
     private static readonly pb::MessageParser<ResponseCreateGame> _parser = new pb::MessageParser<ResponseCreateGame>(() => new ResponseCreateGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseCreateGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseCreateGame() {
+    public ResponseCreateGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseCreateGame(ResponseCreateGame other) : this() {
+    public ResponseCreateGame(ResponseCreateGame other) : this()
+    {
       error_ = other.error_;
       errorDetails_ = other.errorDetails_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseCreateGame Clone() {
+    public ResponseCreateGame Clone()
+    {
       return new ResponseCreateGame(this);
     }
 
@@ -2922,9 +3386,11 @@ namespace SC2APIProtocol {
     public const int ErrorFieldNumber = 1;
     private global::SC2APIProtocol.ResponseCreateGame.Types.Error error_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseCreateGame.Types.Error Error {
+    public global::SC2APIProtocol.ResponseCreateGame.Types.Error Error
+    {
       get { return error_; }
-      set {
+      set
+      {
         error_ = value;
       }
     }
@@ -2933,24 +3399,30 @@ namespace SC2APIProtocol {
     public const int ErrorDetailsFieldNumber = 2;
     private string errorDetails_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ErrorDetails {
+    public string ErrorDetails
+    {
       get { return errorDetails_; }
-      set {
+      set
+      {
         errorDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseCreateGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseCreateGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseCreateGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Error != other.Error) return false;
@@ -2959,81 +3431,101 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Error != 0) hash ^= Error.GetHashCode();
       if (ErrorDetails.Length != 0) hash ^= ErrorDetails.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Error != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Error != 0)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Error);
+        output.WriteEnum((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Error != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Error);
+      if (Error != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseCreateGame other) {
-      if (other == null) {
+    public void MergeFrom(ResponseCreateGame other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Error != 0) {
+      if (other.Error != 0)
+      {
         Error = other.Error;
       }
-      if (other.ErrorDetails.Length != 0) {
+      if (other.ErrorDetails.Length != 0)
+      {
         ErrorDetails = other.ErrorDetails;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            error_ = (global::SC2APIProtocol.ResponseCreateGame.Types.Error) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            ErrorDetails = input.ReadString();
-            break;
-          }
+          case 8:
+            {
+              error_ = (global::SC2APIProtocol.ResponseCreateGame.Types.Error)input.ReadEnum();
+              break;
+            }
+          case 18:
+            {
+              ErrorDetails = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -3041,8 +3533,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ResponseCreateGame message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Error {
+    public static partial class Types
+    {
+      public enum Error
+      {
         [pbr::OriginalName("Error_UNSET")] Unset = 0,
         [pbr::OriginalName("MissingMap")] MissingMap = 1,
         [pbr::OriginalName("InvalidMapPath")] InvalidMapPath = 2,
@@ -3067,36 +3561,42 @@ namespace SC2APIProtocol {
   /// If successful, puts the game into the status: in_game. Will be able to
   /// request actions, observations and step the game.
   /// </summary>
-  public sealed partial class RequestJoinGame : pb::IMessage<RequestJoinGame> {
+  public sealed partial class RequestJoinGame : pb::IMessage<RequestJoinGame>
+  {
     private static readonly pb::MessageParser<RequestJoinGame> _parser = new pb::MessageParser<RequestJoinGame>(() => new RequestJoinGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestJoinGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestJoinGame() {
+    public RequestJoinGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestJoinGame(RequestJoinGame other) : this() {
+    public RequestJoinGame(RequestJoinGame other) : this()
+    {
       Options = other.options_ != null ? other.Options.Clone() : null;
       ServerPorts = other.serverPorts_ != null ? other.ServerPorts.Clone() : null;
       clientPorts_ = other.clientPorts_.Clone();
       sharedPort_ = other.sharedPort_;
-      switch (other.ParticipationCase) {
+      switch (other.ParticipationCase)
+      {
         case ParticipationOneofCase.Race:
           Race = other.Race;
           break;
@@ -3109,7 +3609,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestJoinGame Clone() {
+    public RequestJoinGame Clone()
+    {
       return new RequestJoinGame(this);
     }
 
@@ -3119,9 +3620,11 @@ namespace SC2APIProtocol {
     /// Join as participant
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Race Race {
-      get { return participationCase_ == ParticipationOneofCase.Race ? (global::SC2APIProtocol.Race) participation_ : 0; }
-      set {
+    public global::SC2APIProtocol.Race Race
+    {
+      get { return participationCase_ == ParticipationOneofCase.Race ? (global::SC2APIProtocol.Race)participation_ : 0; }
+      set
+      {
         participation_ = value;
         participationCase_ = ParticipationOneofCase.Race;
       }
@@ -3133,9 +3636,11 @@ namespace SC2APIProtocol {
     /// Join as observer
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint ObservedPlayerId {
-      get { return participationCase_ == ParticipationOneofCase.ObservedPlayerId ? (uint) participation_ : 0; }
-      set {
+    public uint ObservedPlayerId
+    {
+      get { return participationCase_ == ParticipationOneofCase.ObservedPlayerId ? (uint)participation_ : 0; }
+      set
+      {
         participation_ = value;
         participationCase_ = ParticipationOneofCase.ObservedPlayerId;
       }
@@ -3148,9 +3653,11 @@ namespace SC2APIProtocol {
     /// This is limited to what is specified in RequestCreateGame, but you can request less information if you want.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.InterfaceOptions Options {
+    public global::SC2APIProtocol.InterfaceOptions Options
+    {
       get { return options_; }
-      set {
+      set
+      {
         options_ = value;
       }
     }
@@ -3162,9 +3669,11 @@ namespace SC2APIProtocol {
     /// Do not set in the single-player case. This is the port a server will use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.PortSet ServerPorts {
+    public global::SC2APIProtocol.PortSet ServerPorts
+    {
       get { return serverPorts_; }
-      set {
+      set
+      {
         serverPorts_ = value;
       }
     }
@@ -3178,7 +3687,8 @@ namespace SC2APIProtocol {
     /// Do not set in the single-player case. These are the ports clients will use to initialize communication.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.PortSet> ClientPorts {
+    public pbc::RepeatedField<global::SC2APIProtocol.PortSet> ClientPorts
+    {
       get { return clientPorts_; }
     }
 
@@ -3189,57 +3699,67 @@ namespace SC2APIProtocol {
     /// Currently only a singe client is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SharedPort {
+    public int SharedPort
+    {
       get { return sharedPort_; }
-      set {
+      set
+      {
         sharedPort_ = value;
       }
     }
 
     private object participation_;
     /// <summary>Enum of possible cases for the "participation" oneof.</summary>
-    public enum ParticipationOneofCase {
+    public enum ParticipationOneofCase
+    {
       None = 0,
       Race = 1,
       ObservedPlayerId = 2,
     }
     private ParticipationOneofCase participationCase_ = ParticipationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ParticipationOneofCase ParticipationCase {
+    public ParticipationOneofCase ParticipationCase
+    {
       get { return participationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearParticipation() {
+    public void ClearParticipation()
+    {
       participationCase_ = ParticipationOneofCase.None;
       participation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestJoinGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestJoinGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestJoinGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Race != other.Race) return false;
       if (ObservedPlayerId != other.ObservedPlayerId) return false;
       if (!object.Equals(Options, other.Options)) return false;
       if (!object.Equals(ServerPorts, other.ServerPorts)) return false;
-      if(!clientPorts_.Equals(other.clientPorts_)) return false;
+      if (!clientPorts_.Equals(other.clientPorts_)) return false;
       if (SharedPort != other.SharedPort) return false;
       if (ParticipationCase != other.ParticipationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (participationCase_ == ParticipationOneofCase.Race) hash ^= Race.GetHashCode();
       if (participationCase_ == ParticipationOneofCase.ObservedPlayerId) hash ^= ObservedPlayerId.GetHashCode();
@@ -3247,93 +3767,117 @@ namespace SC2APIProtocol {
       if (serverPorts_ != null) hash ^= ServerPorts.GetHashCode();
       hash ^= clientPorts_.GetHashCode();
       if (SharedPort != 0) hash ^= SharedPort.GetHashCode();
-      hash ^= (int) participationCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)participationCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (participationCase_ == ParticipationOneofCase.Race) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (participationCase_ == ParticipationOneofCase.Race)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Race);
+        output.WriteEnum((int)Race);
       }
-      if (participationCase_ == ParticipationOneofCase.ObservedPlayerId) {
+      if (participationCase_ == ParticipationOneofCase.ObservedPlayerId)
+      {
         output.WriteRawTag(16);
         output.WriteUInt32(ObservedPlayerId);
       }
-      if (options_ != null) {
+      if (options_ != null)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
       }
-      if (serverPorts_ != null) {
+      if (serverPorts_ != null)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(ServerPorts);
       }
       clientPorts_.WriteTo(output, _repeated_clientPorts_codec);
-      if (SharedPort != 0) {
+      if (SharedPort != 0)
+      {
         output.WriteRawTag(48);
         output.WriteInt32(SharedPort);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (participationCase_ == ParticipationOneofCase.Race) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Race);
+      if (participationCase_ == ParticipationOneofCase.Race)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Race);
       }
-      if (participationCase_ == ParticipationOneofCase.ObservedPlayerId) {
+      if (participationCase_ == ParticipationOneofCase.ObservedPlayerId)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ObservedPlayerId);
       }
-      if (options_ != null) {
+      if (options_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
-      if (serverPorts_ != null) {
+      if (serverPorts_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServerPorts);
       }
       size += clientPorts_.CalculateSize(_repeated_clientPorts_codec);
-      if (SharedPort != 0) {
+      if (SharedPort != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SharedPort);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestJoinGame other) {
-      if (other == null) {
+    public void MergeFrom(RequestJoinGame other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.options_ != null) {
-        if (options_ == null) {
+      if (other.options_ != null)
+      {
+        if (options_ == null)
+        {
           options_ = new global::SC2APIProtocol.InterfaceOptions();
         }
         Options.MergeFrom(other.Options);
       }
-      if (other.serverPorts_ != null) {
-        if (serverPorts_ == null) {
+      if (other.serverPorts_ != null)
+      {
+        if (serverPorts_ == null)
+        {
           serverPorts_ = new global::SC2APIProtocol.PortSet();
         }
         ServerPorts.MergeFrom(other.ServerPorts);
       }
       clientPorts_.Add(other.clientPorts_);
-      if (other.SharedPort != 0) {
+      if (other.SharedPort != 0)
+      {
         SharedPort = other.SharedPort;
       }
-      switch (other.ParticipationCase) {
+      switch (other.ParticipationCase)
+      {
         case ParticipationOneofCase.Race:
           Race = other.Race;
           break;
@@ -3346,82 +3890,99 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            participation_ = input.ReadEnum();
-            participationCase_ = ParticipationOneofCase.Race;
-            break;
-          }
-          case 16: {
-            ObservedPlayerId = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            if (options_ == null) {
-              options_ = new global::SC2APIProtocol.InterfaceOptions();
+          case 8:
+            {
+              participation_ = input.ReadEnum();
+              participationCase_ = ParticipationOneofCase.Race;
+              break;
             }
-            input.ReadMessage(options_);
-            break;
-          }
-          case 34: {
-            if (serverPorts_ == null) {
-              serverPorts_ = new global::SC2APIProtocol.PortSet();
+          case 16:
+            {
+              ObservedPlayerId = input.ReadUInt32();
+              break;
             }
-            input.ReadMessage(serverPorts_);
-            break;
-          }
-          case 42: {
-            clientPorts_.AddEntriesFrom(input, _repeated_clientPorts_codec);
-            break;
-          }
-          case 48: {
-            SharedPort = input.ReadInt32();
-            break;
-          }
+          case 26:
+            {
+              if (options_ == null)
+              {
+                options_ = new global::SC2APIProtocol.InterfaceOptions();
+              }
+              input.ReadMessage(options_);
+              break;
+            }
+          case 34:
+            {
+              if (serverPorts_ == null)
+              {
+                serverPorts_ = new global::SC2APIProtocol.PortSet();
+              }
+              input.ReadMessage(serverPorts_);
+              break;
+            }
+          case 42:
+            {
+              clientPorts_.AddEntriesFrom(input, _repeated_clientPorts_codec);
+              break;
+            }
+          case 48:
+            {
+              SharedPort = input.ReadInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class PortSet : pb::IMessage<PortSet> {
+  public sealed partial class PortSet : pb::IMessage<PortSet>
+  {
     private static readonly pb::MessageParser<PortSet> _parser = new pb::MessageParser<PortSet>(() => new PortSet());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PortSet> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PortSet() {
+    public PortSet()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PortSet(PortSet other) : this() {
+    public PortSet(PortSet other) : this()
+    {
       gamePort_ = other.gamePort_;
       basePort_ = other.basePort_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PortSet Clone() {
+    public PortSet Clone()
+    {
       return new PortSet(this);
     }
 
@@ -3432,9 +3993,11 @@ namespace SC2APIProtocol {
     /// Game right now needs two internal ports to establish a multiplay game on the local host.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int GamePort {
+    public int GamePort
+    {
       get { return gamePort_; }
-      set {
+      set
+      {
         gamePort_ = value;
       }
     }
@@ -3443,24 +4006,30 @@ namespace SC2APIProtocol {
     public const int BasePortFieldNumber = 2;
     private int basePort_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int BasePort {
+    public int BasePort
+    {
       get { return basePort_; }
-      set {
+      set
+      {
         basePort_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as PortSet);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PortSet other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(PortSet other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (GamePort != other.GamePort) return false;
@@ -3469,112 +4038,137 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (GamePort != 0) hash ^= GamePort.GetHashCode();
       if (BasePort != 0) hash ^= BasePort.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (GamePort != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (GamePort != 0)
+      {
         output.WriteRawTag(8);
         output.WriteInt32(GamePort);
       }
-      if (BasePort != 0) {
+      if (BasePort != 0)
+      {
         output.WriteRawTag(16);
         output.WriteInt32(BasePort);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (GamePort != 0) {
+      if (GamePort != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(GamePort);
       }
-      if (BasePort != 0) {
+      if (BasePort != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(BasePort);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PortSet other) {
-      if (other == null) {
+    public void MergeFrom(PortSet other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.GamePort != 0) {
+      if (other.GamePort != 0)
+      {
         GamePort = other.GamePort;
       }
-      if (other.BasePort != 0) {
+      if (other.BasePort != 0)
+      {
         BasePort = other.BasePort;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            GamePort = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            BasePort = input.ReadInt32();
-            break;
-          }
+          case 8:
+            {
+              GamePort = input.ReadInt32();
+              break;
+            }
+          case 16:
+            {
+              BasePort = input.ReadInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseJoinGame : pb::IMessage<ResponseJoinGame> {
+  public sealed partial class ResponseJoinGame : pb::IMessage<ResponseJoinGame>
+  {
     private static readonly pb::MessageParser<ResponseJoinGame> _parser = new pb::MessageParser<ResponseJoinGame>(() => new ResponseJoinGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseJoinGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseJoinGame() {
+    public ResponseJoinGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseJoinGame(ResponseJoinGame other) : this() {
+    public ResponseJoinGame(ResponseJoinGame other) : this()
+    {
       playerId_ = other.playerId_;
       error_ = other.error_;
       errorDetails_ = other.errorDetails_;
@@ -3582,7 +4176,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseJoinGame Clone() {
+    public ResponseJoinGame Clone()
+    {
       return new ResponseJoinGame(this);
     }
 
@@ -3590,9 +4185,11 @@ namespace SC2APIProtocol {
     public const int PlayerIdFieldNumber = 1;
     private uint playerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
@@ -3601,9 +4198,11 @@ namespace SC2APIProtocol {
     public const int ErrorFieldNumber = 2;
     private global::SC2APIProtocol.ResponseJoinGame.Types.Error error_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseJoinGame.Types.Error Error {
+    public global::SC2APIProtocol.ResponseJoinGame.Types.Error Error
+    {
       get { return error_; }
-      set {
+      set
+      {
         error_ = value;
       }
     }
@@ -3612,24 +4211,30 @@ namespace SC2APIProtocol {
     public const int ErrorDetailsFieldNumber = 3;
     private string errorDetails_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ErrorDetails {
+    public string ErrorDetails
+    {
       get { return errorDetails_; }
-      set {
+      set
+      {
         errorDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseJoinGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseJoinGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseJoinGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -3639,96 +4244,120 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
       if (Error != 0) hash ^= Error.GetHashCode();
       if (ErrorDetails.Length != 0) hash ^= ErrorDetails.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (Error != 0) {
+      if (Error != 0)
+      {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Error);
+        output.WriteEnum((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         output.WriteRawTag(26);
         output.WriteString(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (Error != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Error);
+      if (Error != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseJoinGame other) {
-      if (other == null) {
+    public void MergeFrom(ResponseJoinGame other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
-      if (other.Error != 0) {
+      if (other.Error != 0)
+      {
         Error = other.Error;
       }
-      if (other.ErrorDetails.Length != 0) {
+      if (other.ErrorDetails.Length != 0)
+      {
         ErrorDetails = other.ErrorDetails;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            error_ = (global::SC2APIProtocol.ResponseJoinGame.Types.Error) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            ErrorDetails = input.ReadString();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
+          case 16:
+            {
+              error_ = (global::SC2APIProtocol.ResponseJoinGame.Types.Error)input.ReadEnum();
+              break;
+            }
+          case 26:
+            {
+              ErrorDetails = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -3736,8 +4365,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ResponseJoinGame message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Error {
+    public static partial class Types
+    {
+      public enum Error
+      {
         [pbr::OriginalName("Error_UNSET")] Unset = 0,
         [pbr::OriginalName("MissingParticipation")] MissingParticipation = 1,
         [pbr::OriginalName("InvalidObservedPlayerId")] InvalidObservedPlayerId = 2,
@@ -3765,98 +4396,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestRestartGame : pb::IMessage<RequestRestartGame> {
+  public sealed partial class RequestRestartGame : pb::IMessage<RequestRestartGame>
+  {
     private static readonly pb::MessageParser<RequestRestartGame> _parser = new pb::MessageParser<RequestRestartGame>(() => new RequestRestartGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestRestartGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestRestartGame() {
+    public RequestRestartGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestRestartGame(RequestRestartGame other) : this() {
+    public RequestRestartGame(RequestRestartGame other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestRestartGame Clone() {
+    public RequestRestartGame Clone()
+    {
       return new RequestRestartGame(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestRestartGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestRestartGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestRestartGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestRestartGame other) {
-      if (other == null) {
+    public void MergeFrom(RequestRestartGame other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3866,38 +4519,44 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ResponseRestartGame : pb::IMessage<ResponseRestartGame> {
+  public sealed partial class ResponseRestartGame : pb::IMessage<ResponseRestartGame>
+  {
     private static readonly pb::MessageParser<ResponseRestartGame> _parser = new pb::MessageParser<ResponseRestartGame>(() => new ResponseRestartGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseRestartGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseRestartGame() {
+    public ResponseRestartGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseRestartGame(ResponseRestartGame other) : this() {
+    public ResponseRestartGame(ResponseRestartGame other) : this()
+    {
       error_ = other.error_;
       errorDetails_ = other.errorDetails_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseRestartGame Clone() {
+    public ResponseRestartGame Clone()
+    {
       return new ResponseRestartGame(this);
     }
 
@@ -3905,9 +4564,11 @@ namespace SC2APIProtocol {
     public const int ErrorFieldNumber = 1;
     private global::SC2APIProtocol.ResponseRestartGame.Types.Error error_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseRestartGame.Types.Error Error {
+    public global::SC2APIProtocol.ResponseRestartGame.Types.Error Error
+    {
       get { return error_; }
-      set {
+      set
+      {
         error_ = value;
       }
     }
@@ -3916,24 +4577,30 @@ namespace SC2APIProtocol {
     public const int ErrorDetailsFieldNumber = 2;
     private string errorDetails_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ErrorDetails {
+    public string ErrorDetails
+    {
       get { return errorDetails_; }
-      set {
+      set
+      {
         errorDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseRestartGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseRestartGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseRestartGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Error != other.Error) return false;
@@ -3942,81 +4609,101 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Error != 0) hash ^= Error.GetHashCode();
       if (ErrorDetails.Length != 0) hash ^= ErrorDetails.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Error != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Error != 0)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Error);
+        output.WriteEnum((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Error != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Error);
+      if (Error != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseRestartGame other) {
-      if (other == null) {
+    public void MergeFrom(ResponseRestartGame other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Error != 0) {
+      if (other.Error != 0)
+      {
         Error = other.Error;
       }
-      if (other.ErrorDetails.Length != 0) {
+      if (other.ErrorDetails.Length != 0)
+      {
         ErrorDetails = other.ErrorDetails;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            error_ = (global::SC2APIProtocol.ResponseRestartGame.Types.Error) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            ErrorDetails = input.ReadString();
-            break;
-          }
+          case 8:
+            {
+              error_ = (global::SC2APIProtocol.ResponseRestartGame.Types.Error)input.ReadEnum();
+              break;
+            }
+          case 18:
+            {
+              ErrorDetails = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -4024,8 +4711,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ResponseRestartGame message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Error {
+    public static partial class Types
+    {
+      public enum Error
+      {
         [pbr::OriginalName("Error_UNSET")] Unset = 0,
         [pbr::OriginalName("LaunchError")] LaunchError = 1,
       }
@@ -4038,37 +4727,43 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestStartReplay : pb::IMessage<RequestStartReplay> {
+  public sealed partial class RequestStartReplay : pb::IMessage<RequestStartReplay>
+  {
     private static readonly pb::MessageParser<RequestStartReplay> _parser = new pb::MessageParser<RequestStartReplay>(() => new RequestStartReplay());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestStartReplay> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStartReplay() {
+    public RequestStartReplay()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStartReplay(RequestStartReplay other) : this() {
+    public RequestStartReplay(RequestStartReplay other) : this()
+    {
       mapData_ = other.mapData_;
       observedPlayerId_ = other.observedPlayerId_;
       Options = other.options_ != null ? other.Options.Clone() : null;
       disableFog_ = other.disableFog_;
       realtime_ = other.realtime_;
-      switch (other.ReplayCase) {
+      switch (other.ReplayCase)
+      {
         case ReplayOneofCase.ReplayPath:
           ReplayPath = other.ReplayPath;
           break;
@@ -4081,16 +4776,19 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStartReplay Clone() {
+    public RequestStartReplay Clone()
+    {
       return new RequestStartReplay(this);
     }
 
     /// <summary>Field number for the "replay_path" field.</summary>
     public const int ReplayPathFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ReplayPath {
-      get { return replayCase_ == ReplayOneofCase.ReplayPath ? (string) replay_ : ""; }
-      set {
+    public string ReplayPath
+    {
+      get { return replayCase_ == ReplayOneofCase.ReplayPath ? (string)replay_ : ""; }
+      set
+      {
         replay_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         replayCase_ = ReplayOneofCase.ReplayPath;
       }
@@ -4099,9 +4797,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "replay_data" field.</summary>
     public const int ReplayDataFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString ReplayData {
-      get { return replayCase_ == ReplayOneofCase.ReplayData ? (pb::ByteString) replay_ : pb::ByteString.Empty; }
-      set {
+    public pb::ByteString ReplayData
+    {
+      get { return replayCase_ == ReplayOneofCase.ReplayData ? (pb::ByteString)replay_ : pb::ByteString.Empty; }
+      set
+      {
         replay_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         replayCase_ = ReplayOneofCase.ReplayData;
       }
@@ -4114,9 +4814,11 @@ namespace SC2APIProtocol {
     /// Overrides the map path stored in the replay.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString MapData {
+    public pb::ByteString MapData
+    {
       get { return mapData_; }
-      set {
+      set
+      {
         mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -4125,9 +4827,11 @@ namespace SC2APIProtocol {
     public const int ObservedPlayerIdFieldNumber = 2;
     private int observedPlayerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int ObservedPlayerId {
+    public int ObservedPlayerId
+    {
       get { return observedPlayerId_; }
-      set {
+      set
+      {
         observedPlayerId_ = value;
       }
     }
@@ -4136,9 +4840,11 @@ namespace SC2APIProtocol {
     public const int OptionsFieldNumber = 3;
     private global::SC2APIProtocol.InterfaceOptions options_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.InterfaceOptions Options {
+    public global::SC2APIProtocol.InterfaceOptions Options
+    {
       get { return options_; }
-      set {
+      set
+      {
         options_ = value;
       }
     }
@@ -4147,9 +4853,11 @@ namespace SC2APIProtocol {
     public const int DisableFogFieldNumber = 4;
     private bool disableFog_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool DisableFog {
+    public bool DisableFog
+    {
       get { return disableFog_; }
-      set {
+      set
+      {
         disableFog_ = value;
       }
     }
@@ -4158,43 +4866,52 @@ namespace SC2APIProtocol {
     public const int RealtimeFieldNumber = 7;
     private bool realtime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Realtime {
+    public bool Realtime
+    {
       get { return realtime_; }
-      set {
+      set
+      {
         realtime_ = value;
       }
     }
 
     private object replay_;
     /// <summary>Enum of possible cases for the "replay" oneof.</summary>
-    public enum ReplayOneofCase {
+    public enum ReplayOneofCase
+    {
       None = 0,
       ReplayPath = 1,
       ReplayData = 5,
     }
     private ReplayOneofCase replayCase_ = ReplayOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ReplayOneofCase ReplayCase {
+    public ReplayOneofCase ReplayCase
+    {
       get { return replayCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearReplay() {
+    public void ClearReplay()
+    {
       replayCase_ = ReplayOneofCase.None;
       replay_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestStartReplay);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestStartReplay other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestStartReplay other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (ReplayPath != other.ReplayPath) return false;
@@ -4209,7 +4926,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (replayCase_ == ReplayOneofCase.ReplayPath) hash ^= ReplayPath.GetHashCode();
       if (replayCase_ == ReplayOneofCase.ReplayData) hash ^= ReplayData.GetHashCode();
@@ -4218,107 +4936,136 @@ namespace SC2APIProtocol {
       if (options_ != null) hash ^= Options.GetHashCode();
       if (DisableFog != false) hash ^= DisableFog.GetHashCode();
       if (Realtime != false) hash ^= Realtime.GetHashCode();
-      hash ^= (int) replayCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)replayCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (replayCase_ == ReplayOneofCase.ReplayPath) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (replayCase_ == ReplayOneofCase.ReplayPath)
+      {
         output.WriteRawTag(10);
         output.WriteString(ReplayPath);
       }
-      if (ObservedPlayerId != 0) {
+      if (ObservedPlayerId != 0)
+      {
         output.WriteRawTag(16);
         output.WriteInt32(ObservedPlayerId);
       }
-      if (options_ != null) {
+      if (options_ != null)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
       }
-      if (DisableFog != false) {
+      if (DisableFog != false)
+      {
         output.WriteRawTag(32);
         output.WriteBool(DisableFog);
       }
-      if (replayCase_ == ReplayOneofCase.ReplayData) {
+      if (replayCase_ == ReplayOneofCase.ReplayData)
+      {
         output.WriteRawTag(42);
         output.WriteBytes(ReplayData);
       }
-      if (MapData.Length != 0) {
+      if (MapData.Length != 0)
+      {
         output.WriteRawTag(50);
         output.WriteBytes(MapData);
       }
-      if (Realtime != false) {
+      if (Realtime != false)
+      {
         output.WriteRawTag(56);
         output.WriteBool(Realtime);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (replayCase_ == ReplayOneofCase.ReplayPath) {
+      if (replayCase_ == ReplayOneofCase.ReplayPath)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReplayPath);
       }
-      if (replayCase_ == ReplayOneofCase.ReplayData) {
+      if (replayCase_ == ReplayOneofCase.ReplayData)
+      {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ReplayData);
       }
-      if (MapData.Length != 0) {
+      if (MapData.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
       }
-      if (ObservedPlayerId != 0) {
+      if (ObservedPlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObservedPlayerId);
       }
-      if (options_ != null) {
+      if (options_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
-      if (DisableFog != false) {
+      if (DisableFog != false)
+      {
         size += 1 + 1;
       }
-      if (Realtime != false) {
+      if (Realtime != false)
+      {
         size += 1 + 1;
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestStartReplay other) {
-      if (other == null) {
+    public void MergeFrom(RequestStartReplay other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.MapData.Length != 0) {
+      if (other.MapData.Length != 0)
+      {
         MapData = other.MapData;
       }
-      if (other.ObservedPlayerId != 0) {
+      if (other.ObservedPlayerId != 0)
+      {
         ObservedPlayerId = other.ObservedPlayerId;
       }
-      if (other.options_ != null) {
-        if (options_ == null) {
+      if (other.options_ != null)
+      {
+        if (options_ == null)
+        {
           options_ = new global::SC2APIProtocol.InterfaceOptions();
         }
         Options.MergeFrom(other.Options);
       }
-      if (other.DisableFog != false) {
+      if (other.DisableFog != false)
+      {
         DisableFog = other.DisableFog;
       }
-      if (other.Realtime != false) {
+      if (other.Realtime != false)
+      {
         Realtime = other.Realtime;
       }
-      switch (other.ReplayCase) {
+      switch (other.ReplayCase)
+      {
         case ReplayOneofCase.ReplayPath:
           ReplayPath = other.ReplayPath;
           break;
@@ -4331,82 +5078,99 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            ReplayPath = input.ReadString();
-            break;
-          }
-          case 16: {
-            ObservedPlayerId = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            if (options_ == null) {
-              options_ = new global::SC2APIProtocol.InterfaceOptions();
+          case 10:
+            {
+              ReplayPath = input.ReadString();
+              break;
             }
-            input.ReadMessage(options_);
-            break;
-          }
-          case 32: {
-            DisableFog = input.ReadBool();
-            break;
-          }
-          case 42: {
-            ReplayData = input.ReadBytes();
-            break;
-          }
-          case 50: {
-            MapData = input.ReadBytes();
-            break;
-          }
-          case 56: {
-            Realtime = input.ReadBool();
-            break;
-          }
+          case 16:
+            {
+              ObservedPlayerId = input.ReadInt32();
+              break;
+            }
+          case 26:
+            {
+              if (options_ == null)
+              {
+                options_ = new global::SC2APIProtocol.InterfaceOptions();
+              }
+              input.ReadMessage(options_);
+              break;
+            }
+          case 32:
+            {
+              DisableFog = input.ReadBool();
+              break;
+            }
+          case 42:
+            {
+              ReplayData = input.ReadBytes();
+              break;
+            }
+          case 50:
+            {
+              MapData = input.ReadBytes();
+              break;
+            }
+          case 56:
+            {
+              Realtime = input.ReadBool();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseStartReplay : pb::IMessage<ResponseStartReplay> {
+  public sealed partial class ResponseStartReplay : pb::IMessage<ResponseStartReplay>
+  {
     private static readonly pb::MessageParser<ResponseStartReplay> _parser = new pb::MessageParser<ResponseStartReplay>(() => new ResponseStartReplay());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseStartReplay> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseStartReplay() {
+    public ResponseStartReplay()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseStartReplay(ResponseStartReplay other) : this() {
+    public ResponseStartReplay(ResponseStartReplay other) : this()
+    {
       error_ = other.error_;
       errorDetails_ = other.errorDetails_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseStartReplay Clone() {
+    public ResponseStartReplay Clone()
+    {
       return new ResponseStartReplay(this);
     }
 
@@ -4414,9 +5178,11 @@ namespace SC2APIProtocol {
     public const int ErrorFieldNumber = 1;
     private global::SC2APIProtocol.ResponseStartReplay.Types.Error error_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseStartReplay.Types.Error Error {
+    public global::SC2APIProtocol.ResponseStartReplay.Types.Error Error
+    {
       get { return error_; }
-      set {
+      set
+      {
         error_ = value;
       }
     }
@@ -4425,24 +5191,30 @@ namespace SC2APIProtocol {
     public const int ErrorDetailsFieldNumber = 2;
     private string errorDetails_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ErrorDetails {
+    public string ErrorDetails
+    {
       get { return errorDetails_; }
-      set {
+      set
+      {
         errorDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseStartReplay);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseStartReplay other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseStartReplay other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Error != other.Error) return false;
@@ -4451,81 +5223,101 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Error != 0) hash ^= Error.GetHashCode();
       if (ErrorDetails.Length != 0) hash ^= ErrorDetails.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Error != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Error != 0)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Error);
+        output.WriteEnum((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Error != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Error);
+      if (Error != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseStartReplay other) {
-      if (other == null) {
+    public void MergeFrom(ResponseStartReplay other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Error != 0) {
+      if (other.Error != 0)
+      {
         Error = other.Error;
       }
-      if (other.ErrorDetails.Length != 0) {
+      if (other.ErrorDetails.Length != 0)
+      {
         ErrorDetails = other.ErrorDetails;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            error_ = (global::SC2APIProtocol.ResponseStartReplay.Types.Error) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            ErrorDetails = input.ReadString();
-            break;
-          }
+          case 8:
+            {
+              error_ = (global::SC2APIProtocol.ResponseStartReplay.Types.Error)input.ReadEnum();
+              break;
+            }
+          case 18:
+            {
+              ErrorDetails = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -4533,8 +5325,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ResponseStartReplay message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Error {
+    public static partial class Types
+    {
+      public enum Error
+      {
         [pbr::OriginalName("Error_UNSET")] Unset = 0,
         [pbr::OriginalName("MissingReplay")] MissingReplay = 1,
         [pbr::OriginalName("InvalidReplayPath")] InvalidReplayPath = 2,
@@ -4553,98 +5347,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestLeaveGame : pb::IMessage<RequestLeaveGame> {
+  public sealed partial class RequestLeaveGame : pb::IMessage<RequestLeaveGame>
+  {
     private static readonly pb::MessageParser<RequestLeaveGame> _parser = new pb::MessageParser<RequestLeaveGame>(() => new RequestLeaveGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestLeaveGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestLeaveGame() {
+    public RequestLeaveGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestLeaveGame(RequestLeaveGame other) : this() {
+    public RequestLeaveGame(RequestLeaveGame other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestLeaveGame Clone() {
+    public RequestLeaveGame Clone()
+    {
       return new RequestLeaveGame(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestLeaveGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestLeaveGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestLeaveGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestLeaveGame other) {
-      if (other == null) {
+    public void MergeFrom(RequestLeaveGame other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4654,98 +5470,120 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ResponseLeaveGame : pb::IMessage<ResponseLeaveGame> {
+  public sealed partial class ResponseLeaveGame : pb::IMessage<ResponseLeaveGame>
+  {
     private static readonly pb::MessageParser<ResponseLeaveGame> _parser = new pb::MessageParser<ResponseLeaveGame>(() => new ResponseLeaveGame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseLeaveGame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseLeaveGame() {
+    public ResponseLeaveGame()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseLeaveGame(ResponseLeaveGame other) : this() {
+    public ResponseLeaveGame(ResponseLeaveGame other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseLeaveGame Clone() {
+    public ResponseLeaveGame Clone()
+    {
       return new ResponseLeaveGame(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseLeaveGame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseLeaveGame other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseLeaveGame other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseLeaveGame other) {
-      if (other == null) {
+    public void MergeFrom(ResponseLeaveGame other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4758,98 +5596,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestQuickSave : pb::IMessage<RequestQuickSave> {
+  public sealed partial class RequestQuickSave : pb::IMessage<RequestQuickSave>
+  {
     private static readonly pb::MessageParser<RequestQuickSave> _parser = new pb::MessageParser<RequestQuickSave>(() => new RequestQuickSave());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestQuickSave> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuickSave() {
+    public RequestQuickSave()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuickSave(RequestQuickSave other) : this() {
+    public RequestQuickSave(RequestQuickSave other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuickSave Clone() {
+    public RequestQuickSave Clone()
+    {
       return new RequestQuickSave(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestQuickSave);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestQuickSave other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestQuickSave other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestQuickSave other) {
-      if (other == null) {
+    public void MergeFrom(RequestQuickSave other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4862,98 +5722,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class ResponseQuickSave : pb::IMessage<ResponseQuickSave> {
+  public sealed partial class ResponseQuickSave : pb::IMessage<ResponseQuickSave>
+  {
     private static readonly pb::MessageParser<ResponseQuickSave> _parser = new pb::MessageParser<ResponseQuickSave>(() => new ResponseQuickSave());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseQuickSave> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuickSave() {
+    public ResponseQuickSave()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuickSave(ResponseQuickSave other) : this() {
+    public ResponseQuickSave(ResponseQuickSave other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuickSave Clone() {
+    public ResponseQuickSave Clone()
+    {
       return new ResponseQuickSave(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseQuickSave);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseQuickSave other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseQuickSave other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseQuickSave other) {
-      if (other == null) {
+    public void MergeFrom(ResponseQuickSave other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4966,98 +5848,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestQuickLoad : pb::IMessage<RequestQuickLoad> {
+  public sealed partial class RequestQuickLoad : pb::IMessage<RequestQuickLoad>
+  {
     private static readonly pb::MessageParser<RequestQuickLoad> _parser = new pb::MessageParser<RequestQuickLoad>(() => new RequestQuickLoad());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestQuickLoad> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuickLoad() {
+    public RequestQuickLoad()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuickLoad(RequestQuickLoad other) : this() {
+    public RequestQuickLoad(RequestQuickLoad other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuickLoad Clone() {
+    public RequestQuickLoad Clone()
+    {
       return new RequestQuickLoad(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestQuickLoad);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestQuickLoad other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestQuickLoad other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestQuickLoad other) {
-      if (other == null) {
+    public void MergeFrom(RequestQuickLoad other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -5070,98 +5974,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class ResponseQuickLoad : pb::IMessage<ResponseQuickLoad> {
+  public sealed partial class ResponseQuickLoad : pb::IMessage<ResponseQuickLoad>
+  {
     private static readonly pb::MessageParser<ResponseQuickLoad> _parser = new pb::MessageParser<ResponseQuickLoad>(() => new ResponseQuickLoad());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseQuickLoad> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuickLoad() {
+    public ResponseQuickLoad()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuickLoad(ResponseQuickLoad other) : this() {
+    public ResponseQuickLoad(ResponseQuickLoad other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuickLoad Clone() {
+    public ResponseQuickLoad Clone()
+    {
       return new ResponseQuickLoad(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseQuickLoad);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseQuickLoad other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseQuickLoad other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseQuickLoad other) {
-      if (other == null) {
+    public void MergeFrom(ResponseQuickLoad other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -5174,98 +6100,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestQuit : pb::IMessage<RequestQuit> {
+  public sealed partial class RequestQuit : pb::IMessage<RequestQuit>
+  {
     private static readonly pb::MessageParser<RequestQuit> _parser = new pb::MessageParser<RequestQuit>(() => new RequestQuit());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestQuit> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuit() {
+    public RequestQuit()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuit(RequestQuit other) : this() {
+    public RequestQuit(RequestQuit other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestQuit Clone() {
+    public RequestQuit Clone()
+    {
       return new RequestQuit(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestQuit);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestQuit other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestQuit other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestQuit other) {
-      if (other == null) {
+    public void MergeFrom(RequestQuit other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -5275,98 +6223,120 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ResponseQuit : pb::IMessage<ResponseQuit> {
+  public sealed partial class ResponseQuit : pb::IMessage<ResponseQuit>
+  {
     private static readonly pb::MessageParser<ResponseQuit> _parser = new pb::MessageParser<ResponseQuit>(() => new ResponseQuit());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseQuit> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuit() {
+    public ResponseQuit()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuit(ResponseQuit other) : this() {
+    public ResponseQuit(ResponseQuit other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseQuit Clone() {
+    public ResponseQuit Clone()
+    {
       return new ResponseQuit(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseQuit);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseQuit other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseQuit other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseQuit other) {
-      if (other == null) {
+    public void MergeFrom(ResponseQuit other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -5379,98 +6349,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestGameInfo : pb::IMessage<RequestGameInfo> {
+  public sealed partial class RequestGameInfo : pb::IMessage<RequestGameInfo>
+  {
     private static readonly pb::MessageParser<RequestGameInfo> _parser = new pb::MessageParser<RequestGameInfo>(() => new RequestGameInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestGameInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestGameInfo() {
+    public RequestGameInfo()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestGameInfo(RequestGameInfo other) : this() {
+    public RequestGameInfo(RequestGameInfo other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestGameInfo Clone() {
+    public RequestGameInfo Clone()
+    {
       return new RequestGameInfo(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestGameInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestGameInfo other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestGameInfo other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestGameInfo other) {
-      if (other == null) {
+    public void MergeFrom(RequestGameInfo other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -5480,31 +6472,36 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ResponseGameInfo : pb::IMessage<ResponseGameInfo> {
+  public sealed partial class ResponseGameInfo : pb::IMessage<ResponseGameInfo>
+  {
     private static readonly pb::MessageParser<ResponseGameInfo> _parser = new pb::MessageParser<ResponseGameInfo>(() => new ResponseGameInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseGameInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseGameInfo() {
+    public ResponseGameInfo()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseGameInfo(ResponseGameInfo other) : this() {
+    public ResponseGameInfo(ResponseGameInfo other) : this()
+    {
       mapName_ = other.mapName_;
       modNames_ = other.modNames_.Clone();
       localMapPath_ = other.localMapPath_;
@@ -5515,7 +6512,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseGameInfo Clone() {
+    public ResponseGameInfo Clone()
+    {
       return new ResponseGameInfo(this);
     }
 
@@ -5523,9 +6521,11 @@ namespace SC2APIProtocol {
     public const int MapNameFieldNumber = 1;
     private string mapName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MapName {
+    public string MapName
+    {
       get { return mapName_; }
-      set {
+      set
+      {
         mapName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -5536,7 +6536,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> modNames_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> ModNames {
+    public pbc::RepeatedField<string> ModNames
+    {
       get { return modNames_; }
     }
 
@@ -5544,9 +6545,11 @@ namespace SC2APIProtocol {
     public const int LocalMapPathFieldNumber = 2;
     private string localMapPath_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string LocalMapPath {
+    public string LocalMapPath
+    {
       get { return localMapPath_; }
-      set {
+      set
+      {
         localMapPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -5557,7 +6560,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(26, global::SC2APIProtocol.PlayerInfo.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.PlayerInfo> playerInfo_ = new pbc::RepeatedField<global::SC2APIProtocol.PlayerInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.PlayerInfo> PlayerInfo {
+    public pbc::RepeatedField<global::SC2APIProtocol.PlayerInfo> PlayerInfo
+    {
       get { return playerInfo_; }
     }
 
@@ -5568,9 +6572,11 @@ namespace SC2APIProtocol {
     /// Populated if Raw interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.StartRaw StartRaw {
+    public global::SC2APIProtocol.StartRaw StartRaw
+    {
       get { return startRaw_; }
-      set {
+      set
+      {
         startRaw_ = value;
       }
     }
@@ -5579,37 +6585,44 @@ namespace SC2APIProtocol {
     public const int OptionsFieldNumber = 5;
     private global::SC2APIProtocol.InterfaceOptions options_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.InterfaceOptions Options {
+    public global::SC2APIProtocol.InterfaceOptions Options
+    {
       get { return options_; }
-      set {
+      set
+      {
         options_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseGameInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseGameInfo other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseGameInfo other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (MapName != other.MapName) return false;
-      if(!modNames_.Equals(other.modNames_)) return false;
+      if (!modNames_.Equals(other.modNames_)) return false;
       if (LocalMapPath != other.LocalMapPath) return false;
-      if(!playerInfo_.Equals(other.playerInfo_)) return false;
+      if (!playerInfo_.Equals(other.playerInfo_)) return false;
       if (!object.Equals(StartRaw, other.StartRaw)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (MapName.Length != 0) hash ^= MapName.GetHashCode();
       hash ^= modNames_.GetHashCode();
@@ -5617,86 +6630,108 @@ namespace SC2APIProtocol {
       hash ^= playerInfo_.GetHashCode();
       if (startRaw_ != null) hash ^= StartRaw.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (MapName.Length != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (MapName.Length != 0)
+      {
         output.WriteRawTag(10);
         output.WriteString(MapName);
       }
-      if (LocalMapPath.Length != 0) {
+      if (LocalMapPath.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(LocalMapPath);
       }
       playerInfo_.WriteTo(output, _repeated_playerInfo_codec);
-      if (startRaw_ != null) {
+      if (startRaw_ != null)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(StartRaw);
       }
-      if (options_ != null) {
+      if (options_ != null)
+      {
         output.WriteRawTag(42);
         output.WriteMessage(Options);
       }
       modNames_.WriteTo(output, _repeated_modNames_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (MapName.Length != 0) {
+      if (MapName.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MapName);
       }
       size += modNames_.CalculateSize(_repeated_modNames_codec);
-      if (LocalMapPath.Length != 0) {
+      if (LocalMapPath.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalMapPath);
       }
       size += playerInfo_.CalculateSize(_repeated_playerInfo_codec);
-      if (startRaw_ != null) {
+      if (startRaw_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartRaw);
       }
-      if (options_ != null) {
+      if (options_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseGameInfo other) {
-      if (other == null) {
+    public void MergeFrom(ResponseGameInfo other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.MapName.Length != 0) {
+      if (other.MapName.Length != 0)
+      {
         MapName = other.MapName;
       }
       modNames_.Add(other.modNames_);
-      if (other.LocalMapPath.Length != 0) {
+      if (other.LocalMapPath.Length != 0)
+      {
         LocalMapPath = other.LocalMapPath;
       }
       playerInfo_.Add(other.playerInfo_);
-      if (other.startRaw_ != null) {
-        if (startRaw_ == null) {
+      if (other.startRaw_ != null)
+      {
+        if (startRaw_ == null)
+        {
           startRaw_ = new global::SC2APIProtocol.StartRaw();
         }
         StartRaw.MergeFrom(other.StartRaw);
       }
-      if (other.options_ != null) {
-        if (options_ == null) {
+      if (other.options_ != null)
+      {
+        if (options_ == null)
+        {
           options_ = new global::SC2APIProtocol.InterfaceOptions();
         }
         Options.MergeFrom(other.Options);
@@ -5705,43 +6740,54 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            MapName = input.ReadString();
-            break;
-          }
-          case 18: {
-            LocalMapPath = input.ReadString();
-            break;
-          }
-          case 26: {
-            playerInfo_.AddEntriesFrom(input, _repeated_playerInfo_codec);
-            break;
-          }
-          case 34: {
-            if (startRaw_ == null) {
-              startRaw_ = new global::SC2APIProtocol.StartRaw();
+          case 10:
+            {
+              MapName = input.ReadString();
+              break;
             }
-            input.ReadMessage(startRaw_);
-            break;
-          }
-          case 42: {
-            if (options_ == null) {
-              options_ = new global::SC2APIProtocol.InterfaceOptions();
+          case 18:
+            {
+              LocalMapPath = input.ReadString();
+              break;
             }
-            input.ReadMessage(options_);
-            break;
-          }
-          case 50: {
-            modNames_.AddEntriesFrom(input, _repeated_modNames_codec);
-            break;
-          }
+          case 26:
+            {
+              playerInfo_.AddEntriesFrom(input, _repeated_playerInfo_codec);
+              break;
+            }
+          case 34:
+            {
+              if (startRaw_ == null)
+              {
+                startRaw_ = new global::SC2APIProtocol.StartRaw();
+              }
+              input.ReadMessage(startRaw_);
+              break;
+            }
+          case 42:
+            {
+              if (options_ == null)
+              {
+                options_ = new global::SC2APIProtocol.InterfaceOptions();
+              }
+              input.ReadMessage(options_);
+              break;
+            }
+          case 50:
+            {
+              modNames_.AddEntriesFrom(input, _repeated_modNames_codec);
+              break;
+            }
         }
       }
     }
@@ -5751,37 +6797,43 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestObservation : pb::IMessage<RequestObservation> {
+  public sealed partial class RequestObservation : pb::IMessage<RequestObservation>
+  {
     private static readonly pb::MessageParser<RequestObservation> _parser = new pb::MessageParser<RequestObservation>(() => new RequestObservation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestObservation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestObservation() {
+    public RequestObservation()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestObservation(RequestObservation other) : this() {
+    public RequestObservation(RequestObservation other) : this()
+    {
       disableFog_ = other.disableFog_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestObservation Clone() {
+    public RequestObservation Clone()
+    {
       return new RequestObservation(this);
     }
 
@@ -5789,24 +6841,30 @@ namespace SC2APIProtocol {
     public const int DisableFogFieldNumber = 1;
     private bool disableFog_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool DisableFog {
+    public bool DisableFog
+    {
       get { return disableFog_; }
-      set {
+      set
+      {
         disableFog_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestObservation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestObservation other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestObservation other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (DisableFog != other.DisableFog) return false;
@@ -5814,97 +6872,118 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (DisableFog != false) hash ^= DisableFog.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (DisableFog != false) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (DisableFog != false)
+      {
         output.WriteRawTag(8);
         output.WriteBool(DisableFog);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (DisableFog != false) {
+      if (DisableFog != false)
+      {
         size += 1 + 1;
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestObservation other) {
-      if (other == null) {
+    public void MergeFrom(RequestObservation other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.DisableFog != false) {
+      if (other.DisableFog != false)
+      {
         DisableFog = other.DisableFog;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            DisableFog = input.ReadBool();
-            break;
-          }
+          case 8:
+            {
+              DisableFog = input.ReadBool();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseObservation : pb::IMessage<ResponseObservation> {
+  public sealed partial class ResponseObservation : pb::IMessage<ResponseObservation>
+  {
     private static readonly pb::MessageParser<ResponseObservation> _parser = new pb::MessageParser<ResponseObservation>(() => new ResponseObservation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseObservation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseObservation() {
+    public ResponseObservation()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseObservation(ResponseObservation other) : this() {
+    public ResponseObservation(ResponseObservation other) : this()
+    {
       actions_ = other.actions_.Clone();
       actionErrors_ = other.actionErrors_.Clone();
       Observation = other.observation_ != null ? other.Observation.Clone() : null;
@@ -5914,7 +6993,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseObservation Clone() {
+    public ResponseObservation Clone()
+    {
       return new ResponseObservation(this);
     }
 
@@ -5927,7 +7007,8 @@ namespace SC2APIProtocol {
     /// Actions this player did since the last Observation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.Action> Actions {
+    public pbc::RepeatedField<global::SC2APIProtocol.Action> Actions
+    {
       get { return actions_; }
     }
 
@@ -5940,7 +7021,8 @@ namespace SC2APIProtocol {
     /// Equivalent of UI "red text" errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.ActionError> ActionErrors {
+    public pbc::RepeatedField<global::SC2APIProtocol.ActionError> ActionErrors
+    {
       get { return actionErrors_; }
     }
 
@@ -5948,9 +7030,11 @@ namespace SC2APIProtocol {
     public const int ObservationFieldNumber = 3;
     private global::SC2APIProtocol.Observation observation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Observation Observation {
+    public global::SC2APIProtocol.Observation Observation
+    {
       get { return observation_; }
-      set {
+      set
+      {
         observation_ = value;
       }
     }
@@ -5964,7 +7048,8 @@ namespace SC2APIProtocol {
     /// Only populated if the game ended during this step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.PlayerResult> PlayerResult {
+    public pbc::RepeatedField<global::SC2APIProtocol.PlayerResult> PlayerResult
+    {
       get { return playerResult_; }
     }
 
@@ -5974,90 +7059,108 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(42, global::SC2APIProtocol.ChatReceived.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.ChatReceived> chat_ = new pbc::RepeatedField<global::SC2APIProtocol.ChatReceived>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.ChatReceived> Chat {
+    public pbc::RepeatedField<global::SC2APIProtocol.ChatReceived> Chat
+    {
       get { return chat_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseObservation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseObservation other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseObservation other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!actions_.Equals(other.actions_)) return false;
-      if(!actionErrors_.Equals(other.actionErrors_)) return false;
+      if (!actions_.Equals(other.actions_)) return false;
+      if (!actionErrors_.Equals(other.actionErrors_)) return false;
       if (!object.Equals(Observation, other.Observation)) return false;
-      if(!playerResult_.Equals(other.playerResult_)) return false;
-      if(!chat_.Equals(other.chat_)) return false;
+      if (!playerResult_.Equals(other.playerResult_)) return false;
+      if (!chat_.Equals(other.chat_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= actions_.GetHashCode();
       hash ^= actionErrors_.GetHashCode();
       if (observation_ != null) hash ^= Observation.GetHashCode();
       hash ^= playerResult_.GetHashCode();
       hash ^= chat_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       actions_.WriteTo(output, _repeated_actions_codec);
       actionErrors_.WriteTo(output, _repeated_actionErrors_codec);
-      if (observation_ != null) {
+      if (observation_ != null)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(Observation);
       }
       playerResult_.WriteTo(output, _repeated_playerResult_codec);
       chat_.WriteTo(output, _repeated_chat_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += actions_.CalculateSize(_repeated_actions_codec);
       size += actionErrors_.CalculateSize(_repeated_actionErrors_codec);
-      if (observation_ != null) {
+      if (observation_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Observation);
       }
       size += playerResult_.CalculateSize(_repeated_playerResult_codec);
       size += chat_.CalculateSize(_repeated_chat_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseObservation other) {
-      if (other == null) {
+    public void MergeFrom(ResponseObservation other)
+    {
+      if (other == null)
+      {
         return;
       }
       actions_.Add(other.actions_);
       actionErrors_.Add(other.actionErrors_);
-      if (other.observation_ != null) {
-        if (observation_ == null) {
+      if (other.observation_ != null)
+      {
+        if (observation_ == null)
+        {
           observation_ = new global::SC2APIProtocol.Observation();
         }
         Observation.MergeFrom(other.Observation);
@@ -6068,74 +7171,89 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            actions_.AddEntriesFrom(input, _repeated_actions_codec);
-            break;
-          }
-          case 18: {
-            actionErrors_.AddEntriesFrom(input, _repeated_actionErrors_codec);
-            break;
-          }
-          case 26: {
-            if (observation_ == null) {
-              observation_ = new global::SC2APIProtocol.Observation();
+          case 10:
+            {
+              actions_.AddEntriesFrom(input, _repeated_actions_codec);
+              break;
             }
-            input.ReadMessage(observation_);
-            break;
-          }
-          case 34: {
-            playerResult_.AddEntriesFrom(input, _repeated_playerResult_codec);
-            break;
-          }
-          case 42: {
-            chat_.AddEntriesFrom(input, _repeated_chat_codec);
-            break;
-          }
+          case 18:
+            {
+              actionErrors_.AddEntriesFrom(input, _repeated_actionErrors_codec);
+              break;
+            }
+          case 26:
+            {
+              if (observation_ == null)
+              {
+                observation_ = new global::SC2APIProtocol.Observation();
+              }
+              input.ReadMessage(observation_);
+              break;
+            }
+          case 34:
+            {
+              playerResult_.AddEntriesFrom(input, _repeated_playerResult_codec);
+              break;
+            }
+          case 42:
+            {
+              chat_.AddEntriesFrom(input, _repeated_chat_codec);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ChatReceived : pb::IMessage<ChatReceived> {
+  public sealed partial class ChatReceived : pb::IMessage<ChatReceived>
+  {
     private static readonly pb::MessageParser<ChatReceived> _parser = new pb::MessageParser<ChatReceived>(() => new ChatReceived());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ChatReceived> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ChatReceived() {
+    public ChatReceived()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ChatReceived(ChatReceived other) : this() {
+    public ChatReceived(ChatReceived other) : this()
+    {
       playerId_ = other.playerId_;
       message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ChatReceived Clone() {
+    public ChatReceived Clone()
+    {
       return new ChatReceived(this);
     }
 
@@ -6143,9 +7261,11 @@ namespace SC2APIProtocol {
     public const int PlayerIdFieldNumber = 1;
     private uint playerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
@@ -6154,24 +7274,30 @@ namespace SC2APIProtocol {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Message {
+    public string Message
+    {
       get { return message_; }
-      set {
+      set
+      {
         message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ChatReceived);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ChatReceived other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ChatReceived other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -6180,81 +7306,101 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (Message.Length != 0) {
+      if (Message.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(Message);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (Message.Length != 0) {
+      if (Message.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ChatReceived other) {
-      if (other == null) {
+    public void MergeFrom(ChatReceived other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
-      if (other.Message.Length != 0) {
+      if (other.Message.Length != 0)
+      {
         Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
-          case 18: {
-            Message = input.ReadString();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
+          case 18:
+            {
+              Message = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -6264,37 +7410,43 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestAction : pb::IMessage<RequestAction> {
+  public sealed partial class RequestAction : pb::IMessage<RequestAction>
+  {
     private static readonly pb::MessageParser<RequestAction> _parser = new pb::MessageParser<RequestAction>(() => new RequestAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestAction> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestAction() {
+    public RequestAction()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestAction(RequestAction other) : this() {
+    public RequestAction(RequestAction other) : this()
+    {
       actions_ = other.actions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestAction Clone() {
+    public RequestAction Clone()
+    {
       return new RequestAction(this);
     }
 
@@ -6304,63 +7456,77 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(10, global::SC2APIProtocol.Action.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.Action> actions_ = new pbc::RepeatedField<global::SC2APIProtocol.Action>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.Action> Actions {
+    public pbc::RepeatedField<global::SC2APIProtocol.Action> Actions
+    {
       get { return actions_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestAction);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestAction other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestAction other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!actions_.Equals(other.actions_)) return false;
+      if (!actions_.Equals(other.actions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= actions_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       actions_.WriteTo(output, _repeated_actions_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += actions_.CalculateSize(_repeated_actions_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestAction other) {
-      if (other == null) {
+    public void MergeFrom(RequestAction other)
+    {
+      if (other == null)
+      {
         return;
       }
       actions_.Add(other.actions_);
@@ -6368,120 +7534,144 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            actions_.AddEntriesFrom(input, _repeated_actions_codec);
-            break;
-          }
+          case 10:
+            {
+              actions_.AddEntriesFrom(input, _repeated_actions_codec);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseAction : pb::IMessage<ResponseAction> {
+  public sealed partial class ResponseAction : pb::IMessage<ResponseAction>
+  {
     private static readonly pb::MessageParser<ResponseAction> _parser = new pb::MessageParser<ResponseAction>(() => new ResponseAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseAction> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseAction() {
+    public ResponseAction()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseAction(ResponseAction other) : this() {
+    public ResponseAction(ResponseAction other) : this()
+    {
       result_ = other.result_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseAction Clone() {
+    public ResponseAction Clone()
+    {
       return new ResponseAction(this);
     }
 
     /// <summary>Field number for the "result" field.</summary>
     public const int ResultFieldNumber = 1;
     private static readonly pb::FieldCodec<global::SC2APIProtocol.ActionResult> _repeated_result_codec
-        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::SC2APIProtocol.ActionResult) x);
+        = pb::FieldCodec.ForEnum(10, x => (int)x, x => (global::SC2APIProtocol.ActionResult)x);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.ActionResult> result_ = new pbc::RepeatedField<global::SC2APIProtocol.ActionResult>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.ActionResult> Result {
+    public pbc::RepeatedField<global::SC2APIProtocol.ActionResult> Result
+    {
       get { return result_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseAction);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseAction other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseAction other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!result_.Equals(other.result_)) return false;
+      if (!result_.Equals(other.result_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= result_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       result_.WriteTo(output, _repeated_result_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += result_.CalculateSize(_repeated_result_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseAction other) {
-      if (other == null) {
+    public void MergeFrom(ResponseAction other)
+    {
+      if (other == null)
+      {
         return;
       }
       result_.Add(other.result_);
@@ -6489,18 +7679,22 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10:
-          case 8: {
-            result_.AddEntriesFrom(input, _repeated_result_codec);
-            break;
-          }
+          case 8:
+            {
+              result_.AddEntriesFrom(input, _repeated_result_codec);
+              break;
+            }
         }
       }
     }
@@ -6510,37 +7704,43 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestObserverAction : pb::IMessage<RequestObserverAction> {
+  public sealed partial class RequestObserverAction : pb::IMessage<RequestObserverAction>
+  {
     private static readonly pb::MessageParser<RequestObserverAction> _parser = new pb::MessageParser<RequestObserverAction>(() => new RequestObserverAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestObserverAction> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestObserverAction() {
+    public RequestObserverAction()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestObserverAction(RequestObserverAction other) : this() {
+    public RequestObserverAction(RequestObserverAction other) : this()
+    {
       actions_ = other.actions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestObserverAction Clone() {
+    public RequestObserverAction Clone()
+    {
       return new RequestObserverAction(this);
     }
 
@@ -6550,63 +7750,77 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(10, global::SC2APIProtocol.ObserverAction.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.ObserverAction> actions_ = new pbc::RepeatedField<global::SC2APIProtocol.ObserverAction>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.ObserverAction> Actions {
+    public pbc::RepeatedField<global::SC2APIProtocol.ObserverAction> Actions
+    {
       get { return actions_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestObserverAction);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestObserverAction other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestObserverAction other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!actions_.Equals(other.actions_)) return false;
+      if (!actions_.Equals(other.actions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= actions_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       actions_.WriteTo(output, _repeated_actions_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += actions_.CalculateSize(_repeated_actions_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestObserverAction other) {
-      if (other == null) {
+    public void MergeFrom(RequestObserverAction other)
+    {
+      if (other == null)
+      {
         return;
       }
       actions_.Add(other.actions_);
@@ -6614,115 +7828,141 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            actions_.AddEntriesFrom(input, _repeated_actions_codec);
-            break;
-          }
+          case 10:
+            {
+              actions_.AddEntriesFrom(input, _repeated_actions_codec);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseObserverAction : pb::IMessage<ResponseObserverAction> {
+  public sealed partial class ResponseObserverAction : pb::IMessage<ResponseObserverAction>
+  {
     private static readonly pb::MessageParser<ResponseObserverAction> _parser = new pb::MessageParser<ResponseObserverAction>(() => new ResponseObserverAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseObserverAction> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseObserverAction() {
+    public ResponseObserverAction()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseObserverAction(ResponseObserverAction other) : this() {
+    public ResponseObserverAction(ResponseObserverAction other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseObserverAction Clone() {
+    public ResponseObserverAction Clone()
+    {
       return new ResponseObserverAction(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseObserverAction);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseObserverAction other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseObserverAction other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseObserverAction other) {
-      if (other == null) {
+    public void MergeFrom(ResponseObserverAction other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -6735,37 +7975,43 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestStep : pb::IMessage<RequestStep> {
+  public sealed partial class RequestStep : pb::IMessage<RequestStep>
+  {
     private static readonly pb::MessageParser<RequestStep> _parser = new pb::MessageParser<RequestStep>(() => new RequestStep());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestStep> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStep() {
+    public RequestStep()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStep(RequestStep other) : this() {
+    public RequestStep(RequestStep other) : this()
+    {
       count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStep Clone() {
+    public RequestStep Clone()
+    {
       return new RequestStep(this);
     }
 
@@ -6776,24 +8022,30 @@ namespace SC2APIProtocol {
     /// Number of game loops to simulate for the next frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Count {
+    public uint Count
+    {
       get { return count_; }
-      set {
+      set
+      {
         count_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestStep);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestStep other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestStep other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Count != other.Count) return false;
@@ -6801,164 +8053,202 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Count != 0) hash ^= Count.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Count != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Count != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(Count);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Count != 0) {
+      if (Count != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestStep other) {
-      if (other == null) {
+    public void MergeFrom(RequestStep other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Count != 0) {
+      if (other.Count != 0)
+      {
         Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Count = input.ReadUInt32();
-            break;
-          }
+          case 8:
+            {
+              Count = input.ReadUInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseStep : pb::IMessage<ResponseStep> {
+  public sealed partial class ResponseStep : pb::IMessage<ResponseStep>
+  {
     private static readonly pb::MessageParser<ResponseStep> _parser = new pb::MessageParser<ResponseStep>(() => new ResponseStep());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseStep> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseStep() {
+    public ResponseStep()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseStep(ResponseStep other) : this() {
+    public ResponseStep(ResponseStep other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseStep Clone() {
+    public ResponseStep Clone()
+    {
       return new ResponseStep(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseStep);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseStep other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseStep other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseStep other) {
-      if (other == null) {
+    public void MergeFrom(ResponseStep other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -6971,31 +8261,36 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestData : pb::IMessage<RequestData> {
+  public sealed partial class RequestData : pb::IMessage<RequestData>
+  {
     private static readonly pb::MessageParser<RequestData> _parser = new pb::MessageParser<RequestData>(() => new RequestData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestData() {
+    public RequestData()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestData(RequestData other) : this() {
+    public RequestData(RequestData other) : this()
+    {
       abilityId_ = other.abilityId_;
       unitTypeId_ = other.unitTypeId_;
       upgradeId_ = other.upgradeId_;
@@ -7005,7 +8300,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestData Clone() {
+    public RequestData Clone()
+    {
       return new RequestData(this);
     }
 
@@ -7013,9 +8309,11 @@ namespace SC2APIProtocol {
     public const int AbilityIdFieldNumber = 1;
     private bool abilityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool AbilityId {
+    public bool AbilityId
+    {
       get { return abilityId_; }
-      set {
+      set
+      {
         abilityId_ = value;
       }
     }
@@ -7024,9 +8322,11 @@ namespace SC2APIProtocol {
     public const int UnitTypeIdFieldNumber = 2;
     private bool unitTypeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool UnitTypeId {
+    public bool UnitTypeId
+    {
       get { return unitTypeId_; }
-      set {
+      set
+      {
         unitTypeId_ = value;
       }
     }
@@ -7035,9 +8335,11 @@ namespace SC2APIProtocol {
     public const int UpgradeIdFieldNumber = 3;
     private bool upgradeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool UpgradeId {
+    public bool UpgradeId
+    {
       get { return upgradeId_; }
-      set {
+      set
+      {
         upgradeId_ = value;
       }
     }
@@ -7046,9 +8348,11 @@ namespace SC2APIProtocol {
     public const int BuffIdFieldNumber = 4;
     private bool buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool BuffId {
+    public bool BuffId
+    {
       get { return buffId_; }
-      set {
+      set
+      {
         buffId_ = value;
       }
     }
@@ -7057,24 +8361,30 @@ namespace SC2APIProtocol {
     public const int EffectIdFieldNumber = 5;
     private bool effectId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool EffectId {
+    public bool EffectId
+    {
       get { return effectId_; }
-      set {
+      set
+      {
         effectId_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestData other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestData other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (AbilityId != other.AbilityId) return false;
@@ -7086,157 +8396,194 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (AbilityId != false) hash ^= AbilityId.GetHashCode();
       if (UnitTypeId != false) hash ^= UnitTypeId.GetHashCode();
       if (UpgradeId != false) hash ^= UpgradeId.GetHashCode();
       if (BuffId != false) hash ^= BuffId.GetHashCode();
       if (EffectId != false) hash ^= EffectId.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (AbilityId != false) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (AbilityId != false)
+      {
         output.WriteRawTag(8);
         output.WriteBool(AbilityId);
       }
-      if (UnitTypeId != false) {
+      if (UnitTypeId != false)
+      {
         output.WriteRawTag(16);
         output.WriteBool(UnitTypeId);
       }
-      if (UpgradeId != false) {
+      if (UpgradeId != false)
+      {
         output.WriteRawTag(24);
         output.WriteBool(UpgradeId);
       }
-      if (BuffId != false) {
+      if (BuffId != false)
+      {
         output.WriteRawTag(32);
         output.WriteBool(BuffId);
       }
-      if (EffectId != false) {
+      if (EffectId != false)
+      {
         output.WriteRawTag(40);
         output.WriteBool(EffectId);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (AbilityId != false) {
+      if (AbilityId != false)
+      {
         size += 1 + 1;
       }
-      if (UnitTypeId != false) {
+      if (UnitTypeId != false)
+      {
         size += 1 + 1;
       }
-      if (UpgradeId != false) {
+      if (UpgradeId != false)
+      {
         size += 1 + 1;
       }
-      if (BuffId != false) {
+      if (BuffId != false)
+      {
         size += 1 + 1;
       }
-      if (EffectId != false) {
+      if (EffectId != false)
+      {
         size += 1 + 1;
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestData other) {
-      if (other == null) {
+    public void MergeFrom(RequestData other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.AbilityId != false) {
+      if (other.AbilityId != false)
+      {
         AbilityId = other.AbilityId;
       }
-      if (other.UnitTypeId != false) {
+      if (other.UnitTypeId != false)
+      {
         UnitTypeId = other.UnitTypeId;
       }
-      if (other.UpgradeId != false) {
+      if (other.UpgradeId != false)
+      {
         UpgradeId = other.UpgradeId;
       }
-      if (other.BuffId != false) {
+      if (other.BuffId != false)
+      {
         BuffId = other.BuffId;
       }
-      if (other.EffectId != false) {
+      if (other.EffectId != false)
+      {
         EffectId = other.EffectId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            AbilityId = input.ReadBool();
-            break;
-          }
-          case 16: {
-            UnitTypeId = input.ReadBool();
-            break;
-          }
-          case 24: {
-            UpgradeId = input.ReadBool();
-            break;
-          }
-          case 32: {
-            BuffId = input.ReadBool();
-            break;
-          }
-          case 40: {
-            EffectId = input.ReadBool();
-            break;
-          }
+          case 8:
+            {
+              AbilityId = input.ReadBool();
+              break;
+            }
+          case 16:
+            {
+              UnitTypeId = input.ReadBool();
+              break;
+            }
+          case 24:
+            {
+              UpgradeId = input.ReadBool();
+              break;
+            }
+          case 32:
+            {
+              BuffId = input.ReadBool();
+              break;
+            }
+          case 40:
+            {
+              EffectId = input.ReadBool();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseData : pb::IMessage<ResponseData> {
+  public sealed partial class ResponseData : pb::IMessage<ResponseData>
+  {
     private static readonly pb::MessageParser<ResponseData> _parser = new pb::MessageParser<ResponseData>(() => new ResponseData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseData() {
+    public ResponseData()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseData(ResponseData other) : this() {
+    public ResponseData(ResponseData other) : this()
+    {
       abilities_ = other.abilities_.Clone();
       units_ = other.units_.Clone();
       upgrades_ = other.upgrades_.Clone();
@@ -7246,7 +8593,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseData Clone() {
+    public ResponseData Clone()
+    {
       return new ResponseData(this);
     }
 
@@ -7256,7 +8604,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(10, global::SC2APIProtocol.AbilityData.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.AbilityData> abilities_ = new pbc::RepeatedField<global::SC2APIProtocol.AbilityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.AbilityData> Abilities {
+    public pbc::RepeatedField<global::SC2APIProtocol.AbilityData> Abilities
+    {
       get { return abilities_; }
     }
 
@@ -7266,7 +8615,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(18, global::SC2APIProtocol.UnitTypeData.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.UnitTypeData> units_ = new pbc::RepeatedField<global::SC2APIProtocol.UnitTypeData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.UnitTypeData> Units {
+    public pbc::RepeatedField<global::SC2APIProtocol.UnitTypeData> Units
+    {
       get { return units_; }
     }
 
@@ -7276,7 +8626,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(26, global::SC2APIProtocol.UpgradeData.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.UpgradeData> upgrades_ = new pbc::RepeatedField<global::SC2APIProtocol.UpgradeData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.UpgradeData> Upgrades {
+    public pbc::RepeatedField<global::SC2APIProtocol.UpgradeData> Upgrades
+    {
       get { return upgrades_; }
     }
 
@@ -7286,7 +8637,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(34, global::SC2APIProtocol.BuffData.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.BuffData> buffs_ = new pbc::RepeatedField<global::SC2APIProtocol.BuffData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.BuffData> Buffs {
+    public pbc::RepeatedField<global::SC2APIProtocol.BuffData> Buffs
+    {
       get { return buffs_; }
     }
 
@@ -7296,79 +8648,93 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(42, global::SC2APIProtocol.EffectData.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.EffectData> effects_ = new pbc::RepeatedField<global::SC2APIProtocol.EffectData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.EffectData> Effects {
+    public pbc::RepeatedField<global::SC2APIProtocol.EffectData> Effects
+    {
       get { return effects_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseData other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseData other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!abilities_.Equals(other.abilities_)) return false;
-      if(!units_.Equals(other.units_)) return false;
-      if(!upgrades_.Equals(other.upgrades_)) return false;
-      if(!buffs_.Equals(other.buffs_)) return false;
-      if(!effects_.Equals(other.effects_)) return false;
+      if (!abilities_.Equals(other.abilities_)) return false;
+      if (!units_.Equals(other.units_)) return false;
+      if (!upgrades_.Equals(other.upgrades_)) return false;
+      if (!buffs_.Equals(other.buffs_)) return false;
+      if (!effects_.Equals(other.effects_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= abilities_.GetHashCode();
       hash ^= units_.GetHashCode();
       hash ^= upgrades_.GetHashCode();
       hash ^= buffs_.GetHashCode();
       hash ^= effects_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       abilities_.WriteTo(output, _repeated_abilities_codec);
       units_.WriteTo(output, _repeated_units_codec);
       upgrades_.WriteTo(output, _repeated_upgrades_codec);
       buffs_.WriteTo(output, _repeated_buffs_codec);
       effects_.WriteTo(output, _repeated_effects_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += abilities_.CalculateSize(_repeated_abilities_codec);
       size += units_.CalculateSize(_repeated_units_codec);
       size += upgrades_.CalculateSize(_repeated_upgrades_codec);
       size += buffs_.CalculateSize(_repeated_buffs_codec);
       size += effects_.CalculateSize(_repeated_effects_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseData other) {
-      if (other == null) {
+    public void MergeFrom(ResponseData other)
+    {
+      if (other == null)
+      {
         return;
       }
       abilities_.Add(other.abilities_);
@@ -7380,33 +8746,41 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            abilities_.AddEntriesFrom(input, _repeated_abilities_codec);
-            break;
-          }
-          case 18: {
-            units_.AddEntriesFrom(input, _repeated_units_codec);
-            break;
-          }
-          case 26: {
-            upgrades_.AddEntriesFrom(input, _repeated_upgrades_codec);
-            break;
-          }
-          case 34: {
-            buffs_.AddEntriesFrom(input, _repeated_buffs_codec);
-            break;
-          }
-          case 42: {
-            effects_.AddEntriesFrom(input, _repeated_effects_codec);
-            break;
-          }
+          case 10:
+            {
+              abilities_.AddEntriesFrom(input, _repeated_abilities_codec);
+              break;
+            }
+          case 18:
+            {
+              units_.AddEntriesFrom(input, _repeated_units_codec);
+              break;
+            }
+          case 26:
+            {
+              upgrades_.AddEntriesFrom(input, _repeated_upgrades_codec);
+              break;
+            }
+          case 34:
+            {
+              buffs_.AddEntriesFrom(input, _repeated_buffs_codec);
+              break;
+            }
+          case 42:
+            {
+              effects_.AddEntriesFrom(input, _repeated_effects_codec);
+              break;
+            }
         }
       }
     }
@@ -7416,98 +8790,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestSaveReplay : pb::IMessage<RequestSaveReplay> {
+  public sealed partial class RequestSaveReplay : pb::IMessage<RequestSaveReplay>
+  {
     private static readonly pb::MessageParser<RequestSaveReplay> _parser = new pb::MessageParser<RequestSaveReplay>(() => new RequestSaveReplay());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestSaveReplay> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestSaveReplay() {
+    public RequestSaveReplay()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestSaveReplay(RequestSaveReplay other) : this() {
+    public RequestSaveReplay(RequestSaveReplay other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestSaveReplay Clone() {
+    public RequestSaveReplay Clone()
+    {
       return new RequestSaveReplay(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestSaveReplay);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestSaveReplay other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestSaveReplay other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestSaveReplay other) {
-      if (other == null) {
+    public void MergeFrom(RequestSaveReplay other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -7517,37 +8913,43 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ResponseSaveReplay : pb::IMessage<ResponseSaveReplay> {
+  public sealed partial class ResponseSaveReplay : pb::IMessage<ResponseSaveReplay>
+  {
     private static readonly pb::MessageParser<ResponseSaveReplay> _parser = new pb::MessageParser<ResponseSaveReplay>(() => new ResponseSaveReplay());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseSaveReplay> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseSaveReplay() {
+    public ResponseSaveReplay()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseSaveReplay(ResponseSaveReplay other) : this() {
+    public ResponseSaveReplay(ResponseSaveReplay other) : this()
+    {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseSaveReplay Clone() {
+    public ResponseSaveReplay Clone()
+    {
       return new ResponseSaveReplay(this);
     }
 
@@ -7555,24 +8957,30 @@ namespace SC2APIProtocol {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString Data {
+    public pb::ByteString Data
+    {
       get { return data_; }
-      set {
+      set
+      {
         data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseSaveReplay);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseSaveReplay other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseSaveReplay other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Data != other.Data) return false;
@@ -7580,66 +8988,82 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Data.Length != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Data.Length != 0)
+      {
         output.WriteRawTag(10);
         output.WriteBytes(Data);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Data.Length != 0) {
+      if (Data.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseSaveReplay other) {
-      if (other == null) {
+    public void MergeFrom(ResponseSaveReplay other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Data.Length != 0) {
+      if (other.Data.Length != 0)
+      {
         Data = other.Data;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Data = input.ReadBytes();
-            break;
-          }
+          case 10:
+            {
+              Data = input.ReadBytes();
+              break;
+            }
         }
       }
     }
@@ -7649,33 +9073,39 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestReplayInfo : pb::IMessage<RequestReplayInfo> {
+  public sealed partial class RequestReplayInfo : pb::IMessage<RequestReplayInfo>
+  {
     private static readonly pb::MessageParser<RequestReplayInfo> _parser = new pb::MessageParser<RequestReplayInfo>(() => new RequestReplayInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestReplayInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestReplayInfo() {
+    public RequestReplayInfo()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestReplayInfo(RequestReplayInfo other) : this() {
+    public RequestReplayInfo(RequestReplayInfo other) : this()
+    {
       downloadData_ = other.downloadData_;
-      switch (other.ReplayCase) {
+      switch (other.ReplayCase)
+      {
         case ReplayOneofCase.ReplayPath:
           ReplayPath = other.ReplayPath;
           break;
@@ -7688,7 +9118,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestReplayInfo Clone() {
+    public RequestReplayInfo Clone()
+    {
       return new RequestReplayInfo(this);
     }
 
@@ -7698,9 +9129,11 @@ namespace SC2APIProtocol {
     /// Limitation: might fail if the replay file is currently loaded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ReplayPath {
-      get { return replayCase_ == ReplayOneofCase.ReplayPath ? (string) replay_ : ""; }
-      set {
+    public string ReplayPath
+    {
+      get { return replayCase_ == ReplayOneofCase.ReplayPath ? (string)replay_ : ""; }
+      set
+      {
         replay_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         replayCase_ = ReplayOneofCase.ReplayPath;
       }
@@ -7709,9 +9142,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "replay_data" field.</summary>
     public const int ReplayDataFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString ReplayData {
-      get { return replayCase_ == ReplayOneofCase.ReplayData ? (pb::ByteString) replay_ : pb::ByteString.Empty; }
-      set {
+    public pb::ByteString ReplayData
+    {
+      get { return replayCase_ == ReplayOneofCase.ReplayData ? (pb::ByteString)replay_ : pb::ByteString.Empty; }
+      set
+      {
         replay_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         replayCase_ = ReplayOneofCase.ReplayData;
       }
@@ -7724,43 +9159,52 @@ namespace SC2APIProtocol {
     /// Ensure the data and binary are downloaded if this is an old version replay.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool DownloadData {
+    public bool DownloadData
+    {
       get { return downloadData_; }
-      set {
+      set
+      {
         downloadData_ = value;
       }
     }
 
     private object replay_;
     /// <summary>Enum of possible cases for the "replay" oneof.</summary>
-    public enum ReplayOneofCase {
+    public enum ReplayOneofCase
+    {
       None = 0,
       ReplayPath = 1,
       ReplayData = 2,
     }
     private ReplayOneofCase replayCase_ = ReplayOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ReplayOneofCase ReplayCase {
+    public ReplayOneofCase ReplayCase
+    {
       get { return replayCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearReplay() {
+    public void ClearReplay()
+    {
       replayCase_ = ReplayOneofCase.None;
       replay_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestReplayInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestReplayInfo other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestReplayInfo other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (ReplayPath != other.ReplayPath) return false;
@@ -7771,69 +9215,86 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (replayCase_ == ReplayOneofCase.ReplayPath) hash ^= ReplayPath.GetHashCode();
       if (replayCase_ == ReplayOneofCase.ReplayData) hash ^= ReplayData.GetHashCode();
       if (DownloadData != false) hash ^= DownloadData.GetHashCode();
-      hash ^= (int) replayCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)replayCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (replayCase_ == ReplayOneofCase.ReplayPath) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (replayCase_ == ReplayOneofCase.ReplayPath)
+      {
         output.WriteRawTag(10);
         output.WriteString(ReplayPath);
       }
-      if (replayCase_ == ReplayOneofCase.ReplayData) {
+      if (replayCase_ == ReplayOneofCase.ReplayData)
+      {
         output.WriteRawTag(18);
         output.WriteBytes(ReplayData);
       }
-      if (DownloadData != false) {
+      if (DownloadData != false)
+      {
         output.WriteRawTag(24);
         output.WriteBool(DownloadData);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (replayCase_ == ReplayOneofCase.ReplayPath) {
+      if (replayCase_ == ReplayOneofCase.ReplayPath)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReplayPath);
       }
-      if (replayCase_ == ReplayOneofCase.ReplayData) {
+      if (replayCase_ == ReplayOneofCase.ReplayData)
+      {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ReplayData);
       }
-      if (DownloadData != false) {
+      if (DownloadData != false)
+      {
         size += 1 + 1;
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestReplayInfo other) {
-      if (other == null) {
+    public void MergeFrom(RequestReplayInfo other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.DownloadData != false) {
+      if (other.DownloadData != false)
+      {
         DownloadData = other.DownloadData;
       }
-      switch (other.ReplayCase) {
+      switch (other.ReplayCase)
+      {
         case ReplayOneofCase.ReplayPath:
           ReplayPath = other.ReplayPath;
           break;
@@ -7846,56 +9307,67 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            ReplayPath = input.ReadString();
-            break;
-          }
-          case 18: {
-            ReplayData = input.ReadBytes();
-            break;
-          }
-          case 24: {
-            DownloadData = input.ReadBool();
-            break;
-          }
+          case 10:
+            {
+              ReplayPath = input.ReadString();
+              break;
+            }
+          case 18:
+            {
+              ReplayData = input.ReadBytes();
+              break;
+            }
+          case 24:
+            {
+              DownloadData = input.ReadBool();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class PlayerInfoExtra : pb::IMessage<PlayerInfoExtra> {
+  public sealed partial class PlayerInfoExtra : pb::IMessage<PlayerInfoExtra>
+  {
     private static readonly pb::MessageParser<PlayerInfoExtra> _parser = new pb::MessageParser<PlayerInfoExtra>(() => new PlayerInfoExtra());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PlayerInfoExtra> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerInfoExtra() {
+    public PlayerInfoExtra()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerInfoExtra(PlayerInfoExtra other) : this() {
+    public PlayerInfoExtra(PlayerInfoExtra other) : this()
+    {
       PlayerInfo = other.playerInfo_ != null ? other.PlayerInfo.Clone() : null;
       PlayerResult = other.playerResult_ != null ? other.PlayerResult.Clone() : null;
       playerMmr_ = other.playerMmr_;
@@ -7904,7 +9376,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerInfoExtra Clone() {
+    public PlayerInfoExtra Clone()
+    {
       return new PlayerInfoExtra(this);
     }
 
@@ -7912,9 +9385,11 @@ namespace SC2APIProtocol {
     public const int PlayerInfoFieldNumber = 1;
     private global::SC2APIProtocol.PlayerInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.PlayerInfo PlayerInfo {
+    public global::SC2APIProtocol.PlayerInfo PlayerInfo
+    {
       get { return playerInfo_; }
-      set {
+      set
+      {
         playerInfo_ = value;
       }
     }
@@ -7923,9 +9398,11 @@ namespace SC2APIProtocol {
     public const int PlayerResultFieldNumber = 2;
     private global::SC2APIProtocol.PlayerResult playerResult_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.PlayerResult PlayerResult {
+    public global::SC2APIProtocol.PlayerResult PlayerResult
+    {
       get { return playerResult_; }
-      set {
+      set
+      {
         playerResult_ = value;
       }
     }
@@ -7934,9 +9411,11 @@ namespace SC2APIProtocol {
     public const int PlayerMmrFieldNumber = 3;
     private int playerMmr_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PlayerMmr {
+    public int PlayerMmr
+    {
       get { return playerMmr_; }
-      set {
+      set
+      {
         playerMmr_ = value;
       }
     }
@@ -7945,24 +9424,30 @@ namespace SC2APIProtocol {
     public const int PlayerApmFieldNumber = 4;
     private int playerApm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PlayerApm {
+    public int PlayerApm
+    {
       get { return playerApm_; }
-      set {
+      set
+      {
         playerApm_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as PlayerInfoExtra);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PlayerInfoExtra other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(PlayerInfoExtra other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
@@ -7973,154 +9458,191 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
       if (playerResult_ != null) hash ^= PlayerResult.GetHashCode();
       if (PlayerMmr != 0) hash ^= PlayerMmr.GetHashCode();
       if (PlayerApm != 0) hash ^= PlayerApm.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (playerInfo_ != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (playerInfo_ != null)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(PlayerInfo);
       }
-      if (playerResult_ != null) {
+      if (playerResult_ != null)
+      {
         output.WriteRawTag(18);
         output.WriteMessage(PlayerResult);
       }
-      if (PlayerMmr != 0) {
+      if (PlayerMmr != 0)
+      {
         output.WriteRawTag(24);
         output.WriteInt32(PlayerMmr);
       }
-      if (PlayerApm != 0) {
+      if (PlayerApm != 0)
+      {
         output.WriteRawTag(32);
         output.WriteInt32(PlayerApm);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (playerInfo_ != null) {
+      if (playerInfo_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerInfo);
       }
-      if (playerResult_ != null) {
+      if (playerResult_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerResult);
       }
-      if (PlayerMmr != 0) {
+      if (PlayerMmr != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerMmr);
       }
-      if (PlayerApm != 0) {
+      if (PlayerApm != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerApm);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PlayerInfoExtra other) {
-      if (other == null) {
+    public void MergeFrom(PlayerInfoExtra other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.playerInfo_ != null) {
-        if (playerInfo_ == null) {
+      if (other.playerInfo_ != null)
+      {
+        if (playerInfo_ == null)
+        {
           playerInfo_ = new global::SC2APIProtocol.PlayerInfo();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
       }
-      if (other.playerResult_ != null) {
-        if (playerResult_ == null) {
+      if (other.playerResult_ != null)
+      {
+        if (playerResult_ == null)
+        {
           playerResult_ = new global::SC2APIProtocol.PlayerResult();
         }
         PlayerResult.MergeFrom(other.PlayerResult);
       }
-      if (other.PlayerMmr != 0) {
+      if (other.PlayerMmr != 0)
+      {
         PlayerMmr = other.PlayerMmr;
       }
-      if (other.PlayerApm != 0) {
+      if (other.PlayerApm != 0)
+      {
         PlayerApm = other.PlayerApm;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (playerInfo_ == null) {
-              playerInfo_ = new global::SC2APIProtocol.PlayerInfo();
+          case 10:
+            {
+              if (playerInfo_ == null)
+              {
+                playerInfo_ = new global::SC2APIProtocol.PlayerInfo();
+              }
+              input.ReadMessage(playerInfo_);
+              break;
             }
-            input.ReadMessage(playerInfo_);
-            break;
-          }
-          case 18: {
-            if (playerResult_ == null) {
-              playerResult_ = new global::SC2APIProtocol.PlayerResult();
+          case 18:
+            {
+              if (playerResult_ == null)
+              {
+                playerResult_ = new global::SC2APIProtocol.PlayerResult();
+              }
+              input.ReadMessage(playerResult_);
+              break;
             }
-            input.ReadMessage(playerResult_);
-            break;
-          }
-          case 24: {
-            PlayerMmr = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            PlayerApm = input.ReadInt32();
-            break;
-          }
+          case 24:
+            {
+              PlayerMmr = input.ReadInt32();
+              break;
+            }
+          case 32:
+            {
+              PlayerApm = input.ReadInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseReplayInfo : pb::IMessage<ResponseReplayInfo> {
+  public sealed partial class ResponseReplayInfo : pb::IMessage<ResponseReplayInfo>
+  {
     private static readonly pb::MessageParser<ResponseReplayInfo> _parser = new pb::MessageParser<ResponseReplayInfo>(() => new ResponseReplayInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseReplayInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseReplayInfo() {
+    public ResponseReplayInfo()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseReplayInfo(ResponseReplayInfo other) : this() {
+    public ResponseReplayInfo(ResponseReplayInfo other) : this()
+    {
       mapName_ = other.mapName_;
       localMapPath_ = other.localMapPath_;
       playerInfo_ = other.playerInfo_.Clone();
@@ -8136,7 +9658,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseReplayInfo Clone() {
+    public ResponseReplayInfo Clone()
+    {
       return new ResponseReplayInfo(this);
     }
 
@@ -8144,9 +9667,11 @@ namespace SC2APIProtocol {
     public const int MapNameFieldNumber = 1;
     private string mapName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MapName {
+    public string MapName
+    {
       get { return mapName_; }
-      set {
+      set
+      {
         mapName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -8155,9 +9680,11 @@ namespace SC2APIProtocol {
     public const int LocalMapPathFieldNumber = 2;
     private string localMapPath_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string LocalMapPath {
+    public string LocalMapPath
+    {
       get { return localMapPath_; }
-      set {
+      set
+      {
         localMapPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -8168,7 +9695,8 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(26, global::SC2APIProtocol.PlayerInfoExtra.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.PlayerInfoExtra> playerInfo_ = new pbc::RepeatedField<global::SC2APIProtocol.PlayerInfoExtra>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.PlayerInfoExtra> PlayerInfo {
+    public pbc::RepeatedField<global::SC2APIProtocol.PlayerInfoExtra> PlayerInfo
+    {
       get { return playerInfo_; }
     }
 
@@ -8176,9 +9704,11 @@ namespace SC2APIProtocol {
     public const int GameDurationLoopsFieldNumber = 4;
     private uint gameDurationLoops_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint GameDurationLoops {
+    public uint GameDurationLoops
+    {
       get { return gameDurationLoops_; }
-      set {
+      set
+      {
         gameDurationLoops_ = value;
       }
     }
@@ -8187,9 +9717,11 @@ namespace SC2APIProtocol {
     public const int GameDurationSecondsFieldNumber = 5;
     private float gameDurationSeconds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float GameDurationSeconds {
+    public float GameDurationSeconds
+    {
       get { return gameDurationSeconds_; }
-      set {
+      set
+      {
         gameDurationSeconds_ = value;
       }
     }
@@ -8198,9 +9730,11 @@ namespace SC2APIProtocol {
     public const int GameVersionFieldNumber = 6;
     private string gameVersion_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string GameVersion {
+    public string GameVersion
+    {
       get { return gameVersion_; }
-      set {
+      set
+      {
         gameVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -8209,9 +9743,11 @@ namespace SC2APIProtocol {
     public const int DataVersionFieldNumber = 11;
     private string dataVersion_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DataVersion {
+    public string DataVersion
+    {
       get { return dataVersion_; }
-      set {
+      set
+      {
         dataVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -8220,9 +9756,11 @@ namespace SC2APIProtocol {
     public const int DataBuildFieldNumber = 7;
     private uint dataBuild_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint DataBuild {
+    public uint DataBuild
+    {
       get { return dataBuild_; }
-      set {
+      set
+      {
         dataBuild_ = value;
       }
     }
@@ -8231,9 +9769,11 @@ namespace SC2APIProtocol {
     public const int BaseBuildFieldNumber = 8;
     private uint baseBuild_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint BaseBuild {
+    public uint BaseBuild
+    {
       get { return baseBuild_; }
-      set {
+      set
+      {
         baseBuild_ = value;
       }
     }
@@ -8242,9 +9782,11 @@ namespace SC2APIProtocol {
     public const int ErrorFieldNumber = 9;
     private global::SC2APIProtocol.ResponseReplayInfo.Types.Error error_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseReplayInfo.Types.Error Error {
+    public global::SC2APIProtocol.ResponseReplayInfo.Types.Error Error
+    {
       get { return error_; }
-      set {
+      set
+      {
         error_ = value;
       }
     }
@@ -8253,29 +9795,35 @@ namespace SC2APIProtocol {
     public const int ErrorDetailsFieldNumber = 10;
     private string errorDetails_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ErrorDetails {
+    public string ErrorDetails
+    {
       get { return errorDetails_; }
-      set {
+      set
+      {
         errorDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseReplayInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseReplayInfo other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseReplayInfo other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (MapName != other.MapName) return false;
       if (LocalMapPath != other.LocalMapPath) return false;
-      if(!playerInfo_.Equals(other.playerInfo_)) return false;
+      if (!playerInfo_.Equals(other.playerInfo_)) return false;
       if (GameDurationLoops != other.GameDurationLoops) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(GameDurationSeconds, other.GameDurationSeconds)) return false;
       if (GameVersion != other.GameVersion) return false;
@@ -8288,7 +9836,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (MapName.Length != 0) hash ^= MapName.GetHashCode();
       if (LocalMapPath.Length != 0) hash ^= LocalMapPath.GetHashCode();
@@ -8301,196 +9850,248 @@ namespace SC2APIProtocol {
       if (BaseBuild != 0) hash ^= BaseBuild.GetHashCode();
       if (Error != 0) hash ^= Error.GetHashCode();
       if (ErrorDetails.Length != 0) hash ^= ErrorDetails.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (MapName.Length != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (MapName.Length != 0)
+      {
         output.WriteRawTag(10);
         output.WriteString(MapName);
       }
-      if (LocalMapPath.Length != 0) {
+      if (LocalMapPath.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(LocalMapPath);
       }
       playerInfo_.WriteTo(output, _repeated_playerInfo_codec);
-      if (GameDurationLoops != 0) {
+      if (GameDurationLoops != 0)
+      {
         output.WriteRawTag(32);
         output.WriteUInt32(GameDurationLoops);
       }
-      if (GameDurationSeconds != 0F) {
+      if (GameDurationSeconds != 0F)
+      {
         output.WriteRawTag(45);
         output.WriteFloat(GameDurationSeconds);
       }
-      if (GameVersion.Length != 0) {
+      if (GameVersion.Length != 0)
+      {
         output.WriteRawTag(50);
         output.WriteString(GameVersion);
       }
-      if (DataBuild != 0) {
+      if (DataBuild != 0)
+      {
         output.WriteRawTag(56);
         output.WriteUInt32(DataBuild);
       }
-      if (BaseBuild != 0) {
+      if (BaseBuild != 0)
+      {
         output.WriteRawTag(64);
         output.WriteUInt32(BaseBuild);
       }
-      if (Error != 0) {
+      if (Error != 0)
+      {
         output.WriteRawTag(72);
-        output.WriteEnum((int) Error);
+        output.WriteEnum((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         output.WriteRawTag(82);
         output.WriteString(ErrorDetails);
       }
-      if (DataVersion.Length != 0) {
+      if (DataVersion.Length != 0)
+      {
         output.WriteRawTag(90);
         output.WriteString(DataVersion);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (MapName.Length != 0) {
+      if (MapName.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MapName);
       }
-      if (LocalMapPath.Length != 0) {
+      if (LocalMapPath.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalMapPath);
       }
       size += playerInfo_.CalculateSize(_repeated_playerInfo_codec);
-      if (GameDurationLoops != 0) {
+      if (GameDurationLoops != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameDurationLoops);
       }
-      if (GameDurationSeconds != 0F) {
+      if (GameDurationSeconds != 0F)
+      {
         size += 1 + 4;
       }
-      if (GameVersion.Length != 0) {
+      if (GameVersion.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GameVersion);
       }
-      if (DataVersion.Length != 0) {
+      if (DataVersion.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataVersion);
       }
-      if (DataBuild != 0) {
+      if (DataBuild != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DataBuild);
       }
-      if (BaseBuild != 0) {
+      if (BaseBuild != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseBuild);
       }
-      if (Error != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Error);
+      if (Error != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Error);
       }
-      if (ErrorDetails.Length != 0) {
+      if (ErrorDetails.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorDetails);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseReplayInfo other) {
-      if (other == null) {
+    public void MergeFrom(ResponseReplayInfo other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.MapName.Length != 0) {
+      if (other.MapName.Length != 0)
+      {
         MapName = other.MapName;
       }
-      if (other.LocalMapPath.Length != 0) {
+      if (other.LocalMapPath.Length != 0)
+      {
         LocalMapPath = other.LocalMapPath;
       }
       playerInfo_.Add(other.playerInfo_);
-      if (other.GameDurationLoops != 0) {
+      if (other.GameDurationLoops != 0)
+      {
         GameDurationLoops = other.GameDurationLoops;
       }
-      if (other.GameDurationSeconds != 0F) {
+      if (other.GameDurationSeconds != 0F)
+      {
         GameDurationSeconds = other.GameDurationSeconds;
       }
-      if (other.GameVersion.Length != 0) {
+      if (other.GameVersion.Length != 0)
+      {
         GameVersion = other.GameVersion;
       }
-      if (other.DataVersion.Length != 0) {
+      if (other.DataVersion.Length != 0)
+      {
         DataVersion = other.DataVersion;
       }
-      if (other.DataBuild != 0) {
+      if (other.DataBuild != 0)
+      {
         DataBuild = other.DataBuild;
       }
-      if (other.BaseBuild != 0) {
+      if (other.BaseBuild != 0)
+      {
         BaseBuild = other.BaseBuild;
       }
-      if (other.Error != 0) {
+      if (other.Error != 0)
+      {
         Error = other.Error;
       }
-      if (other.ErrorDetails.Length != 0) {
+      if (other.ErrorDetails.Length != 0)
+      {
         ErrorDetails = other.ErrorDetails;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            MapName = input.ReadString();
-            break;
-          }
-          case 18: {
-            LocalMapPath = input.ReadString();
-            break;
-          }
-          case 26: {
-            playerInfo_.AddEntriesFrom(input, _repeated_playerInfo_codec);
-            break;
-          }
-          case 32: {
-            GameDurationLoops = input.ReadUInt32();
-            break;
-          }
-          case 45: {
-            GameDurationSeconds = input.ReadFloat();
-            break;
-          }
-          case 50: {
-            GameVersion = input.ReadString();
-            break;
-          }
-          case 56: {
-            DataBuild = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            BaseBuild = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            error_ = (global::SC2APIProtocol.ResponseReplayInfo.Types.Error) input.ReadEnum();
-            break;
-          }
-          case 82: {
-            ErrorDetails = input.ReadString();
-            break;
-          }
-          case 90: {
-            DataVersion = input.ReadString();
-            break;
-          }
+          case 10:
+            {
+              MapName = input.ReadString();
+              break;
+            }
+          case 18:
+            {
+              LocalMapPath = input.ReadString();
+              break;
+            }
+          case 26:
+            {
+              playerInfo_.AddEntriesFrom(input, _repeated_playerInfo_codec);
+              break;
+            }
+          case 32:
+            {
+              GameDurationLoops = input.ReadUInt32();
+              break;
+            }
+          case 45:
+            {
+              GameDurationSeconds = input.ReadFloat();
+              break;
+            }
+          case 50:
+            {
+              GameVersion = input.ReadString();
+              break;
+            }
+          case 56:
+            {
+              DataBuild = input.ReadUInt32();
+              break;
+            }
+          case 64:
+            {
+              BaseBuild = input.ReadUInt32();
+              break;
+            }
+          case 72:
+            {
+              error_ = (global::SC2APIProtocol.ResponseReplayInfo.Types.Error)input.ReadEnum();
+              break;
+            }
+          case 82:
+            {
+              ErrorDetails = input.ReadString();
+              break;
+            }
+          case 90:
+            {
+              DataVersion = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -8498,8 +10099,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ResponseReplayInfo message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Error {
+    public static partial class Types
+    {
+      public enum Error
+      {
         [pbr::OriginalName("Error_UNSET")] Unset = 0,
         [pbr::OriginalName("MissingReplay")] MissingReplay = 1,
         [pbr::OriginalName("InvalidReplayPath")] InvalidReplayPath = 2,
@@ -8516,98 +10119,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestAvailableMaps : pb::IMessage<RequestAvailableMaps> {
+  public sealed partial class RequestAvailableMaps : pb::IMessage<RequestAvailableMaps>
+  {
     private static readonly pb::MessageParser<RequestAvailableMaps> _parser = new pb::MessageParser<RequestAvailableMaps>(() => new RequestAvailableMaps());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestAvailableMaps> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestAvailableMaps() {
+    public RequestAvailableMaps()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestAvailableMaps(RequestAvailableMaps other) : this() {
+    public RequestAvailableMaps(RequestAvailableMaps other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestAvailableMaps Clone() {
+    public RequestAvailableMaps Clone()
+    {
       return new RequestAvailableMaps(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestAvailableMaps);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestAvailableMaps other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestAvailableMaps other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestAvailableMaps other) {
-      if (other == null) {
+    public void MergeFrom(RequestAvailableMaps other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -8622,38 +10247,44 @@ namespace SC2APIProtocol {
   /// To download all ladder maps, log in and queue into a ladder match.
   /// To download any other map, play a custom game on that map.
   /// </summary>
-  public sealed partial class ResponseAvailableMaps : pb::IMessage<ResponseAvailableMaps> {
+  public sealed partial class ResponseAvailableMaps : pb::IMessage<ResponseAvailableMaps>
+  {
     private static readonly pb::MessageParser<ResponseAvailableMaps> _parser = new pb::MessageParser<ResponseAvailableMaps>(() => new ResponseAvailableMaps());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseAvailableMaps> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseAvailableMaps() {
+    public ResponseAvailableMaps()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseAvailableMaps(ResponseAvailableMaps other) : this() {
+    public ResponseAvailableMaps(ResponseAvailableMaps other) : this()
+    {
       localMapPaths_ = other.localMapPaths_.Clone();
       battlenetMapNames_ = other.battlenetMapNames_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseAvailableMaps Clone() {
+    public ResponseAvailableMaps Clone()
+    {
       return new ResponseAvailableMaps(this);
     }
 
@@ -8666,7 +10297,8 @@ namespace SC2APIProtocol {
     /// All the maps in the "Maps/" directory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> LocalMapPaths {
+    public pbc::RepeatedField<string> LocalMapPaths
+    {
       get { return localMapPaths_; }
     }
 
@@ -8679,67 +10311,81 @@ namespace SC2APIProtocol {
     /// All the maps in the BattleNet cache.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> BattlenetMapNames {
+    public pbc::RepeatedField<string> BattlenetMapNames
+    {
       get { return battlenetMapNames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseAvailableMaps);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseAvailableMaps other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseAvailableMaps other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!localMapPaths_.Equals(other.localMapPaths_)) return false;
-      if(!battlenetMapNames_.Equals(other.battlenetMapNames_)) return false;
+      if (!localMapPaths_.Equals(other.localMapPaths_)) return false;
+      if (!battlenetMapNames_.Equals(other.battlenetMapNames_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= localMapPaths_.GetHashCode();
       hash ^= battlenetMapNames_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       localMapPaths_.WriteTo(output, _repeated_localMapPaths_codec);
       battlenetMapNames_.WriteTo(output, _repeated_battlenetMapNames_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += localMapPaths_.CalculateSize(_repeated_localMapPaths_codec);
       size += battlenetMapNames_.CalculateSize(_repeated_battlenetMapNames_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseAvailableMaps other) {
-      if (other == null) {
+    public void MergeFrom(ResponseAvailableMaps other)
+    {
+      if (other == null)
+      {
         return;
       }
       localMapPaths_.Add(other.localMapPaths_);
@@ -8748,21 +10394,26 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            localMapPaths_.AddEntriesFrom(input, _repeated_localMapPaths_codec);
-            break;
-          }
-          case 18: {
-            battlenetMapNames_.AddEntriesFrom(input, _repeated_battlenetMapNames_codec);
-            break;
-          }
+          case 10:
+            {
+              localMapPaths_.AddEntriesFrom(input, _repeated_localMapPaths_codec);
+              break;
+            }
+          case 18:
+            {
+              battlenetMapNames_.AddEntriesFrom(input, _repeated_battlenetMapNames_codec);
+              break;
+            }
         }
       }
     }
@@ -8773,38 +10424,44 @@ namespace SC2APIProtocol {
   ///-----------------------------------------------------------------------------
   /// Copies map data into the path specified.
   /// </summary>
-  public sealed partial class RequestSaveMap : pb::IMessage<RequestSaveMap> {
+  public sealed partial class RequestSaveMap : pb::IMessage<RequestSaveMap>
+  {
     private static readonly pb::MessageParser<RequestSaveMap> _parser = new pb::MessageParser<RequestSaveMap>(() => new RequestSaveMap());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestSaveMap> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestSaveMap() {
+    public RequestSaveMap()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestSaveMap(RequestSaveMap other) : this() {
+    public RequestSaveMap(RequestSaveMap other) : this()
+    {
       mapPath_ = other.mapPath_;
       mapData_ = other.mapData_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestSaveMap Clone() {
+    public RequestSaveMap Clone()
+    {
       return new RequestSaveMap(this);
     }
 
@@ -8815,9 +10472,11 @@ namespace SC2APIProtocol {
     /// Path the game process will write to, relative to the temp directory. (260 character max)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MapPath {
+    public string MapPath
+    {
       get { return mapPath_; }
-      set {
+      set
+      {
         mapPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -8829,24 +10488,30 @@ namespace SC2APIProtocol {
     /// Binary map data of a .SC2Map.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString MapData {
+    public pb::ByteString MapData
+    {
       get { return mapData_; }
-      set {
+      set
+      {
         mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestSaveMap);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestSaveMap other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestSaveMap other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (MapPath != other.MapPath) return false;
@@ -8855,118 +10520,144 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (MapPath.Length != 0) hash ^= MapPath.GetHashCode();
       if (MapData.Length != 0) hash ^= MapData.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (MapPath.Length != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (MapPath.Length != 0)
+      {
         output.WriteRawTag(10);
         output.WriteString(MapPath);
       }
-      if (MapData.Length != 0) {
+      if (MapData.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteBytes(MapData);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (MapPath.Length != 0) {
+      if (MapPath.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MapPath);
       }
-      if (MapData.Length != 0) {
+      if (MapData.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestSaveMap other) {
-      if (other == null) {
+    public void MergeFrom(RequestSaveMap other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.MapPath.Length != 0) {
+      if (other.MapPath.Length != 0)
+      {
         MapPath = other.MapPath;
       }
-      if (other.MapData.Length != 0) {
+      if (other.MapData.Length != 0)
+      {
         MapData = other.MapData;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            MapPath = input.ReadString();
-            break;
-          }
-          case 18: {
-            MapData = input.ReadBytes();
-            break;
-          }
+          case 10:
+            {
+              MapPath = input.ReadString();
+              break;
+            }
+          case 18:
+            {
+              MapData = input.ReadBytes();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseSaveMap : pb::IMessage<ResponseSaveMap> {
+  public sealed partial class ResponseSaveMap : pb::IMessage<ResponseSaveMap>
+  {
     private static readonly pb::MessageParser<ResponseSaveMap> _parser = new pb::MessageParser<ResponseSaveMap>(() => new ResponseSaveMap());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseSaveMap> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseSaveMap() {
+    public ResponseSaveMap()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseSaveMap(ResponseSaveMap other) : this() {
+    public ResponseSaveMap(ResponseSaveMap other) : this()
+    {
       error_ = other.error_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseSaveMap Clone() {
+    public ResponseSaveMap Clone()
+    {
       return new ResponseSaveMap(this);
     }
 
@@ -8974,24 +10665,30 @@ namespace SC2APIProtocol {
     public const int ErrorFieldNumber = 1;
     private global::SC2APIProtocol.ResponseSaveMap.Types.Error error_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ResponseSaveMap.Types.Error Error {
+    public global::SC2APIProtocol.ResponseSaveMap.Types.Error Error
+    {
       get { return error_; }
-      set {
+      set
+      {
         error_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseSaveMap);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseSaveMap other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseSaveMap other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Error != other.Error) return false;
@@ -8999,66 +10696,82 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Error != 0) hash ^= Error.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Error != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Error != 0)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Error);
+        output.WriteEnum((int)Error);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Error != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Error);
+      if (Error != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Error);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseSaveMap other) {
-      if (other == null) {
+    public void MergeFrom(ResponseSaveMap other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Error != 0) {
+      if (other.Error != 0)
+      {
         Error = other.Error;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            error_ = (global::SC2APIProtocol.ResponseSaveMap.Types.Error) input.ReadEnum();
-            break;
-          }
+          case 8:
+            {
+              error_ = (global::SC2APIProtocol.ResponseSaveMap.Types.Error)input.ReadEnum();
+              break;
+            }
         }
       }
     }
@@ -9066,8 +10779,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ResponseSaveMap message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Error {
+    public static partial class Types
+    {
+      public enum Error
+      {
         [pbr::OriginalName("Error_UNSET")] Unset = 0,
         [pbr::OriginalName("InvalidMapData")] InvalidMapData = 1,
       }
@@ -9080,98 +10795,120 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestPing : pb::IMessage<RequestPing> {
+  public sealed partial class RequestPing : pb::IMessage<RequestPing>
+  {
     private static readonly pb::MessageParser<RequestPing> _parser = new pb::MessageParser<RequestPing>(() => new RequestPing());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestPing> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestPing() {
+    public RequestPing()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestPing(RequestPing other) : this() {
+    public RequestPing(RequestPing other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestPing Clone() {
+    public RequestPing Clone()
+    {
       return new RequestPing(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestPing);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestPing other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestPing other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestPing other) {
-      if (other == null) {
+    public void MergeFrom(RequestPing other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -9181,31 +10918,36 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ResponsePing : pb::IMessage<ResponsePing> {
+  public sealed partial class ResponsePing : pb::IMessage<ResponsePing>
+  {
     private static readonly pb::MessageParser<ResponsePing> _parser = new pb::MessageParser<ResponsePing>(() => new ResponsePing());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponsePing> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponsePing() {
+    public ResponsePing()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponsePing(ResponsePing other) : this() {
+    public ResponsePing(ResponsePing other) : this()
+    {
       gameVersion_ = other.gameVersion_;
       dataVersion_ = other.dataVersion_;
       dataBuild_ = other.dataBuild_;
@@ -9214,7 +10956,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponsePing Clone() {
+    public ResponsePing Clone()
+    {
       return new ResponsePing(this);
     }
 
@@ -9222,9 +10965,11 @@ namespace SC2APIProtocol {
     public const int GameVersionFieldNumber = 1;
     private string gameVersion_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string GameVersion {
+    public string GameVersion
+    {
       get { return gameVersion_; }
-      set {
+      set
+      {
         gameVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -9233,9 +10978,11 @@ namespace SC2APIProtocol {
     public const int DataVersionFieldNumber = 2;
     private string dataVersion_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DataVersion {
+    public string DataVersion
+    {
       get { return dataVersion_; }
-      set {
+      set
+      {
         dataVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -9244,9 +10991,11 @@ namespace SC2APIProtocol {
     public const int DataBuildFieldNumber = 3;
     private uint dataBuild_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint DataBuild {
+    public uint DataBuild
+    {
       get { return dataBuild_; }
-      set {
+      set
+      {
         dataBuild_ = value;
       }
     }
@@ -9255,24 +11004,30 @@ namespace SC2APIProtocol {
     public const int BaseBuildFieldNumber = 4;
     private uint baseBuild_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint BaseBuild {
+    public uint BaseBuild
+    {
       get { return baseBuild_; }
-      set {
+      set
+      {
         baseBuild_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponsePing);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponsePing other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponsePing other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (GameVersion != other.GameVersion) return false;
@@ -9283,111 +11038,139 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (GameVersion.Length != 0) hash ^= GameVersion.GetHashCode();
       if (DataVersion.Length != 0) hash ^= DataVersion.GetHashCode();
       if (DataBuild != 0) hash ^= DataBuild.GetHashCode();
       if (BaseBuild != 0) hash ^= BaseBuild.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (GameVersion.Length != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (GameVersion.Length != 0)
+      {
         output.WriteRawTag(10);
         output.WriteString(GameVersion);
       }
-      if (DataVersion.Length != 0) {
+      if (DataVersion.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(DataVersion);
       }
-      if (DataBuild != 0) {
+      if (DataBuild != 0)
+      {
         output.WriteRawTag(24);
         output.WriteUInt32(DataBuild);
       }
-      if (BaseBuild != 0) {
+      if (BaseBuild != 0)
+      {
         output.WriteRawTag(32);
         output.WriteUInt32(BaseBuild);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (GameVersion.Length != 0) {
+      if (GameVersion.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GameVersion);
       }
-      if (DataVersion.Length != 0) {
+      if (DataVersion.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataVersion);
       }
-      if (DataBuild != 0) {
+      if (DataBuild != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DataBuild);
       }
-      if (BaseBuild != 0) {
+      if (BaseBuild != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseBuild);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponsePing other) {
-      if (other == null) {
+    public void MergeFrom(ResponsePing other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.GameVersion.Length != 0) {
+      if (other.GameVersion.Length != 0)
+      {
         GameVersion = other.GameVersion;
       }
-      if (other.DataVersion.Length != 0) {
+      if (other.DataVersion.Length != 0)
+      {
         DataVersion = other.DataVersion;
       }
-      if (other.DataBuild != 0) {
+      if (other.DataBuild != 0)
+      {
         DataBuild = other.DataBuild;
       }
-      if (other.BaseBuild != 0) {
+      if (other.BaseBuild != 0)
+      {
         BaseBuild = other.BaseBuild;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            GameVersion = input.ReadString();
-            break;
-          }
-          case 18: {
-            DataVersion = input.ReadString();
-            break;
-          }
-          case 24: {
-            DataBuild = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            BaseBuild = input.ReadUInt32();
-            break;
-          }
+          case 10:
+            {
+              GameVersion = input.ReadString();
+              break;
+            }
+          case 18:
+            {
+              DataVersion = input.ReadString();
+              break;
+            }
+          case 24:
+            {
+              DataBuild = input.ReadUInt32();
+              break;
+            }
+          case 32:
+            {
+              BaseBuild = input.ReadUInt32();
+              break;
+            }
         }
       }
     }
@@ -9397,37 +11180,43 @@ namespace SC2APIProtocol {
   /// <summary>
   ///-----------------------------------------------------------------------------
   /// </summary>
-  public sealed partial class RequestDebug : pb::IMessage<RequestDebug> {
+  public sealed partial class RequestDebug : pb::IMessage<RequestDebug>
+  {
     private static readonly pb::MessageParser<RequestDebug> _parser = new pb::MessageParser<RequestDebug>(() => new RequestDebug());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RequestDebug> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestDebug() {
+    public RequestDebug()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestDebug(RequestDebug other) : this() {
+    public RequestDebug(RequestDebug other) : this()
+    {
       debug_ = other.debug_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestDebug Clone() {
+    public RequestDebug Clone()
+    {
       return new RequestDebug(this);
     }
 
@@ -9437,63 +11226,77 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForMessage(10, global::SC2APIProtocol.DebugCommand.Parser);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.DebugCommand> debug_ = new pbc::RepeatedField<global::SC2APIProtocol.DebugCommand>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.DebugCommand> Debug {
+    public pbc::RepeatedField<global::SC2APIProtocol.DebugCommand> Debug
+    {
       get { return debug_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as RequestDebug);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestDebug other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(RequestDebug other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!debug_.Equals(other.debug_)) return false;
+      if (!debug_.Equals(other.debug_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= debug_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       debug_.WriteTo(output, _repeated_debug_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += debug_.CalculateSize(_repeated_debug_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestDebug other) {
-      if (other == null) {
+    public void MergeFrom(RequestDebug other)
+    {
+      if (other == null)
+      {
         return;
       }
       debug_.Add(other.debug_);
@@ -9501,115 +11304,141 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            debug_.AddEntriesFrom(input, _repeated_debug_codec);
-            break;
-          }
+          case 10:
+            {
+              debug_.AddEntriesFrom(input, _repeated_debug_codec);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ResponseDebug : pb::IMessage<ResponseDebug> {
+  public sealed partial class ResponseDebug : pb::IMessage<ResponseDebug>
+  {
     private static readonly pb::MessageParser<ResponseDebug> _parser = new pb::MessageParser<ResponseDebug>(() => new ResponseDebug());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ResponseDebug> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseDebug() {
+    public ResponseDebug()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseDebug(ResponseDebug other) : this() {
+    public ResponseDebug(ResponseDebug other) : this()
+    {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ResponseDebug Clone() {
+    public ResponseDebug Clone()
+    {
       return new ResponseDebug(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ResponseDebug);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ResponseDebug other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ResponseDebug other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ResponseDebug other) {
-      if (other == null) {
+    public void MergeFrom(ResponseDebug other)
+    {
+      if (other == null)
+      {
         return;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -9619,31 +11448,36 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class PlayerSetup : pb::IMessage<PlayerSetup> {
+  public sealed partial class PlayerSetup : pb::IMessage<PlayerSetup>
+  {
     private static readonly pb::MessageParser<PlayerSetup> _parser = new pb::MessageParser<PlayerSetup>(() => new PlayerSetup());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PlayerSetup> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerSetup() {
+    public PlayerSetup()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerSetup(PlayerSetup other) : this() {
+    public PlayerSetup(PlayerSetup other) : this()
+    {
       type_ = other.type_;
       race_ = other.race_;
       difficulty_ = other.difficulty_;
@@ -9651,7 +11485,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerSetup Clone() {
+    public PlayerSetup Clone()
+    {
       return new PlayerSetup(this);
     }
 
@@ -9659,9 +11494,11 @@ namespace SC2APIProtocol {
     public const int TypeFieldNumber = 1;
     private global::SC2APIProtocol.PlayerType type_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.PlayerType Type {
+    public global::SC2APIProtocol.PlayerType Type
+    {
       get { return type_; }
-      set {
+      set
+      {
         type_ = value;
       }
     }
@@ -9673,9 +11510,11 @@ namespace SC2APIProtocol {
     /// Only used for a computer player.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Race Race {
+    public global::SC2APIProtocol.Race Race
+    {
       get { return race_; }
-      set {
+      set
+      {
         race_ = value;
       }
     }
@@ -9684,24 +11523,30 @@ namespace SC2APIProtocol {
     public const int DifficultyFieldNumber = 3;
     private global::SC2APIProtocol.Difficulty difficulty_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Difficulty Difficulty {
+    public global::SC2APIProtocol.Difficulty Difficulty
+    {
       get { return difficulty_; }
-      set {
+      set
+      {
         difficulty_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as PlayerSetup);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PlayerSetup other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(PlayerSetup other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Type != other.Type) return false;
@@ -9711,127 +11556,156 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Type != 0) hash ^= Type.GetHashCode();
       if (Race != 0) hash ^= Race.GetHashCode();
       if (Difficulty != 0) hash ^= Difficulty.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Type != 0)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
+        output.WriteEnum((int)Type);
       }
-      if (Race != 0) {
+      if (Race != 0)
+      {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Race);
+        output.WriteEnum((int)Race);
       }
-      if (Difficulty != 0) {
+      if (Difficulty != 0)
+      {
         output.WriteRawTag(24);
-        output.WriteEnum((int) Difficulty);
+        output.WriteEnum((int)Difficulty);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (Type != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Type);
       }
-      if (Race != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Race);
+      if (Race != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Race);
       }
-      if (Difficulty != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Difficulty);
+      if (Difficulty != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Difficulty);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PlayerSetup other) {
-      if (other == null) {
+    public void MergeFrom(PlayerSetup other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != 0)
+      {
         Type = other.Type;
       }
-      if (other.Race != 0) {
+      if (other.Race != 0)
+      {
         Race = other.Race;
       }
-      if (other.Difficulty != 0) {
+      if (other.Difficulty != 0)
+      {
         Difficulty = other.Difficulty;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            type_ = (global::SC2APIProtocol.PlayerType) input.ReadEnum();
-            break;
-          }
-          case 16: {
-            race_ = (global::SC2APIProtocol.Race) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            difficulty_ = (global::SC2APIProtocol.Difficulty) input.ReadEnum();
-            break;
-          }
+          case 8:
+            {
+              type_ = (global::SC2APIProtocol.PlayerType)input.ReadEnum();
+              break;
+            }
+          case 16:
+            {
+              race_ = (global::SC2APIProtocol.Race)input.ReadEnum();
+              break;
+            }
+          case 24:
+            {
+              difficulty_ = (global::SC2APIProtocol.Difficulty)input.ReadEnum();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class SpatialCameraSetup : pb::IMessage<SpatialCameraSetup> {
+  public sealed partial class SpatialCameraSetup : pb::IMessage<SpatialCameraSetup>
+  {
     private static readonly pb::MessageParser<SpatialCameraSetup> _parser = new pb::MessageParser<SpatialCameraSetup>(() => new SpatialCameraSetup());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<SpatialCameraSetup> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpatialCameraSetup() {
+    public SpatialCameraSetup()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpatialCameraSetup(SpatialCameraSetup other) : this() {
+    public SpatialCameraSetup(SpatialCameraSetup other) : this()
+    {
       width_ = other.width_;
       Resolution = other.resolution_ != null ? other.Resolution.Clone() : null;
       MinimapResolution = other.minimapResolution_ != null ? other.MinimapResolution.Clone() : null;
@@ -9839,7 +11713,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpatialCameraSetup Clone() {
+    public SpatialCameraSetup Clone()
+    {
       return new SpatialCameraSetup(this);
     }
 
@@ -9847,9 +11722,11 @@ namespace SC2APIProtocol {
     public const int WidthFieldNumber = 1;
     private float width_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Width {
+    public float Width
+    {
       get { return width_; }
-      set {
+      set
+      {
         width_ = value;
       }
     }
@@ -9858,9 +11735,11 @@ namespace SC2APIProtocol {
     public const int ResolutionFieldNumber = 2;
     private global::SC2APIProtocol.Size2DI resolution_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Size2DI Resolution {
+    public global::SC2APIProtocol.Size2DI Resolution
+    {
       get { return resolution_; }
-      set {
+      set
+      {
         resolution_ = value;
       }
     }
@@ -9869,24 +11748,30 @@ namespace SC2APIProtocol {
     public const int MinimapResolutionFieldNumber = 3;
     private global::SC2APIProtocol.Size2DI minimapResolution_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Size2DI MinimapResolution {
+    public global::SC2APIProtocol.Size2DI MinimapResolution
+    {
       get { return minimapResolution_; }
-      set {
+      set
+      {
         minimapResolution_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as SpatialCameraSetup);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SpatialCameraSetup other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(SpatialCameraSetup other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Width, other.Width)) return false;
@@ -9896,75 +11781,95 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Width != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Width);
       if (resolution_ != null) hash ^= Resolution.GetHashCode();
       if (minimapResolution_ != null) hash ^= MinimapResolution.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Width != 0F) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Width != 0F)
+      {
         output.WriteRawTag(13);
         output.WriteFloat(Width);
       }
-      if (resolution_ != null) {
+      if (resolution_ != null)
+      {
         output.WriteRawTag(18);
         output.WriteMessage(Resolution);
       }
-      if (minimapResolution_ != null) {
+      if (minimapResolution_ != null)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(MinimapResolution);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Width != 0F) {
+      if (Width != 0F)
+      {
         size += 1 + 4;
       }
-      if (resolution_ != null) {
+      if (resolution_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Resolution);
       }
-      if (minimapResolution_ != null) {
+      if (minimapResolution_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MinimapResolution);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SpatialCameraSetup other) {
-      if (other == null) {
+    public void MergeFrom(SpatialCameraSetup other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Width != 0F) {
+      if (other.Width != 0F)
+      {
         Width = other.Width;
       }
-      if (other.resolution_ != null) {
-        if (resolution_ == null) {
+      if (other.resolution_ != null)
+      {
+        if (resolution_ == null)
+        {
           resolution_ = new global::SC2APIProtocol.Size2DI();
         }
         Resolution.MergeFrom(other.Resolution);
       }
-      if (other.minimapResolution_ != null) {
-        if (minimapResolution_ == null) {
+      if (other.minimapResolution_ != null)
+      {
+        if (minimapResolution_ == null)
+        {
           minimapResolution_ = new global::SC2APIProtocol.Size2DI();
         }
         MinimapResolution.MergeFrom(other.MinimapResolution);
@@ -9973,62 +11878,75 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 13: {
-            Width = input.ReadFloat();
-            break;
-          }
-          case 18: {
-            if (resolution_ == null) {
-              resolution_ = new global::SC2APIProtocol.Size2DI();
+          case 13:
+            {
+              Width = input.ReadFloat();
+              break;
             }
-            input.ReadMessage(resolution_);
-            break;
-          }
-          case 26: {
-            if (minimapResolution_ == null) {
-              minimapResolution_ = new global::SC2APIProtocol.Size2DI();
+          case 18:
+            {
+              if (resolution_ == null)
+              {
+                resolution_ = new global::SC2APIProtocol.Size2DI();
+              }
+              input.ReadMessage(resolution_);
+              break;
             }
-            input.ReadMessage(minimapResolution_);
-            break;
-          }
+          case 26:
+            {
+              if (minimapResolution_ == null)
+              {
+                minimapResolution_ = new global::SC2APIProtocol.Size2DI();
+              }
+              input.ReadMessage(minimapResolution_);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class InterfaceOptions : pb::IMessage<InterfaceOptions> {
+  public sealed partial class InterfaceOptions : pb::IMessage<InterfaceOptions>
+  {
     private static readonly pb::MessageParser<InterfaceOptions> _parser = new pb::MessageParser<InterfaceOptions>(() => new InterfaceOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<InterfaceOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public InterfaceOptions() {
+    public InterfaceOptions()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public InterfaceOptions(InterfaceOptions other) : this() {
+    public InterfaceOptions(InterfaceOptions other) : this()
+    {
       raw_ = other.raw_;
       score_ = other.score_;
       FeatureLayer = other.featureLayer_ != null ? other.FeatureLayer.Clone() : null;
@@ -10037,7 +11955,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public InterfaceOptions Clone() {
+    public InterfaceOptions Clone()
+    {
       return new InterfaceOptions(this);
     }
 
@@ -10048,9 +11967,11 @@ namespace SC2APIProtocol {
     /// Interface options
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Raw {
+    public bool Raw
+    {
       get { return raw_; }
-      set {
+      set
+      {
         raw_ = value;
       }
     }
@@ -10059,9 +11980,11 @@ namespace SC2APIProtocol {
     public const int ScoreFieldNumber = 2;
     private bool score_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Score {
+    public bool Score
+    {
       get { return score_; }
-      set {
+      set
+      {
         score_ = value;
       }
     }
@@ -10073,9 +11996,11 @@ namespace SC2APIProtocol {
     /// Omit to disable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.SpatialCameraSetup FeatureLayer {
+    public global::SC2APIProtocol.SpatialCameraSetup FeatureLayer
+    {
       get { return featureLayer_; }
-      set {
+      set
+      {
         featureLayer_ = value;
       }
     }
@@ -10087,24 +12012,30 @@ namespace SC2APIProtocol {
     /// Not implemented.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.SpatialCameraSetup Render {
+    public global::SC2APIProtocol.SpatialCameraSetup Render
+    {
       get { return render_; }
-      set {
+      set
+      {
         render_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as InterfaceOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(InterfaceOptions other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(InterfaceOptions other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Raw != other.Raw) return false;
@@ -10115,86 +12046,109 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Raw != false) hash ^= Raw.GetHashCode();
       if (Score != false) hash ^= Score.GetHashCode();
       if (featureLayer_ != null) hash ^= FeatureLayer.GetHashCode();
       if (render_ != null) hash ^= Render.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Raw != false) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Raw != false)
+      {
         output.WriteRawTag(8);
         output.WriteBool(Raw);
       }
-      if (Score != false) {
+      if (Score != false)
+      {
         output.WriteRawTag(16);
         output.WriteBool(Score);
       }
-      if (featureLayer_ != null) {
+      if (featureLayer_ != null)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(FeatureLayer);
       }
-      if (render_ != null) {
+      if (render_ != null)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(Render);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Raw != false) {
+      if (Raw != false)
+      {
         size += 1 + 1;
       }
-      if (Score != false) {
+      if (Score != false)
+      {
         size += 1 + 1;
       }
-      if (featureLayer_ != null) {
+      if (featureLayer_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FeatureLayer);
       }
-      if (render_ != null) {
+      if (render_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Render);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(InterfaceOptions other) {
-      if (other == null) {
+    public void MergeFrom(InterfaceOptions other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Raw != false) {
+      if (other.Raw != false)
+      {
         Raw = other.Raw;
       }
-      if (other.Score != false) {
+      if (other.Score != false)
+      {
         Score = other.Score;
       }
-      if (other.featureLayer_ != null) {
-        if (featureLayer_ == null) {
+      if (other.featureLayer_ != null)
+      {
+        if (featureLayer_ == null)
+        {
           featureLayer_ = new global::SC2APIProtocol.SpatialCameraSetup();
         }
         FeatureLayer.MergeFrom(other.FeatureLayer);
       }
-      if (other.render_ != null) {
-        if (render_ == null) {
+      if (other.render_ != null)
+      {
+        if (render_ == null)
+        {
           render_ = new global::SC2APIProtocol.SpatialCameraSetup();
         }
         Render.MergeFrom(other.Render);
@@ -10203,66 +12157,80 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Raw = input.ReadBool();
-            break;
-          }
-          case 16: {
-            Score = input.ReadBool();
-            break;
-          }
-          case 26: {
-            if (featureLayer_ == null) {
-              featureLayer_ = new global::SC2APIProtocol.SpatialCameraSetup();
+          case 8:
+            {
+              Raw = input.ReadBool();
+              break;
             }
-            input.ReadMessage(featureLayer_);
-            break;
-          }
-          case 34: {
-            if (render_ == null) {
-              render_ = new global::SC2APIProtocol.SpatialCameraSetup();
+          case 16:
+            {
+              Score = input.ReadBool();
+              break;
             }
-            input.ReadMessage(render_);
-            break;
-          }
+          case 26:
+            {
+              if (featureLayer_ == null)
+              {
+                featureLayer_ = new global::SC2APIProtocol.SpatialCameraSetup();
+              }
+              input.ReadMessage(featureLayer_);
+              break;
+            }
+          case 34:
+            {
+              if (render_ == null)
+              {
+                render_ = new global::SC2APIProtocol.SpatialCameraSetup();
+              }
+              input.ReadMessage(render_);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class PlayerInfo : pb::IMessage<PlayerInfo> {
+  public sealed partial class PlayerInfo : pb::IMessage<PlayerInfo>
+  {
     private static readonly pb::MessageParser<PlayerInfo> _parser = new pb::MessageParser<PlayerInfo>(() => new PlayerInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PlayerInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerInfo() {
+    public PlayerInfo()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerInfo(PlayerInfo other) : this() {
+    public PlayerInfo(PlayerInfo other) : this()
+    {
       playerId_ = other.playerId_;
       type_ = other.type_;
       raceRequested_ = other.raceRequested_;
@@ -10272,7 +12240,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerInfo Clone() {
+    public PlayerInfo Clone()
+    {
       return new PlayerInfo(this);
     }
 
@@ -10284,9 +12253,11 @@ namespace SC2APIProtocol {
     /// SC2 will always assign playerIds starting from 1 in standard Melee maps. This may not be true in custom maps.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
@@ -10295,9 +12266,11 @@ namespace SC2APIProtocol {
     public const int TypeFieldNumber = 2;
     private global::SC2APIProtocol.PlayerType type_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.PlayerType Type {
+    public global::SC2APIProtocol.PlayerType Type
+    {
       get { return type_; }
-      set {
+      set
+      {
         type_ = value;
       }
     }
@@ -10306,9 +12279,11 @@ namespace SC2APIProtocol {
     public const int RaceRequestedFieldNumber = 3;
     private global::SC2APIProtocol.Race raceRequested_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Race RaceRequested {
+    public global::SC2APIProtocol.Race RaceRequested
+    {
       get { return raceRequested_; }
-      set {
+      set
+      {
         raceRequested_ = value;
       }
     }
@@ -10320,9 +12295,11 @@ namespace SC2APIProtocol {
     /// Only populated for your player or when watching replay
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Race RaceActual {
+    public global::SC2APIProtocol.Race RaceActual
+    {
       get { return raceActual_; }
-      set {
+      set
+      {
         raceActual_ = value;
       }
     }
@@ -10331,24 +12308,30 @@ namespace SC2APIProtocol {
     public const int DifficultyFieldNumber = 5;
     private global::SC2APIProtocol.Difficulty difficulty_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Difficulty Difficulty {
+    public global::SC2APIProtocol.Difficulty Difficulty
+    {
       get { return difficulty_; }
-      set {
+      set
+      {
         difficulty_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as PlayerInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PlayerInfo other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(PlayerInfo other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -10360,157 +12343,194 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       if (RaceRequested != 0) hash ^= RaceRequested.GetHashCode();
       if (RaceActual != 0) hash ^= RaceActual.GetHashCode();
       if (Difficulty != 0) hash ^= Difficulty.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (Type != 0) {
+      if (Type != 0)
+      {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Type);
+        output.WriteEnum((int)Type);
       }
-      if (RaceRequested != 0) {
+      if (RaceRequested != 0)
+      {
         output.WriteRawTag(24);
-        output.WriteEnum((int) RaceRequested);
+        output.WriteEnum((int)RaceRequested);
       }
-      if (RaceActual != 0) {
+      if (RaceActual != 0)
+      {
         output.WriteRawTag(32);
-        output.WriteEnum((int) RaceActual);
+        output.WriteEnum((int)RaceActual);
       }
-      if (Difficulty != 0) {
+      if (Difficulty != 0)
+      {
         output.WriteRawTag(40);
-        output.WriteEnum((int) Difficulty);
+        output.WriteEnum((int)Difficulty);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (Type != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Type);
       }
-      if (RaceRequested != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RaceRequested);
+      if (RaceRequested != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)RaceRequested);
       }
-      if (RaceActual != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RaceActual);
+      if (RaceActual != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)RaceActual);
       }
-      if (Difficulty != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Difficulty);
+      if (Difficulty != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Difficulty);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PlayerInfo other) {
-      if (other == null) {
+    public void MergeFrom(PlayerInfo other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
-      if (other.Type != 0) {
+      if (other.Type != 0)
+      {
         Type = other.Type;
       }
-      if (other.RaceRequested != 0) {
+      if (other.RaceRequested != 0)
+      {
         RaceRequested = other.RaceRequested;
       }
-      if (other.RaceActual != 0) {
+      if (other.RaceActual != 0)
+      {
         RaceActual = other.RaceActual;
       }
-      if (other.Difficulty != 0) {
+      if (other.Difficulty != 0)
+      {
         Difficulty = other.Difficulty;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            type_ = (global::SC2APIProtocol.PlayerType) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            raceRequested_ = (global::SC2APIProtocol.Race) input.ReadEnum();
-            break;
-          }
-          case 32: {
-            raceActual_ = (global::SC2APIProtocol.Race) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            difficulty_ = (global::SC2APIProtocol.Difficulty) input.ReadEnum();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
+          case 16:
+            {
+              type_ = (global::SC2APIProtocol.PlayerType)input.ReadEnum();
+              break;
+            }
+          case 24:
+            {
+              raceRequested_ = (global::SC2APIProtocol.Race)input.ReadEnum();
+              break;
+            }
+          case 32:
+            {
+              raceActual_ = (global::SC2APIProtocol.Race)input.ReadEnum();
+              break;
+            }
+          case 40:
+            {
+              difficulty_ = (global::SC2APIProtocol.Difficulty)input.ReadEnum();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class PlayerCommon : pb::IMessage<PlayerCommon> {
+  public sealed partial class PlayerCommon : pb::IMessage<PlayerCommon>
+  {
     private static readonly pb::MessageParser<PlayerCommon> _parser = new pb::MessageParser<PlayerCommon>(() => new PlayerCommon());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PlayerCommon> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerCommon() {
+    public PlayerCommon()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerCommon(PlayerCommon other) : this() {
+    public PlayerCommon(PlayerCommon other) : this()
+    {
       playerId_ = other.playerId_;
       minerals_ = other.minerals_;
       vespene_ = other.vespene_;
@@ -10526,7 +12546,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerCommon Clone() {
+    public PlayerCommon Clone()
+    {
       return new PlayerCommon(this);
     }
 
@@ -10534,9 +12555,11 @@ namespace SC2APIProtocol {
     public const int PlayerIdFieldNumber = 1;
     private uint playerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
@@ -10545,9 +12568,11 @@ namespace SC2APIProtocol {
     public const int MineralsFieldNumber = 2;
     private uint minerals_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Minerals {
+    public uint Minerals
+    {
       get { return minerals_; }
-      set {
+      set
+      {
         minerals_ = value;
       }
     }
@@ -10556,9 +12581,11 @@ namespace SC2APIProtocol {
     public const int VespeneFieldNumber = 3;
     private uint vespene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Vespene {
+    public uint Vespene
+    {
       get { return vespene_; }
-      set {
+      set
+      {
         vespene_ = value;
       }
     }
@@ -10567,9 +12594,11 @@ namespace SC2APIProtocol {
     public const int FoodCapFieldNumber = 4;
     private uint foodCap_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FoodCap {
+    public uint FoodCap
+    {
       get { return foodCap_; }
-      set {
+      set
+      {
         foodCap_ = value;
       }
     }
@@ -10578,9 +12607,11 @@ namespace SC2APIProtocol {
     public const int FoodUsedFieldNumber = 5;
     private uint foodUsed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FoodUsed {
+    public uint FoodUsed
+    {
       get { return foodUsed_; }
-      set {
+      set
+      {
         foodUsed_ = value;
       }
     }
@@ -10589,9 +12620,11 @@ namespace SC2APIProtocol {
     public const int FoodArmyFieldNumber = 6;
     private uint foodArmy_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FoodArmy {
+    public uint FoodArmy
+    {
       get { return foodArmy_; }
-      set {
+      set
+      {
         foodArmy_ = value;
       }
     }
@@ -10600,9 +12633,11 @@ namespace SC2APIProtocol {
     public const int FoodWorkersFieldNumber = 7;
     private uint foodWorkers_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FoodWorkers {
+    public uint FoodWorkers
+    {
       get { return foodWorkers_; }
-      set {
+      set
+      {
         foodWorkers_ = value;
       }
     }
@@ -10611,9 +12646,11 @@ namespace SC2APIProtocol {
     public const int IdleWorkerCountFieldNumber = 8;
     private uint idleWorkerCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint IdleWorkerCount {
+    public uint IdleWorkerCount
+    {
       get { return idleWorkerCount_; }
-      set {
+      set
+      {
         idleWorkerCount_ = value;
       }
     }
@@ -10622,9 +12659,11 @@ namespace SC2APIProtocol {
     public const int ArmyCountFieldNumber = 9;
     private uint armyCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint ArmyCount {
+    public uint ArmyCount
+    {
       get { return armyCount_; }
-      set {
+      set
+      {
         armyCount_ = value;
       }
     }
@@ -10633,9 +12672,11 @@ namespace SC2APIProtocol {
     public const int WarpGateCountFieldNumber = 10;
     private uint warpGateCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint WarpGateCount {
+    public uint WarpGateCount
+    {
       get { return warpGateCount_; }
-      set {
+      set
+      {
         warpGateCount_ = value;
       }
     }
@@ -10644,24 +12685,30 @@ namespace SC2APIProtocol {
     public const int LarvaCountFieldNumber = 11;
     private uint larvaCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint LarvaCount {
+    public uint LarvaCount
+    {
       get { return larvaCount_; }
-      set {
+      set
+      {
         larvaCount_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as PlayerCommon);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PlayerCommon other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(PlayerCommon other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -10679,7 +12726,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
       if (Minerals != 0) hash ^= Minerals.GetHashCode();
@@ -10692,234 +12740,294 @@ namespace SC2APIProtocol {
       if (ArmyCount != 0) hash ^= ArmyCount.GetHashCode();
       if (WarpGateCount != 0) hash ^= WarpGateCount.GetHashCode();
       if (LarvaCount != 0) hash ^= LarvaCount.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (Minerals != 0) {
+      if (Minerals != 0)
+      {
         output.WriteRawTag(16);
         output.WriteUInt32(Minerals);
       }
-      if (Vespene != 0) {
+      if (Vespene != 0)
+      {
         output.WriteRawTag(24);
         output.WriteUInt32(Vespene);
       }
-      if (FoodCap != 0) {
+      if (FoodCap != 0)
+      {
         output.WriteRawTag(32);
         output.WriteUInt32(FoodCap);
       }
-      if (FoodUsed != 0) {
+      if (FoodUsed != 0)
+      {
         output.WriteRawTag(40);
         output.WriteUInt32(FoodUsed);
       }
-      if (FoodArmy != 0) {
+      if (FoodArmy != 0)
+      {
         output.WriteRawTag(48);
         output.WriteUInt32(FoodArmy);
       }
-      if (FoodWorkers != 0) {
+      if (FoodWorkers != 0)
+      {
         output.WriteRawTag(56);
         output.WriteUInt32(FoodWorkers);
       }
-      if (IdleWorkerCount != 0) {
+      if (IdleWorkerCount != 0)
+      {
         output.WriteRawTag(64);
         output.WriteUInt32(IdleWorkerCount);
       }
-      if (ArmyCount != 0) {
+      if (ArmyCount != 0)
+      {
         output.WriteRawTag(72);
         output.WriteUInt32(ArmyCount);
       }
-      if (WarpGateCount != 0) {
+      if (WarpGateCount != 0)
+      {
         output.WriteRawTag(80);
         output.WriteUInt32(WarpGateCount);
       }
-      if (LarvaCount != 0) {
+      if (LarvaCount != 0)
+      {
         output.WriteRawTag(88);
         output.WriteUInt32(LarvaCount);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (Minerals != 0) {
+      if (Minerals != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Minerals);
       }
-      if (Vespene != 0) {
+      if (Vespene != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Vespene);
       }
-      if (FoodCap != 0) {
+      if (FoodCap != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FoodCap);
       }
-      if (FoodUsed != 0) {
+      if (FoodUsed != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FoodUsed);
       }
-      if (FoodArmy != 0) {
+      if (FoodArmy != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FoodArmy);
       }
-      if (FoodWorkers != 0) {
+      if (FoodWorkers != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FoodWorkers);
       }
-      if (IdleWorkerCount != 0) {
+      if (IdleWorkerCount != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IdleWorkerCount);
       }
-      if (ArmyCount != 0) {
+      if (ArmyCount != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ArmyCount);
       }
-      if (WarpGateCount != 0) {
+      if (WarpGateCount != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WarpGateCount);
       }
-      if (LarvaCount != 0) {
+      if (LarvaCount != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LarvaCount);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PlayerCommon other) {
-      if (other == null) {
+    public void MergeFrom(PlayerCommon other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
-      if (other.Minerals != 0) {
+      if (other.Minerals != 0)
+      {
         Minerals = other.Minerals;
       }
-      if (other.Vespene != 0) {
+      if (other.Vespene != 0)
+      {
         Vespene = other.Vespene;
       }
-      if (other.FoodCap != 0) {
+      if (other.FoodCap != 0)
+      {
         FoodCap = other.FoodCap;
       }
-      if (other.FoodUsed != 0) {
+      if (other.FoodUsed != 0)
+      {
         FoodUsed = other.FoodUsed;
       }
-      if (other.FoodArmy != 0) {
+      if (other.FoodArmy != 0)
+      {
         FoodArmy = other.FoodArmy;
       }
-      if (other.FoodWorkers != 0) {
+      if (other.FoodWorkers != 0)
+      {
         FoodWorkers = other.FoodWorkers;
       }
-      if (other.IdleWorkerCount != 0) {
+      if (other.IdleWorkerCount != 0)
+      {
         IdleWorkerCount = other.IdleWorkerCount;
       }
-      if (other.ArmyCount != 0) {
+      if (other.ArmyCount != 0)
+      {
         ArmyCount = other.ArmyCount;
       }
-      if (other.WarpGateCount != 0) {
+      if (other.WarpGateCount != 0)
+      {
         WarpGateCount = other.WarpGateCount;
       }
-      if (other.LarvaCount != 0) {
+      if (other.LarvaCount != 0)
+      {
         LarvaCount = other.LarvaCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            Minerals = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            Vespene = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            FoodCap = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            FoodUsed = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            FoodArmy = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            FoodWorkers = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IdleWorkerCount = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ArmyCount = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            WarpGateCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            LarvaCount = input.ReadUInt32();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
+          case 16:
+            {
+              Minerals = input.ReadUInt32();
+              break;
+            }
+          case 24:
+            {
+              Vespene = input.ReadUInt32();
+              break;
+            }
+          case 32:
+            {
+              FoodCap = input.ReadUInt32();
+              break;
+            }
+          case 40:
+            {
+              FoodUsed = input.ReadUInt32();
+              break;
+            }
+          case 48:
+            {
+              FoodArmy = input.ReadUInt32();
+              break;
+            }
+          case 56:
+            {
+              FoodWorkers = input.ReadUInt32();
+              break;
+            }
+          case 64:
+            {
+              IdleWorkerCount = input.ReadUInt32();
+              break;
+            }
+          case 72:
+            {
+              ArmyCount = input.ReadUInt32();
+              break;
+            }
+          case 80:
+            {
+              WarpGateCount = input.ReadUInt32();
+              break;
+            }
+          case 88:
+            {
+              LarvaCount = input.ReadUInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class Observation : pb::IMessage<Observation> {
+  public sealed partial class Observation : pb::IMessage<Observation>
+  {
     private static readonly pb::MessageParser<Observation> _parser = new pb::MessageParser<Observation>(() => new Observation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Observation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Observation() {
+    public Observation()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Observation(Observation other) : this() {
+    public Observation(Observation other) : this()
+    {
       gameLoop_ = other.gameLoop_;
       PlayerCommon = other.playerCommon_ != null ? other.PlayerCommon.Clone() : null;
       alerts_ = other.alerts_.Clone();
@@ -10933,7 +13041,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Observation Clone() {
+    public Observation Clone()
+    {
       return new Observation(this);
     }
 
@@ -10941,9 +13050,11 @@ namespace SC2APIProtocol {
     public const int GameLoopFieldNumber = 9;
     private uint gameLoop_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint GameLoop {
+    public uint GameLoop
+    {
       get { return gameLoop_; }
-      set {
+      set
+      {
         gameLoop_ = value;
       }
     }
@@ -10952,9 +13063,11 @@ namespace SC2APIProtocol {
     public const int PlayerCommonFieldNumber = 1;
     private global::SC2APIProtocol.PlayerCommon playerCommon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.PlayerCommon PlayerCommon {
+    public global::SC2APIProtocol.PlayerCommon PlayerCommon
+    {
       get { return playerCommon_; }
-      set {
+      set
+      {
         playerCommon_ = value;
       }
     }
@@ -10962,10 +13075,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "alerts" field.</summary>
     public const int AlertsFieldNumber = 10;
     private static readonly pb::FieldCodec<global::SC2APIProtocol.Alert> _repeated_alerts_codec
-        = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::SC2APIProtocol.Alert) x);
+        = pb::FieldCodec.ForEnum(82, x => (int)x, x => (global::SC2APIProtocol.Alert)x);
     private readonly pbc::RepeatedField<global::SC2APIProtocol.Alert> alerts_ = new pbc::RepeatedField<global::SC2APIProtocol.Alert>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.Alert> Alerts {
+    public pbc::RepeatedField<global::SC2APIProtocol.Alert> Alerts
+    {
       get { return alerts_; }
     }
 
@@ -10978,7 +13092,8 @@ namespace SC2APIProtocol {
     /// Abilities available in the selection. Enabled if in this list, disabled otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SC2APIProtocol.AvailableAbility> Abilities {
+    public pbc::RepeatedField<global::SC2APIProtocol.AvailableAbility> Abilities
+    {
       get { return abilities_; }
     }
 
@@ -10986,9 +13101,11 @@ namespace SC2APIProtocol {
     public const int ScoreFieldNumber = 4;
     private global::SC2APIProtocol.Score score_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Score Score {
+    public global::SC2APIProtocol.Score Score
+    {
       get { return score_; }
-      set {
+      set
+      {
         score_ = value;
       }
     }
@@ -11000,9 +13117,11 @@ namespace SC2APIProtocol {
     /// Populated if Raw interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ObservationRaw RawData {
+    public global::SC2APIProtocol.ObservationRaw RawData
+    {
       get { return rawData_; }
-      set {
+      set
+      {
         rawData_ = value;
       }
     }
@@ -11014,9 +13133,11 @@ namespace SC2APIProtocol {
     /// Populated if Feature Layer interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ObservationFeatureLayer FeatureLayerData {
+    public global::SC2APIProtocol.ObservationFeatureLayer FeatureLayerData
+    {
       get { return featureLayerData_; }
-      set {
+      set
+      {
         featureLayerData_ = value;
       }
     }
@@ -11028,9 +13149,11 @@ namespace SC2APIProtocol {
     /// Populated if Render interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ObservationRender RenderData {
+    public global::SC2APIProtocol.ObservationRender RenderData
+    {
       get { return renderData_; }
-      set {
+      set
+      {
         renderData_ = value;
       }
     }
@@ -11042,30 +13165,36 @@ namespace SC2APIProtocol {
     /// Populated if Feature Layer or Render interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ObservationUI UiData {
+    public global::SC2APIProtocol.ObservationUI UiData
+    {
       get { return uiData_; }
-      set {
+      set
+      {
         uiData_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as Observation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Observation other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(Observation other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (GameLoop != other.GameLoop) return false;
       if (!object.Equals(PlayerCommon, other.PlayerCommon)) return false;
-      if(!alerts_.Equals(other.alerts_)) return false;
-      if(!abilities_.Equals(other.abilities_)) return false;
+      if (!alerts_.Equals(other.alerts_)) return false;
+      if (!abilities_.Equals(other.abilities_)) return false;
       if (!object.Equals(Score, other.Score)) return false;
       if (!object.Equals(RawData, other.RawData)) return false;
       if (!object.Equals(FeatureLayerData, other.FeatureLayerData)) return false;
@@ -11075,7 +13204,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (GameLoop != 0) hash ^= GameLoop.GetHashCode();
       if (playerCommon_ != null) hash ^= PlayerCommon.GetHashCode();
@@ -11086,128 +13216,163 @@ namespace SC2APIProtocol {
       if (featureLayerData_ != null) hash ^= FeatureLayerData.GetHashCode();
       if (renderData_ != null) hash ^= RenderData.GetHashCode();
       if (uiData_ != null) hash ^= UiData.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (playerCommon_ != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (playerCommon_ != null)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(PlayerCommon);
       }
       abilities_.WriteTo(output, _repeated_abilities_codec);
-      if (score_ != null) {
+      if (score_ != null)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(Score);
       }
-      if (rawData_ != null) {
+      if (rawData_ != null)
+      {
         output.WriteRawTag(42);
         output.WriteMessage(RawData);
       }
-      if (featureLayerData_ != null) {
+      if (featureLayerData_ != null)
+      {
         output.WriteRawTag(50);
         output.WriteMessage(FeatureLayerData);
       }
-      if (renderData_ != null) {
+      if (renderData_ != null)
+      {
         output.WriteRawTag(58);
         output.WriteMessage(RenderData);
       }
-      if (uiData_ != null) {
+      if (uiData_ != null)
+      {
         output.WriteRawTag(66);
         output.WriteMessage(UiData);
       }
-      if (GameLoop != 0) {
+      if (GameLoop != 0)
+      {
         output.WriteRawTag(72);
         output.WriteUInt32(GameLoop);
       }
       alerts_.WriteTo(output, _repeated_alerts_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (GameLoop != 0) {
+      if (GameLoop != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameLoop);
       }
-      if (playerCommon_ != null) {
+      if (playerCommon_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerCommon);
       }
       size += alerts_.CalculateSize(_repeated_alerts_codec);
       size += abilities_.CalculateSize(_repeated_abilities_codec);
-      if (score_ != null) {
+      if (score_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Score);
       }
-      if (rawData_ != null) {
+      if (rawData_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RawData);
       }
-      if (featureLayerData_ != null) {
+      if (featureLayerData_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FeatureLayerData);
       }
-      if (renderData_ != null) {
+      if (renderData_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RenderData);
       }
-      if (uiData_ != null) {
+      if (uiData_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UiData);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Observation other) {
-      if (other == null) {
+    public void MergeFrom(Observation other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.GameLoop != 0) {
+      if (other.GameLoop != 0)
+      {
         GameLoop = other.GameLoop;
       }
-      if (other.playerCommon_ != null) {
-        if (playerCommon_ == null) {
+      if (other.playerCommon_ != null)
+      {
+        if (playerCommon_ == null)
+        {
           playerCommon_ = new global::SC2APIProtocol.PlayerCommon();
         }
         PlayerCommon.MergeFrom(other.PlayerCommon);
       }
       alerts_.Add(other.alerts_);
       abilities_.Add(other.abilities_);
-      if (other.score_ != null) {
-        if (score_ == null) {
+      if (other.score_ != null)
+      {
+        if (score_ == null)
+        {
           score_ = new global::SC2APIProtocol.Score();
         }
         Score.MergeFrom(other.Score);
       }
-      if (other.rawData_ != null) {
-        if (rawData_ == null) {
+      if (other.rawData_ != null)
+      {
+        if (rawData_ == null)
+        {
           rawData_ = new global::SC2APIProtocol.ObservationRaw();
         }
         RawData.MergeFrom(other.RawData);
       }
-      if (other.featureLayerData_ != null) {
-        if (featureLayerData_ == null) {
+      if (other.featureLayerData_ != null)
+      {
+        if (featureLayerData_ == null)
+        {
           featureLayerData_ = new global::SC2APIProtocol.ObservationFeatureLayer();
         }
         FeatureLayerData.MergeFrom(other.FeatureLayerData);
       }
-      if (other.renderData_ != null) {
-        if (renderData_ == null) {
+      if (other.renderData_ != null)
+      {
+        if (renderData_ == null)
+        {
           renderData_ = new global::SC2APIProtocol.ObservationRender();
         }
         RenderData.MergeFrom(other.RenderData);
       }
-      if (other.uiData_ != null) {
-        if (uiData_ == null) {
+      if (other.uiData_ != null)
+      {
+        if (uiData_ == null)
+        {
           uiData_ = new global::SC2APIProtocol.ObservationUI();
         }
         UiData.MergeFrom(other.UiData);
@@ -11216,99 +13381,122 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (playerCommon_ == null) {
-              playerCommon_ = new global::SC2APIProtocol.PlayerCommon();
+          case 10:
+            {
+              if (playerCommon_ == null)
+              {
+                playerCommon_ = new global::SC2APIProtocol.PlayerCommon();
+              }
+              input.ReadMessage(playerCommon_);
+              break;
             }
-            input.ReadMessage(playerCommon_);
-            break;
-          }
-          case 26: {
-            abilities_.AddEntriesFrom(input, _repeated_abilities_codec);
-            break;
-          }
-          case 34: {
-            if (score_ == null) {
-              score_ = new global::SC2APIProtocol.Score();
+          case 26:
+            {
+              abilities_.AddEntriesFrom(input, _repeated_abilities_codec);
+              break;
             }
-            input.ReadMessage(score_);
-            break;
-          }
-          case 42: {
-            if (rawData_ == null) {
-              rawData_ = new global::SC2APIProtocol.ObservationRaw();
+          case 34:
+            {
+              if (score_ == null)
+              {
+                score_ = new global::SC2APIProtocol.Score();
+              }
+              input.ReadMessage(score_);
+              break;
             }
-            input.ReadMessage(rawData_);
-            break;
-          }
-          case 50: {
-            if (featureLayerData_ == null) {
-              featureLayerData_ = new global::SC2APIProtocol.ObservationFeatureLayer();
+          case 42:
+            {
+              if (rawData_ == null)
+              {
+                rawData_ = new global::SC2APIProtocol.ObservationRaw();
+              }
+              input.ReadMessage(rawData_);
+              break;
             }
-            input.ReadMessage(featureLayerData_);
-            break;
-          }
-          case 58: {
-            if (renderData_ == null) {
-              renderData_ = new global::SC2APIProtocol.ObservationRender();
+          case 50:
+            {
+              if (featureLayerData_ == null)
+              {
+                featureLayerData_ = new global::SC2APIProtocol.ObservationFeatureLayer();
+              }
+              input.ReadMessage(featureLayerData_);
+              break;
             }
-            input.ReadMessage(renderData_);
-            break;
-          }
-          case 66: {
-            if (uiData_ == null) {
-              uiData_ = new global::SC2APIProtocol.ObservationUI();
+          case 58:
+            {
+              if (renderData_ == null)
+              {
+                renderData_ = new global::SC2APIProtocol.ObservationRender();
+              }
+              input.ReadMessage(renderData_);
+              break;
             }
-            input.ReadMessage(uiData_);
-            break;
-          }
-          case 72: {
-            GameLoop = input.ReadUInt32();
-            break;
-          }
+          case 66:
+            {
+              if (uiData_ == null)
+              {
+                uiData_ = new global::SC2APIProtocol.ObservationUI();
+              }
+              input.ReadMessage(uiData_);
+              break;
+            }
+          case 72:
+            {
+              GameLoop = input.ReadUInt32();
+              break;
+            }
           case 82:
-          case 80: {
-            alerts_.AddEntriesFrom(input, _repeated_alerts_codec);
-            break;
-          }
+          case 80:
+            {
+              alerts_.AddEntriesFrom(input, _repeated_alerts_codec);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class Action : pb::IMessage<Action> {
+  public sealed partial class Action : pb::IMessage<Action>
+  {
     private static readonly pb::MessageParser<Action> _parser = new pb::MessageParser<Action>(() => new Action());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Action> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Action() {
+    public Action()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Action(Action other) : this() {
+    public Action(Action other) : this()
+    {
       ActionRaw = other.actionRaw_ != null ? other.ActionRaw.Clone() : null;
       ActionFeatureLayer = other.actionFeatureLayer_ != null ? other.ActionFeatureLayer.Clone() : null;
       ActionRender = other.actionRender_ != null ? other.ActionRender.Clone() : null;
@@ -11318,7 +13506,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Action Clone() {
+    public Action Clone()
+    {
       return new Action(this);
     }
 
@@ -11329,9 +13518,11 @@ namespace SC2APIProtocol {
     /// Populated if Raw interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionRaw ActionRaw {
+    public global::SC2APIProtocol.ActionRaw ActionRaw
+    {
       get { return actionRaw_; }
-      set {
+      set
+      {
         actionRaw_ = value;
       }
     }
@@ -11343,9 +13534,11 @@ namespace SC2APIProtocol {
     /// Populated if Feature Layer interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionSpatial ActionFeatureLayer {
+    public global::SC2APIProtocol.ActionSpatial ActionFeatureLayer
+    {
       get { return actionFeatureLayer_; }
-      set {
+      set
+      {
         actionFeatureLayer_ = value;
       }
     }
@@ -11357,9 +13550,11 @@ namespace SC2APIProtocol {
     /// Not implemented. Populated if Render interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionSpatial ActionRender {
+    public global::SC2APIProtocol.ActionSpatial ActionRender
+    {
       get { return actionRender_; }
-      set {
+      set
+      {
         actionRender_ = value;
       }
     }
@@ -11371,9 +13566,11 @@ namespace SC2APIProtocol {
     /// Populated if Feature Layer or Render interface is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionUI ActionUi {
+    public global::SC2APIProtocol.ActionUI ActionUi
+    {
       get { return actionUi_; }
-      set {
+      set
+      {
         actionUi_ = value;
       }
     }
@@ -11385,24 +13582,30 @@ namespace SC2APIProtocol {
     /// Chat messages as a player typing into the chat channel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionChat ActionChat {
+    public global::SC2APIProtocol.ActionChat ActionChat
+    {
       get { return actionChat_; }
-      set {
+      set
+      {
         actionChat_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as Action);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Action other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(Action other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(ActionRaw, other.ActionRaw)) return false;
@@ -11414,106 +13617,135 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (actionRaw_ != null) hash ^= ActionRaw.GetHashCode();
       if (actionFeatureLayer_ != null) hash ^= ActionFeatureLayer.GetHashCode();
       if (actionRender_ != null) hash ^= ActionRender.GetHashCode();
       if (actionUi_ != null) hash ^= ActionUi.GetHashCode();
       if (actionChat_ != null) hash ^= ActionChat.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (actionRaw_ != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (actionRaw_ != null)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(ActionRaw);
       }
-      if (actionFeatureLayer_ != null) {
+      if (actionFeatureLayer_ != null)
+      {
         output.WriteRawTag(18);
         output.WriteMessage(ActionFeatureLayer);
       }
-      if (actionRender_ != null) {
+      if (actionRender_ != null)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(ActionRender);
       }
-      if (actionUi_ != null) {
+      if (actionUi_ != null)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(ActionUi);
       }
-      if (actionChat_ != null) {
+      if (actionChat_ != null)
+      {
         output.WriteRawTag(50);
         output.WriteMessage(ActionChat);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (actionRaw_ != null) {
+      if (actionRaw_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActionRaw);
       }
-      if (actionFeatureLayer_ != null) {
+      if (actionFeatureLayer_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActionFeatureLayer);
       }
-      if (actionRender_ != null) {
+      if (actionRender_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActionRender);
       }
-      if (actionUi_ != null) {
+      if (actionUi_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActionUi);
       }
-      if (actionChat_ != null) {
+      if (actionChat_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActionChat);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Action other) {
-      if (other == null) {
+    public void MergeFrom(Action other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.actionRaw_ != null) {
-        if (actionRaw_ == null) {
+      if (other.actionRaw_ != null)
+      {
+        if (actionRaw_ == null)
+        {
           actionRaw_ = new global::SC2APIProtocol.ActionRaw();
         }
         ActionRaw.MergeFrom(other.ActionRaw);
       }
-      if (other.actionFeatureLayer_ != null) {
-        if (actionFeatureLayer_ == null) {
+      if (other.actionFeatureLayer_ != null)
+      {
+        if (actionFeatureLayer_ == null)
+        {
           actionFeatureLayer_ = new global::SC2APIProtocol.ActionSpatial();
         }
         ActionFeatureLayer.MergeFrom(other.ActionFeatureLayer);
       }
-      if (other.actionRender_ != null) {
-        if (actionRender_ == null) {
+      if (other.actionRender_ != null)
+      {
+        if (actionRender_ == null)
+        {
           actionRender_ = new global::SC2APIProtocol.ActionSpatial();
         }
         ActionRender.MergeFrom(other.ActionRender);
       }
-      if (other.actionUi_ != null) {
-        if (actionUi_ == null) {
+      if (other.actionUi_ != null)
+      {
+        if (actionUi_ == null)
+        {
           actionUi_ = new global::SC2APIProtocol.ActionUI();
         }
         ActionUi.MergeFrom(other.ActionUi);
       }
-      if (other.actionChat_ != null) {
-        if (actionChat_ == null) {
+      if (other.actionChat_ != null)
+      {
+        if (actionChat_ == null)
+        {
           actionChat_ = new global::SC2APIProtocol.ActionChat();
         }
         ActionChat.MergeFrom(other.ActionChat);
@@ -11522,86 +13754,105 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (actionRaw_ == null) {
-              actionRaw_ = new global::SC2APIProtocol.ActionRaw();
+          case 10:
+            {
+              if (actionRaw_ == null)
+              {
+                actionRaw_ = new global::SC2APIProtocol.ActionRaw();
+              }
+              input.ReadMessage(actionRaw_);
+              break;
             }
-            input.ReadMessage(actionRaw_);
-            break;
-          }
-          case 18: {
-            if (actionFeatureLayer_ == null) {
-              actionFeatureLayer_ = new global::SC2APIProtocol.ActionSpatial();
+          case 18:
+            {
+              if (actionFeatureLayer_ == null)
+              {
+                actionFeatureLayer_ = new global::SC2APIProtocol.ActionSpatial();
+              }
+              input.ReadMessage(actionFeatureLayer_);
+              break;
             }
-            input.ReadMessage(actionFeatureLayer_);
-            break;
-          }
-          case 26: {
-            if (actionRender_ == null) {
-              actionRender_ = new global::SC2APIProtocol.ActionSpatial();
+          case 26:
+            {
+              if (actionRender_ == null)
+              {
+                actionRender_ = new global::SC2APIProtocol.ActionSpatial();
+              }
+              input.ReadMessage(actionRender_);
+              break;
             }
-            input.ReadMessage(actionRender_);
-            break;
-          }
-          case 34: {
-            if (actionUi_ == null) {
-              actionUi_ = new global::SC2APIProtocol.ActionUI();
+          case 34:
+            {
+              if (actionUi_ == null)
+              {
+                actionUi_ = new global::SC2APIProtocol.ActionUI();
+              }
+              input.ReadMessage(actionUi_);
+              break;
             }
-            input.ReadMessage(actionUi_);
-            break;
-          }
-          case 50: {
-            if (actionChat_ == null) {
-              actionChat_ = new global::SC2APIProtocol.ActionChat();
+          case 50:
+            {
+              if (actionChat_ == null)
+              {
+                actionChat_ = new global::SC2APIProtocol.ActionChat();
+              }
+              input.ReadMessage(actionChat_);
+              break;
             }
-            input.ReadMessage(actionChat_);
-            break;
-          }
         }
       }
     }
 
   }
 
-  public sealed partial class ActionChat : pb::IMessage<ActionChat> {
+  public sealed partial class ActionChat : pb::IMessage<ActionChat>
+  {
     private static readonly pb::MessageParser<ActionChat> _parser = new pb::MessageParser<ActionChat>(() => new ActionChat());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ActionChat> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionChat() {
+    public ActionChat()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionChat(ActionChat other) : this() {
+    public ActionChat(ActionChat other) : this()
+    {
       channel_ = other.channel_;
       message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionChat Clone() {
+    public ActionChat Clone()
+    {
       return new ActionChat(this);
     }
 
@@ -11609,9 +13860,11 @@ namespace SC2APIProtocol {
     public const int ChannelFieldNumber = 1;
     private global::SC2APIProtocol.ActionChat.Types.Channel channel_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionChat.Types.Channel Channel {
+    public global::SC2APIProtocol.ActionChat.Types.Channel Channel
+    {
       get { return channel_; }
-      set {
+      set
+      {
         channel_ = value;
       }
     }
@@ -11620,24 +13873,30 @@ namespace SC2APIProtocol {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Message {
+    public string Message
+    {
       get { return message_; }
-      set {
+      set
+      {
         message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ActionChat);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActionChat other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ActionChat other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (Channel != other.Channel) return false;
@@ -11646,81 +13905,101 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (Channel != 0) hash ^= Channel.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Channel != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (Channel != 0)
+      {
         output.WriteRawTag(8);
-        output.WriteEnum((int) Channel);
+        output.WriteEnum((int)Channel);
       }
-      if (Message.Length != 0) {
+      if (Message.Length != 0)
+      {
         output.WriteRawTag(18);
         output.WriteString(Message);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (Channel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Channel);
+      if (Channel != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Channel);
       }
-      if (Message.Length != 0) {
+      if (Message.Length != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActionChat other) {
-      if (other == null) {
+    public void MergeFrom(ActionChat other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.Channel != 0) {
+      if (other.Channel != 0)
+      {
         Channel = other.Channel;
       }
-      if (other.Message.Length != 0) {
+      if (other.Message.Length != 0)
+      {
         Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            channel_ = (global::SC2APIProtocol.ActionChat.Types.Channel) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            Message = input.ReadString();
-            break;
-          }
+          case 8:
+            {
+              channel_ = (global::SC2APIProtocol.ActionChat.Types.Channel)input.ReadEnum();
+              break;
+            }
+          case 18:
+            {
+              Message = input.ReadString();
+              break;
+            }
         }
       }
     }
@@ -11728,8 +14007,10 @@ namespace SC2APIProtocol {
     #region Nested types
     /// <summary>Container for nested types declared in the ActionChat message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Channel {
+    public static partial class Types
+    {
+      public enum Channel
+      {
         [pbr::OriginalName("Channel_UNSET")] Unset = 0,
         [pbr::OriginalName("Broadcast")] Broadcast = 1,
         [pbr::OriginalName("Team")] Team = 2,
@@ -11740,31 +14021,36 @@ namespace SC2APIProtocol {
 
   }
 
-  public sealed partial class ActionError : pb::IMessage<ActionError> {
+  public sealed partial class ActionError : pb::IMessage<ActionError>
+  {
     private static readonly pb::MessageParser<ActionError> _parser = new pb::MessageParser<ActionError>(() => new ActionError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ActionError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionError() {
+    public ActionError()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionError(ActionError other) : this() {
+    public ActionError(ActionError other) : this()
+    {
       unitTag_ = other.unitTag_;
       abilityId_ = other.abilityId_;
       result_ = other.result_;
@@ -11772,7 +14058,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionError Clone() {
+    public ActionError Clone()
+    {
       return new ActionError(this);
     }
 
@@ -11783,9 +14070,11 @@ namespace SC2APIProtocol {
     /// Only populated when using raw interface.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong UnitTag {
+    public ulong UnitTag
+    {
       get { return unitTag_; }
-      set {
+      set
+      {
         unitTag_ = value;
       }
     }
@@ -11794,9 +14083,11 @@ namespace SC2APIProtocol {
     public const int AbilityIdFieldNumber = 2;
     private ulong abilityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong AbilityId {
+    public ulong AbilityId
+    {
       get { return abilityId_; }
-      set {
+      set
+      {
         abilityId_ = value;
       }
     }
@@ -11805,24 +14096,30 @@ namespace SC2APIProtocol {
     public const int ResultFieldNumber = 3;
     private global::SC2APIProtocol.ActionResult result_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionResult Result {
+    public global::SC2APIProtocol.ActionResult Result
+    {
       get { return result_; }
-      set {
+      set
+      {
         result_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ActionError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActionError other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ActionError other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (UnitTag != other.UnitTag) return false;
@@ -11832,128 +14129,158 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (UnitTag != 0UL) hash ^= UnitTag.GetHashCode();
       if (AbilityId != 0UL) hash ^= AbilityId.GetHashCode();
       if (Result != 0) hash ^= Result.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (UnitTag != 0UL) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (UnitTag != 0UL)
+      {
         output.WriteRawTag(8);
         output.WriteUInt64(UnitTag);
       }
-      if (AbilityId != 0UL) {
+      if (AbilityId != 0UL)
+      {
         output.WriteRawTag(16);
         output.WriteUInt64(AbilityId);
       }
-      if (Result != 0) {
+      if (Result != 0)
+      {
         output.WriteRawTag(24);
-        output.WriteEnum((int) Result);
+        output.WriteEnum((int)Result);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (UnitTag != 0UL) {
+      if (UnitTag != 0UL)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UnitTag);
       }
-      if (AbilityId != 0UL) {
+      if (AbilityId != 0UL)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(AbilityId);
       }
-      if (Result != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Result);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActionError other) {
-      if (other == null) {
+    public void MergeFrom(ActionError other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.UnitTag != 0UL) {
+      if (other.UnitTag != 0UL)
+      {
         UnitTag = other.UnitTag;
       }
-      if (other.AbilityId != 0UL) {
+      if (other.AbilityId != 0UL)
+      {
         AbilityId = other.AbilityId;
       }
-      if (other.Result != 0) {
+      if (other.Result != 0)
+      {
         Result = other.Result;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            UnitTag = input.ReadUInt64();
-            break;
-          }
-          case 16: {
-            AbilityId = input.ReadUInt64();
-            break;
-          }
-          case 24: {
-            result_ = (global::SC2APIProtocol.ActionResult) input.ReadEnum();
-            break;
-          }
+          case 8:
+            {
+              UnitTag = input.ReadUInt64();
+              break;
+            }
+          case 16:
+            {
+              AbilityId = input.ReadUInt64();
+              break;
+            }
+          case 24:
+            {
+              result_ = (global::SC2APIProtocol.ActionResult)input.ReadEnum();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ObserverAction : pb::IMessage<ObserverAction> {
+  public sealed partial class ObserverAction : pb::IMessage<ObserverAction>
+  {
     private static readonly pb::MessageParser<ObserverAction> _parser = new pb::MessageParser<ObserverAction>(() => new ObserverAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ObserverAction> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ObserverAction() {
+    public ObserverAction()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ObserverAction(ObserverAction other) : this() {
-      switch (other.ActionCase) {
+    public ObserverAction(ObserverAction other) : this()
+    {
+      switch (other.ActionCase)
+      {
         case ActionOneofCase.PlayerPerspective:
           PlayerPerspective = other.PlayerPerspective.Clone();
           break;
@@ -11972,7 +14299,8 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ObserverAction Clone() {
+    public ObserverAction Clone()
+    {
       return new ObserverAction(this);
     }
 
@@ -11982,9 +14310,11 @@ namespace SC2APIProtocol {
     /// Not implemented
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionObserverPlayerPerspective PlayerPerspective {
-      get { return actionCase_ == ActionOneofCase.PlayerPerspective ? (global::SC2APIProtocol.ActionObserverPlayerPerspective) action_ : null; }
-      set {
+    public global::SC2APIProtocol.ActionObserverPlayerPerspective PlayerPerspective
+    {
+      get { return actionCase_ == ActionOneofCase.PlayerPerspective ? (global::SC2APIProtocol.ActionObserverPlayerPerspective)action_ : null; }
+      set
+      {
         action_ = value;
         actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.PlayerPerspective;
       }
@@ -11993,9 +14323,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "camera_move" field.</summary>
     public const int CameraMoveFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionObserverCameraMove CameraMove {
-      get { return actionCase_ == ActionOneofCase.CameraMove ? (global::SC2APIProtocol.ActionObserverCameraMove) action_ : null; }
-      set {
+    public global::SC2APIProtocol.ActionObserverCameraMove CameraMove
+    {
+      get { return actionCase_ == ActionOneofCase.CameraMove ? (global::SC2APIProtocol.ActionObserverCameraMove)action_ : null; }
+      set
+      {
         action_ = value;
         actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.CameraMove;
       }
@@ -12004,9 +14336,11 @@ namespace SC2APIProtocol {
     /// <summary>Field number for the "camera_follow_player" field.</summary>
     public const int CameraFollowPlayerFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionObserverCameraFollowPlayer CameraFollowPlayer {
-      get { return actionCase_ == ActionOneofCase.CameraFollowPlayer ? (global::SC2APIProtocol.ActionObserverCameraFollowPlayer) action_ : null; }
-      set {
+    public global::SC2APIProtocol.ActionObserverCameraFollowPlayer CameraFollowPlayer
+    {
+      get { return actionCase_ == ActionOneofCase.CameraFollowPlayer ? (global::SC2APIProtocol.ActionObserverCameraFollowPlayer)action_ : null; }
+      set
+      {
         action_ = value;
         actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.CameraFollowPlayer;
       }
@@ -12018,9 +14352,11 @@ namespace SC2APIProtocol {
     /// Not implemented
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.ActionObserverCameraFollowUnits CameraFollowUnits {
-      get { return actionCase_ == ActionOneofCase.CameraFollowUnits ? (global::SC2APIProtocol.ActionObserverCameraFollowUnits) action_ : null; }
-      set {
+    public global::SC2APIProtocol.ActionObserverCameraFollowUnits CameraFollowUnits
+    {
+      get { return actionCase_ == ActionOneofCase.CameraFollowUnits ? (global::SC2APIProtocol.ActionObserverCameraFollowUnits)action_ : null; }
+      set
+      {
         action_ = value;
         actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.CameraFollowUnits;
       }
@@ -12028,7 +14364,8 @@ namespace SC2APIProtocol {
 
     private object action_;
     /// <summary>Enum of possible cases for the "action" oneof.</summary>
-    public enum ActionOneofCase {
+    public enum ActionOneofCase
+    {
       None = 0,
       PlayerPerspective = 1,
       CameraMove = 2,
@@ -12037,27 +14374,33 @@ namespace SC2APIProtocol {
     }
     private ActionOneofCase actionCase_ = ActionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionOneofCase ActionCase {
+    public ActionOneofCase ActionCase
+    {
       get { return actionCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearAction() {
+    public void ClearAction()
+    {
       actionCase_ = ActionOneofCase.None;
       action_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ObserverAction);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ObserverAction other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ObserverAction other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(PlayerPerspective, other.PlayerPerspective)) return false;
@@ -12069,94 +14412,116 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (actionCase_ == ActionOneofCase.PlayerPerspective) hash ^= PlayerPerspective.GetHashCode();
       if (actionCase_ == ActionOneofCase.CameraMove) hash ^= CameraMove.GetHashCode();
       if (actionCase_ == ActionOneofCase.CameraFollowPlayer) hash ^= CameraFollowPlayer.GetHashCode();
       if (actionCase_ == ActionOneofCase.CameraFollowUnits) hash ^= CameraFollowUnits.GetHashCode();
-      hash ^= (int) actionCase_;
-      if (_unknownFields != null) {
+      hash ^= (int)actionCase_;
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (actionCase_ == ActionOneofCase.PlayerPerspective) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (actionCase_ == ActionOneofCase.PlayerPerspective)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(PlayerPerspective);
       }
-      if (actionCase_ == ActionOneofCase.CameraMove) {
+      if (actionCase_ == ActionOneofCase.CameraMove)
+      {
         output.WriteRawTag(18);
         output.WriteMessage(CameraMove);
       }
-      if (actionCase_ == ActionOneofCase.CameraFollowPlayer) {
+      if (actionCase_ == ActionOneofCase.CameraFollowPlayer)
+      {
         output.WriteRawTag(26);
         output.WriteMessage(CameraFollowPlayer);
       }
-      if (actionCase_ == ActionOneofCase.CameraFollowUnits) {
+      if (actionCase_ == ActionOneofCase.CameraFollowUnits)
+      {
         output.WriteRawTag(34);
         output.WriteMessage(CameraFollowUnits);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (actionCase_ == ActionOneofCase.PlayerPerspective) {
+      if (actionCase_ == ActionOneofCase.PlayerPerspective)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerPerspective);
       }
-      if (actionCase_ == ActionOneofCase.CameraMove) {
+      if (actionCase_ == ActionOneofCase.CameraMove)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CameraMove);
       }
-      if (actionCase_ == ActionOneofCase.CameraFollowPlayer) {
+      if (actionCase_ == ActionOneofCase.CameraFollowPlayer)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CameraFollowPlayer);
       }
-      if (actionCase_ == ActionOneofCase.CameraFollowUnits) {
+      if (actionCase_ == ActionOneofCase.CameraFollowUnits)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CameraFollowUnits);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ObserverAction other) {
-      if (other == null) {
+    public void MergeFrom(ObserverAction other)
+    {
+      if (other == null)
+      {
         return;
       }
-      switch (other.ActionCase) {
+      switch (other.ActionCase)
+      {
         case ActionOneofCase.PlayerPerspective:
-          if (PlayerPerspective == null) {
+          if (PlayerPerspective == null)
+          {
             PlayerPerspective = new global::SC2APIProtocol.ActionObserverPlayerPerspective();
           }
           PlayerPerspective.MergeFrom(other.PlayerPerspective);
           break;
         case ActionOneofCase.CameraMove:
-          if (CameraMove == null) {
+          if (CameraMove == null)
+          {
             CameraMove = new global::SC2APIProtocol.ActionObserverCameraMove();
           }
           CameraMove.MergeFrom(other.CameraMove);
           break;
         case ActionOneofCase.CameraFollowPlayer:
-          if (CameraFollowPlayer == null) {
+          if (CameraFollowPlayer == null)
+          {
             CameraFollowPlayer = new global::SC2APIProtocol.ActionObserverCameraFollowPlayer();
           }
           CameraFollowPlayer.MergeFrom(other.CameraFollowPlayer);
           break;
         case ActionOneofCase.CameraFollowUnits:
-          if (CameraFollowUnits == null) {
+          if (CameraFollowUnits == null)
+          {
             CameraFollowUnits = new global::SC2APIProtocol.ActionObserverCameraFollowUnits();
           }
           CameraFollowUnits.MergeFrom(other.CameraFollowUnits);
@@ -12167,86 +14532,103 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            global::SC2APIProtocol.ActionObserverPlayerPerspective subBuilder = new global::SC2APIProtocol.ActionObserverPlayerPerspective();
-            if (actionCase_ == ActionOneofCase.PlayerPerspective) {
-              subBuilder.MergeFrom(PlayerPerspective);
+          case 10:
+            {
+              global::SC2APIProtocol.ActionObserverPlayerPerspective subBuilder = new global::SC2APIProtocol.ActionObserverPlayerPerspective();
+              if (actionCase_ == ActionOneofCase.PlayerPerspective)
+              {
+                subBuilder.MergeFrom(PlayerPerspective);
+              }
+              input.ReadMessage(subBuilder);
+              PlayerPerspective = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            PlayerPerspective = subBuilder;
-            break;
-          }
-          case 18: {
-            global::SC2APIProtocol.ActionObserverCameraMove subBuilder = new global::SC2APIProtocol.ActionObserverCameraMove();
-            if (actionCase_ == ActionOneofCase.CameraMove) {
-              subBuilder.MergeFrom(CameraMove);
+          case 18:
+            {
+              global::SC2APIProtocol.ActionObserverCameraMove subBuilder = new global::SC2APIProtocol.ActionObserverCameraMove();
+              if (actionCase_ == ActionOneofCase.CameraMove)
+              {
+                subBuilder.MergeFrom(CameraMove);
+              }
+              input.ReadMessage(subBuilder);
+              CameraMove = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            CameraMove = subBuilder;
-            break;
-          }
-          case 26: {
-            global::SC2APIProtocol.ActionObserverCameraFollowPlayer subBuilder = new global::SC2APIProtocol.ActionObserverCameraFollowPlayer();
-            if (actionCase_ == ActionOneofCase.CameraFollowPlayer) {
-              subBuilder.MergeFrom(CameraFollowPlayer);
+          case 26:
+            {
+              global::SC2APIProtocol.ActionObserverCameraFollowPlayer subBuilder = new global::SC2APIProtocol.ActionObserverCameraFollowPlayer();
+              if (actionCase_ == ActionOneofCase.CameraFollowPlayer)
+              {
+                subBuilder.MergeFrom(CameraFollowPlayer);
+              }
+              input.ReadMessage(subBuilder);
+              CameraFollowPlayer = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            CameraFollowPlayer = subBuilder;
-            break;
-          }
-          case 34: {
-            global::SC2APIProtocol.ActionObserverCameraFollowUnits subBuilder = new global::SC2APIProtocol.ActionObserverCameraFollowUnits();
-            if (actionCase_ == ActionOneofCase.CameraFollowUnits) {
-              subBuilder.MergeFrom(CameraFollowUnits);
+          case 34:
+            {
+              global::SC2APIProtocol.ActionObserverCameraFollowUnits subBuilder = new global::SC2APIProtocol.ActionObserverCameraFollowUnits();
+              if (actionCase_ == ActionOneofCase.CameraFollowUnits)
+              {
+                subBuilder.MergeFrom(CameraFollowUnits);
+              }
+              input.ReadMessage(subBuilder);
+              CameraFollowUnits = subBuilder;
+              break;
             }
-            input.ReadMessage(subBuilder);
-            CameraFollowUnits = subBuilder;
-            break;
-          }
         }
       }
     }
 
   }
 
-  public sealed partial class ActionObserverPlayerPerspective : pb::IMessage<ActionObserverPlayerPerspective> {
+  public sealed partial class ActionObserverPlayerPerspective : pb::IMessage<ActionObserverPlayerPerspective>
+  {
     private static readonly pb::MessageParser<ActionObserverPlayerPerspective> _parser = new pb::MessageParser<ActionObserverPlayerPerspective>(() => new ActionObserverPlayerPerspective());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ActionObserverPlayerPerspective> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverPlayerPerspective() {
+    public ActionObserverPlayerPerspective()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverPlayerPerspective(ActionObserverPlayerPerspective other) : this() {
+    public ActionObserverPlayerPerspective(ActionObserverPlayerPerspective other) : this()
+    {
       playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverPlayerPerspective Clone() {
+    public ActionObserverPlayerPerspective Clone()
+    {
       return new ActionObserverPlayerPerspective(this);
     }
 
@@ -12257,24 +14639,30 @@ namespace SC2APIProtocol {
     /// 0 to observe "Everyone"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ActionObserverPlayerPerspective);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActionObserverPlayerPerspective other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ActionObserverPlayerPerspective other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -12282,104 +14670,126 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActionObserverPlayerPerspective other) {
-      if (other == null) {
+    public void MergeFrom(ActionObserverPlayerPerspective other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ActionObserverCameraMove : pb::IMessage<ActionObserverCameraMove> {
+  public sealed partial class ActionObserverCameraMove : pb::IMessage<ActionObserverCameraMove>
+  {
     private static readonly pb::MessageParser<ActionObserverCameraMove> _parser = new pb::MessageParser<ActionObserverCameraMove>(() => new ActionObserverCameraMove());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ActionObserverCameraMove> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraMove() {
+    public ActionObserverCameraMove()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraMove(ActionObserverCameraMove other) : this() {
+    public ActionObserverCameraMove(ActionObserverCameraMove other) : this()
+    {
       WorldPos = other.worldPos_ != null ? other.WorldPos.Clone() : null;
       distance_ = other.distance_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraMove Clone() {
+    public ActionObserverCameraMove Clone()
+    {
       return new ActionObserverCameraMove(this);
     }
 
@@ -12387,9 +14797,11 @@ namespace SC2APIProtocol {
     public const int WorldPosFieldNumber = 1;
     private global::SC2APIProtocol.Point2D worldPos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Point2D WorldPos {
+    public global::SC2APIProtocol.Point2D WorldPos
+    {
       get { return worldPos_; }
-      set {
+      set
+      {
         worldPos_ = value;
       }
     }
@@ -12402,24 +14814,30 @@ namespace SC2APIProtocol {
     /// Defaults to standard camera distance if set to 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Distance {
+    public float Distance
+    {
       get { return distance_; }
-      set {
+      set
+      {
         distance_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ActionObserverCameraMove);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActionObserverCameraMove other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ActionObserverCameraMove other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (!object.Equals(WorldPos, other.WorldPos)) return false;
@@ -12428,124 +14846,152 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (worldPos_ != null) hash ^= WorldPos.GetHashCode();
       if (Distance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Distance);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (worldPos_ != null) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (worldPos_ != null)
+      {
         output.WriteRawTag(10);
         output.WriteMessage(WorldPos);
       }
-      if (Distance != 0F) {
+      if (Distance != 0F)
+      {
         output.WriteRawTag(21);
         output.WriteFloat(Distance);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (worldPos_ != null) {
+      if (worldPos_ != null)
+      {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WorldPos);
       }
-      if (Distance != 0F) {
+      if (Distance != 0F)
+      {
         size += 1 + 4;
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActionObserverCameraMove other) {
-      if (other == null) {
+    public void MergeFrom(ActionObserverCameraMove other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.worldPos_ != null) {
-        if (worldPos_ == null) {
+      if (other.worldPos_ != null)
+      {
+        if (worldPos_ == null)
+        {
           worldPos_ = new global::SC2APIProtocol.Point2D();
         }
         WorldPos.MergeFrom(other.WorldPos);
       }
-      if (other.Distance != 0F) {
+      if (other.Distance != 0F)
+      {
         Distance = other.Distance;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (worldPos_ == null) {
-              worldPos_ = new global::SC2APIProtocol.Point2D();
+          case 10:
+            {
+              if (worldPos_ == null)
+              {
+                worldPos_ = new global::SC2APIProtocol.Point2D();
+              }
+              input.ReadMessage(worldPos_);
+              break;
             }
-            input.ReadMessage(worldPos_);
-            break;
-          }
-          case 21: {
-            Distance = input.ReadFloat();
-            break;
-          }
+          case 21:
+            {
+              Distance = input.ReadFloat();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ActionObserverCameraFollowPlayer : pb::IMessage<ActionObserverCameraFollowPlayer> {
+  public sealed partial class ActionObserverCameraFollowPlayer : pb::IMessage<ActionObserverCameraFollowPlayer>
+  {
     private static readonly pb::MessageParser<ActionObserverCameraFollowPlayer> _parser = new pb::MessageParser<ActionObserverCameraFollowPlayer>(() => new ActionObserverCameraFollowPlayer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ActionObserverCameraFollowPlayer> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraFollowPlayer() {
+    public ActionObserverCameraFollowPlayer()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraFollowPlayer(ActionObserverCameraFollowPlayer other) : this() {
+    public ActionObserverCameraFollowPlayer(ActionObserverCameraFollowPlayer other) : this()
+    {
       playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraFollowPlayer Clone() {
+    public ActionObserverCameraFollowPlayer Clone()
+    {
       return new ActionObserverCameraFollowPlayer(this);
     }
 
@@ -12556,24 +15002,30 @@ namespace SC2APIProtocol {
     /// Not implemented. Value must be [1, 15]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ActionObserverCameraFollowPlayer);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActionObserverCameraFollowPlayer other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ActionObserverCameraFollowPlayer other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -12581,103 +15033,125 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActionObserverCameraFollowPlayer other) {
-      if (other == null) {
+    public void MergeFrom(ActionObserverCameraFollowPlayer other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class ActionObserverCameraFollowUnits : pb::IMessage<ActionObserverCameraFollowUnits> {
+  public sealed partial class ActionObserverCameraFollowUnits : pb::IMessage<ActionObserverCameraFollowUnits>
+  {
     private static readonly pb::MessageParser<ActionObserverCameraFollowUnits> _parser = new pb::MessageParser<ActionObserverCameraFollowUnits>(() => new ActionObserverCameraFollowUnits());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ActionObserverCameraFollowUnits> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraFollowUnits() {
+    public ActionObserverCameraFollowUnits()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraFollowUnits(ActionObserverCameraFollowUnits other) : this() {
+    public ActionObserverCameraFollowUnits(ActionObserverCameraFollowUnits other) : this()
+    {
       unitTags_ = other.unitTags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActionObserverCameraFollowUnits Clone() {
+    public ActionObserverCameraFollowUnits Clone()
+    {
       return new ActionObserverCameraFollowUnits(this);
     }
 
@@ -12687,63 +15161,77 @@ namespace SC2APIProtocol {
         = pb::FieldCodec.ForUInt64(10);
     private readonly pbc::RepeatedField<ulong> unitTags_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<ulong> UnitTags {
+    public pbc::RepeatedField<ulong> UnitTags
+    {
       get { return unitTags_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as ActionObserverCameraFollowUnits);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActionObserverCameraFollowUnits other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(ActionObserverCameraFollowUnits other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
-      if(!unitTags_.Equals(other.unitTags_)) return false;
+      if (!unitTags_.Equals(other.unitTags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       hash ^= unitTags_.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
       unitTags_.WriteTo(output, _repeated_unitTags_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
       size += unitTags_.CalculateSize(_repeated_unitTags_codec);
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActionObserverCameraFollowUnits other) {
-      if (other == null) {
+    public void MergeFrom(ActionObserverCameraFollowUnits other)
+    {
+      if (other == null)
+      {
         return;
       }
       unitTags_.Add(other.unitTags_);
@@ -12751,56 +15239,66 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10:
-          case 8: {
-            unitTags_.AddEntriesFrom(input, _repeated_unitTags_codec);
-            break;
-          }
+          case 8:
+            {
+              unitTags_.AddEntriesFrom(input, _repeated_unitTags_codec);
+              break;
+            }
         }
       }
     }
 
   }
 
-  public sealed partial class PlayerResult : pb::IMessage<PlayerResult> {
+  public sealed partial class PlayerResult : pb::IMessage<PlayerResult>
+  {
     private static readonly pb::MessageParser<PlayerResult> _parser = new pb::MessageParser<PlayerResult>(() => new PlayerResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PlayerResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
+    public static pbr::MessageDescriptor Descriptor
+    {
       get { return global::SC2APIProtocol.Sc2ApiReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
+    pbr::MessageDescriptor pb::IMessage.Descriptor
+    {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerResult() {
+    public PlayerResult()
+    {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerResult(PlayerResult other) : this() {
+    public PlayerResult(PlayerResult other) : this()
+    {
       playerId_ = other.playerId_;
       result_ = other.result_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerResult Clone() {
+    public PlayerResult Clone()
+    {
       return new PlayerResult(this);
     }
 
@@ -12808,9 +15306,11 @@ namespace SC2APIProtocol {
     public const int PlayerIdFieldNumber = 1;
     private uint playerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PlayerId {
+    public uint PlayerId
+    {
       get { return playerId_; }
-      set {
+      set
+      {
         playerId_ = value;
       }
     }
@@ -12819,24 +15319,30 @@ namespace SC2APIProtocol {
     public const int ResultFieldNumber = 2;
     private global::SC2APIProtocol.Result result_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SC2APIProtocol.Result Result {
+    public global::SC2APIProtocol.Result Result
+    {
       get { return result_; }
-      set {
+      set
+      {
         result_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
+    public override bool Equals(object other)
+    {
       return Equals(other as PlayerResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PlayerResult other) {
-      if (ReferenceEquals(other, null)) {
+    public bool Equals(PlayerResult other)
+    {
+      if (ReferenceEquals(other, null))
+      {
         return false;
       }
-      if (ReferenceEquals(other, this)) {
+      if (ReferenceEquals(other, this))
+      {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
@@ -12845,81 +15351,101 @@ namespace SC2APIProtocol {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
+    public override int GetHashCode()
+    {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
       if (Result != 0) hash ^= Result.GetHashCode();
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
+    public override string ToString()
+    {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (PlayerId != 0) {
+    public void WriteTo(pb::CodedOutputStream output)
+    {
+      if (PlayerId != 0)
+      {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerId);
       }
-      if (Result != 0) {
+      if (Result != 0)
+      {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Result);
+        output.WriteEnum((int)Result);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
+    public int CalculateSize()
+    {
       int size = 0;
-      if (PlayerId != 0) {
+      if (PlayerId != 0)
+      {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerId);
       }
-      if (Result != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != 0)
+      {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)Result);
       }
-      if (_unknownFields != null) {
+      if (_unknownFields != null)
+      {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PlayerResult other) {
-      if (other == null) {
+    public void MergeFrom(PlayerResult other)
+    {
+      if (other == null)
+      {
         return;
       }
-      if (other.PlayerId != 0) {
+      if (other.PlayerId != 0)
+      {
         PlayerId = other.PlayerId;
       }
-      if (other.Result != 0) {
+      if (other.Result != 0)
+      {
         Result = other.Result;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
+    public void MergeFrom(pb::CodedInputStream input)
+    {
       uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      while ((tag = input.ReadTag()) != 0)
+      {
+        switch (tag)
+        {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PlayerId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            result_ = (global::SC2APIProtocol.Result) input.ReadEnum();
-            break;
-          }
+          case 8:
+            {
+              PlayerId = input.ReadUInt32();
+              break;
+            }
+          case 16:
+            {
+              result_ = (global::SC2APIProtocol.Result)input.ReadEnum();
+              break;
+            }
         }
       }
     }

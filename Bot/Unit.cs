@@ -3,8 +3,6 @@ using System.Numerics;
 using Google.Protobuf.Collections;
 using SC2APIProtocol;
 
-// ReSharper disable MemberCanBePrivate.Global
-
 namespace Bot {
     public class Unit {
         private SC2APIProtocol.Unit original;
@@ -92,8 +90,5 @@ namespace Bot {
             action.ActionRaw.UnitCommand.UnitTags.Add(tag);
             Controller.AddAction(action);
         }
-
-
-        
     }
 }

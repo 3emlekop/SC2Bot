@@ -385,7 +385,5 @@ namespace Bot {
 
             Logger.Info("Constructing: {0} @ {1} / {2}", GetUnitName(unitType), constructionSpot.X, constructionSpot.Y);
         }
-
-
     }
 }
